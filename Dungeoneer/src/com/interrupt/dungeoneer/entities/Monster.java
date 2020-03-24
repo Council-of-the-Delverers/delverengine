@@ -42,6 +42,10 @@ public class Monster extends Actor implements Directional {
 	
 	@EditorProperty
 	public float attackStartDistance = 0.6f;
+
+	//Custom Distance from Monster
+	@EditorProperty
+	public float detectDistance = 15;
 	
 	public int baseLevel = 0;
 
@@ -320,6 +324,7 @@ public class Monster extends Actor implements Directional {
 			if (hurtAnimation != null) hurtAnimation.play();
 		}
 		return tookDamage;
+
 	}
 
 	public boolean doPainRoll(int damage) {
@@ -328,6 +333,7 @@ public class Monster extends Actor implements Directional {
 
 		float damageMod = (float)damage / (float)maxHp;
 		return Game.rand.nextFloat() <= (painChance + (damageMod * 0.5f));
+
 	}
 
 	@Override
@@ -407,9 +413,10 @@ public class Monster extends Actor implements Directional {
 		last_targety = targety;
 		
 		boolean canSeePlayer = false;
-		
+
+		// Custom Distance from Monster
 		if(hostile) {
-			canSeePlayer = level.canSeeIncludingDoors(x, y, player.x, player.y, 17);
+			canSeePlayer = level.canSeeIncludingDoors(x, y, player.x, player.y, detectDistance);
 
 			if(!canSeePlayer && attacktimer < 30) attacktimer = 30;
 			
@@ -437,7 +444,8 @@ public class Monster extends Actor implements Directional {
 		// Turn alerted if the player is visible
 		if(hostile && (!alerted && canSeePlayer) && !fleeing)
 		{
-			if(playerdist < (player.visiblityMod * 15) + 3  || alertValue >= 1f) {
+			// Custom Distance for Monsters to See Player
+			if(playerdist < (player.visiblityMod * detectDistance) + 3  || alertValue >= 1f) {
 				alerted = true;
 
 				// bark!

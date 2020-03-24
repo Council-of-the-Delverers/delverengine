@@ -8,7 +8,8 @@ import com.interrupt.dungeoneer.entities.Monster;
 import com.interrupt.dungeoneer.game.Game;
 
 public class PlayerHistory {
-	
+
+	public int timesBled = 0;
 	public int monstersKilled = 0;
 	public int foodEaten = 0;
 	public int damageTaken = 0;
@@ -104,6 +105,16 @@ public class PlayerHistory {
 
 		if(timesPoisoned >= 10) {
 			SteamApi.api.achieve("RUN_POISONED");
+		}
+	}
+	// TUD Bleeding Addon
+	public void bled() {
+
+		Gdx.app.log("PlayerHistory", "Was bleeding");
+		timesBled++;
+
+		if(timesBled >= 10) {
+			SteamApi.api.achieve("RUN_LIKE_A_DEAD_MAN");
 		}
 	}
 

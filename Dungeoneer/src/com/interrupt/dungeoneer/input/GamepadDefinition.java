@@ -37,10 +37,11 @@ public class GamepadDefinition {
 	}
 	
 	public GamepadDefinition(Xbox360Pad pad) {
-		gamepadBindings.put(Actions.Action.USE, new GamepadBinding(Xbox360Pad.BUTTON_A, GamepadBinding.GamepadInputType.BUTTON));
+		gamepadBindings.put(Actions.Action.USE, new GamepadBinding(Xbox360Pad.BUTTON_X, GamepadBinding.GamepadInputType.BUTTON));
 		gamepadBindings.put(Actions.Action.MAP, new GamepadBinding(Xbox360Pad.BUTTON_Y, GamepadBinding.GamepadInputType.BUTTON));
 		gamepadBindings.put(Actions.Action.PAUSE, new GamepadBinding(Xbox360Pad.BUTTON_START, GamepadBinding.GamepadInputType.BUTTON));
-		gamepadBindings.put(Actions.Action.INVENTORY, new GamepadBinding(Xbox360Pad.BUTTON_X, GamepadBinding.GamepadInputType.BUTTON));
+		gamepadBindings.put(Actions.Action.INVENTORY, new GamepadBinding(Xbox360Pad.BUTTON_B, GamepadBinding.GamepadInputType.BUTTON));
+		gamepadBindings.put(Actions.Action.JUMP, new GamepadBinding(Xbox360Pad.BUTTON_A, GamepadBinding.GamepadInputType.BUTTON));
 
 		gamepadBindings.put(Actions.Action.MENU_SELECT, new GamepadBinding(Xbox360Pad.BUTTON_A, GamepadBinding.GamepadInputType.BUTTON));
 		gamepadBindings.put(Actions.Action.MENU_CANCEL, new GamepadBinding(Xbox360Pad.BUTTON_B, GamepadBinding.GamepadInputType.BUTTON));

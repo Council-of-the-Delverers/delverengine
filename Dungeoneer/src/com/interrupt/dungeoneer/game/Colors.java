@@ -19,6 +19,9 @@ public class Colors {
     public static Color SLIME_BLOOD = Color.GREEN;
     public static Color INSECT_BLOOD = Color.YELLOW;
     public static Color BONE_BLOOD = Color.LIGHT_GRAY;
+    public static Color CYAN_BLOOD = Color.CYAN;
+    public static Color BLUE_BLOOD = Color.BLUE;
+    public static Color PURPLE_BLOOD = Color.PURPLE;
 
     // Screen flashes
     public static Color HEAL_FLASH = Color.GREEN;

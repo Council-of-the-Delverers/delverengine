@@ -1,0 +1,33 @@
+ranged: {
+"1" : [
+{
+class:com.interrupt.dungeoneer.entities.items.Bow,
+itemType:bow,
+tex:2,
+name:"Testing Ranged Bow3",
+baseDamage:1,
+randDamage:2,
+knockback:0.1,
+range:4,
+speed: 1.75,
+cost:20,
+yOffset: 0.05,
+twoHanded:true
+},
+{
+class:com.interrupt.dungeoneer.entities.items.ItemStack,
+itemType:stack,
+item: {
+class:com.interrupt.dungeoneer.entities.projectiles.Missile,
+name:"Arrow",
+tex: 73
+},
+stackType:"ARROW",
+tex:3,
+name:"Testing Arrows",
+count:4,
+yOffset:-0.11,
+cost:10
+}
+]
+},

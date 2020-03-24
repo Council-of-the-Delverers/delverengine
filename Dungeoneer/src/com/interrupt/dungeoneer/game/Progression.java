@@ -29,7 +29,8 @@ public class Progression {
 
     public HashMap<String, Integer> messagesSeen = new HashMap<String, Integer>();
 
-    public int inventoryUpgrades = 0;
+    /** Inventory Slots*/
+    public int inventoryUpgrades = 6;
 	public int hotbarUpgrades = 0;
 
     public ArrayMap<String, String> progressionTriggers = new ArrayMap<String, String>();

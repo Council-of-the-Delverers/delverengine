@@ -24,7 +24,21 @@ import com.interrupt.managers.StringManager;
 
 public class Weapon extends Item {
 	
-	public enum DamageType { PHYSICAL, MAGIC, FIRE, ICE, LIGHTNING, POISON, HEALING, PARALYZE, VAMPIRE }
+	public enum DamageType {
+		PHYSICAL,
+		MAGIC,
+		FIRE,
+		ICE,
+		LIGHTNING,
+		POISON,
+		HEALING,
+		PARALYZE,
+		VAMPIRE,
+		PIERCING,
+		BLUDGEONING,
+		SLASHING,
+		BLEEDING,
+	}
 
 	public ItemModification baseMods;
 	

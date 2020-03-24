@@ -228,8 +228,8 @@ public class LevelUpOverlay extends WindowOverlay {
 	public void resize(int width, int height) {
 		if(ui != null && ui.getViewport() != null) {
 			Viewport viewport = ui.getViewport();
-			viewport.setWorldHeight(height * 0.325f / Options.instance.uiSize * 1.25f);
-			viewport.setWorldWidth(width * 0.325f / Options.instance.uiSize * 1.25f);
+			viewport.setWorldHeight(height * 0.325f / Options.instance.uiSize * 1.0f);
+			viewport.setWorldWidth(width * 0.325f / Options.instance.uiSize * 1.0f);
 			viewport.update(width, height, true);
 		}
 	}

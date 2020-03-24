@@ -48,14 +48,27 @@ public class Hud {
 		float startX = -4.7f;
 		float startY = 1.7f;
 		
-		equipLocations.put( "HAT", new EquipLoc("HAT", startX, startY, 103) );
-		equipLocations.put( "ARMOR", new EquipLoc("ARMOR", startX, startY + 1f, 119) );
-		equipLocations.put( "PANTS", new EquipLoc("PANTS", startX, startY + 2f, 111) );
+		equipLocations.put( "HAT", new EquipLoc("HAT", startX, startY, 135) );
+		equipLocations.put( "ARMOR", new EquipLoc("ARMOR", startX, startY + 1f, 151) );
+		equipLocations.put( "PANTS", new EquipLoc("PANTS", startX, startY + 2f, 143) );
 		
-		equipLocations.put( "OFFHAND", new EquipLoc("OFFHAND", startX + 1f, startY, 102) );
-		equipLocations.put( "RING", new EquipLoc("RING", startX + 1f, startY + 1f, 118) );
-		equipLocations.put( "AMULET", new EquipLoc("AMULET", startX + 1f, startY + 2f, 110) );
-		
+		equipLocations.put( "OFFHAND", new EquipLoc("OFFHAND", startX + 1f, startY, 134) );
+		equipLocations.put( "RING", new EquipLoc("RING", startX + 1f, startY + 1f, 150) );
+		equipLocations.put( "AMULET", new EquipLoc("AMULET", startX + 1f, startY + 2f, 142) );
+
+		/** TUR Slots */
+		equipLocations.put( "RING2", new EquipLoc("RING", startX + -1f, startY + 1f, 150) );
+		equipLocations.put( "HOOD", new EquipLoc("HOOD", startX + -1f, startY, 141) );
+		equipLocations.put( "BELT", new EquipLoc("BELT", startX + -1f, startY + 2, 140) );
+		equipLocations.put( "BOOTS", new EquipLoc("BOOTS", startX + -1f, startY + 2, 159) );
+		equipLocations.put( "CLOAK", new EquipLoc("CLOAK", startX + -1f, startY + 2, 159) );
+
+		/** TUR Enhancements */
+		equipLocations.put( "SKILL1", new EquipLoc("SKILL1", startX + 1f, startY + 4, 159) );
+		equipLocations.put( "SKILL2", new EquipLoc("SKILL2", startX, startY + 4, 159) );
+		equipLocations.put( "SKILL3", new EquipLoc("SKILL3", startX + -1f, startY + 4, 159) );
+
+
 		for(EquipLoc loc : equipLocations.values())
 		{
 			loc.init(itemTextures);

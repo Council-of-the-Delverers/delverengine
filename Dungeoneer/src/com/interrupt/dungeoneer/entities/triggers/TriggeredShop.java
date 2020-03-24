@@ -20,24 +20,31 @@ import com.interrupt.helpers.Upgrade;
 import com.interrupt.managers.StringManager;
 
 public class TriggeredShop extends Trigger {
-	
+
 	public enum ShopType { upgrades, scrolls, potions, weapons, wands, armor, persistent }
+
+	/** Custom Currency Types */
+	public enum CurrencyType { gold, ython  }
 
 	@EditorProperty
 	public String messageFile = null;
-	
+
 	@EditorProperty
 	public ShopType shopType = ShopType.upgrades;
-	
+
+	@EditorProperty
+	/** Custom Currencies Shop Setting */
+	public CurrencyType currencyType = CurrencyType.gold;
+
 	@EditorProperty
 	public String title = StringManager.get("triggers.TriggeredShop.titleText");
-	
+
 	@EditorProperty
 	public String description = StringManager.get("triggers.TriggeredShop.descriptionText");
 
 	@EditorProperty
 	public boolean pausesGame = false;
-	
+
 	public Array<ShopItem> items = null;
 
 	public TriggeredShop() { hidden = true; spriteAtlas = "editor"; tex = 16; isSolid = true; }
@@ -69,7 +76,7 @@ public class TriggeredShop extends Trigger {
 
 		super.init(level, source);
 	}
-	
+
 	@Override
 	public void doTriggerEvent(String value) {
 
@@ -95,7 +102,7 @@ public class TriggeredShop extends Trigger {
 		else {
 			showShopOverlay(null);
 		}
-		
+
 		super.doTriggerEvent(value);
 	}
 
@@ -189,7 +196,8 @@ public class TriggeredShop extends Trigger {
 			OverlayManager.instance.replace(previousOverlay, shopOverlay);
 		}
 		else {
-			ShopOverlay shopOverlay = new ShopOverlay(Game.instance.player, title, description, items);
+			/** Custom Currencies ShopOverlay */
+			ShopOverlay shopOverlay = new ShopOverlay(Game.instance.player, title, description, items, currencyType);
 			shopOverlay.pausesGame = pausesGame;
 			OverlayManager.instance.push(shopOverlay);
 		}

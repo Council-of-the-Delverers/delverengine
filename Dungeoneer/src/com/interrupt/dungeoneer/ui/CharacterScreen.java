@@ -103,7 +103,16 @@ public class CharacterScreen {
         makeRow(playerTable,"Level", Integer.toString(player.level));
         makeRow(playerTable,"XP", player.exp + "/" + player.getNextLevel());
         makeRow(playerTable,"Gold", Integer.toString(player.gold));
+
         contentTable.add(playerTable).colspan(4);
+        contentTable.row();
+
+        /** TUD CURRENCIES IN INVENTORY */
+        // Currency Info
+        makeTitle(StringManager.get("overlays.CharacterOverlay.currencyTitle"));
+        Table currencyTable = new Table();
+        makeRow(currencyTable,"Ython", Integer.toString(player.ython));
+        contentTable.add(currencyTable).colspan(4);
         contentTable.row();
 
         NinePatchDrawable background = new NinePatchDrawable(new NinePatch(UiSkin.getSkin().getRegion("inventory-window"), 16, 16, 16, 16));

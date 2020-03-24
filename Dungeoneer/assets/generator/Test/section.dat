@@ -13,6 +13,7 @@
 			generated:false,
 			levelFileName:"levels/test-level.bin",
 			ambientSound:"env_indoor.mp3",
+			skybox: { meshFile: "meshes/skyNight.obj", textureFile: "skybox/skyNight.png" },
 			ambientSoundVolume:"0.15",
 			traps:[]
 		}

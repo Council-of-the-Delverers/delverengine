@@ -36,6 +36,308 @@
 			},
 			"Status Effect Area": {class: com.interrupt.dungeoneer.entities.areas.StatusEffectArea}
 		},
+		"Fate Entities": {
+			"Basic Monster": {
+				class: com.interrupt.dungeoneer.entities.Monster,
+			},
+			"Basic Monster (Emit)": {
+				class: com.interrupt.dungeoneer.entities.Monster,
+				attached: [
+					{
+						"class": "com.interrupt.dungeoneer.entities.ParticleSphereEmitter",
+						"id": "",
+						"tex": 8,
+						"artType": "hidden",
+						"spriteAtlas": "vfx",
+						"collision": {
+							"x": 0.2,
+							"y": 0.2,
+							"z": 0.5
+						},
+						"dropSound": "drops/drop_soft.ogg",
+						"sphereRadius": 6.0,
+						"particleHalos": true,
+						"particleHalo": "BOTH",
+						"particleLifetime": 100,
+						"particlesCollide": false,
+						"particleSpread": {
+							"x": 4,
+							"y": 4,
+							"z": 0.9
+						},
+						"particleRandomVelocity": {
+							"x": 0.004,
+							"y": 0.004
+						},
+						"particlesFloat": true,
+						"particleEndScale": 0,
+						"particlesFullbrite": true,
+						"particleSpawnCount": 50,
+						"particleSpawnInterval": 12,
+						"particleRandomSpawnInterval": 5,
+						"particleRandomLifetime": 25,
+						"particleColor": {
+							"a": 1
+						},
+						"particleEndColor": {
+							"r": 1,
+							"g": 0.9607843,
+							"a": 1
+						},
+						"visibleArea": {
+							"crn": [
+								{},
+								{},
+								{},
+								{},
+								{},
+								{},
+								{},
+								{}
+							],
+							"min": {
+								"x": 18.05189,
+								"y": -3.5881815,
+								"z": 14.811835
+							},
+							"max": {
+								"x": 24.45189,
+								"y": 3.4118185,
+								"z": 21.211836
+							},
+							"cnt": {
+								"x": 21.25189,
+								"y": -0.088181496,
+								"z": 18.011835
+							},
+							"dim": {
+								"x": 6.4000015,
+								"y": 7,
+								"z": 6.4000006
+							}
+						},
+						"maxVisibleRadius": 4
+					}
+				]
+			},
+			"Basic Item": {
+				class: com.interrupt.dungeoneer.entities.Item,
+			},
+			"Particle Sphere Emitter": {
+				"class": "com.interrupt.dungeoneer.entities.ParticleSphereEmitter",
+				"id": "",
+				"tex": 8,
+				"artType": "hidden",
+				"spriteAtlas": "vfx",
+				"collision": {
+					"x": 0.2,
+					"y": 0.2,
+					"z": 0.5
+				},
+				"dropSound": "drops/drop_soft.ogg",
+				"particleHalos": true,
+				"particleHalo": "BOTH",
+				"particleLifetime": 100,
+				"particlesCollide": false,
+				"particleSpread": {
+					"x": 4,
+					"y": 4,
+					"z": 0.9
+				},
+				"particleRandomVelocity": {
+					"x": 0.004,
+					"y": 0.004
+				},
+				"particlesFloat": true,
+				"particleEndScale": 0,
+				"particlesFullbrite": true,
+				"particleSpawnCount": 1,
+				"particleSpawnInterval": 12,
+				"particleRandomSpawnInterval": 5,
+				"particleRandomLifetime": 25,
+				"particleColor": {
+					"r": 0.61960787,
+					"g": 1,
+					"b": 0.4117647,
+					"a": 1
+				},
+				"visibleArea": {
+					"crn": [
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{}
+					],
+					"min": {
+						"x": 18.05189,
+						"y": -3.5881815,
+						"z": 14.811835
+					},
+					"max": {
+					"x": 24.45189,
+					"y": 3.4118185,
+					"z": 21.211836
+					},
+					"cnt": {
+						"x": 21.25189,
+						"y": -0.088181496,
+						"z": 18.011835
+					},
+					"dim": {
+						"x": 6.4000015,
+						"y": 7,
+						"z": 6.4000006
+					}
+				},
+				"maxVisibleRadius": 4
+			},
+			"Loot Chest": {
+				class:com.interrupt.dungeoneer.entities.Breakable,
+				meshFile:meshes/breakables/Chest.obj,
+				"textureFile": "sprites/breakables/Chest.png",
+				"scale": 0.35,
+				stepHeight:0.0,
+				collision:{x:0.25,y:0.25,z:0.5},
+				isSolid:true,
+				shadowType: "RECTANGLE",
+				surpriseSpawnChance:0.75,
+				// for it to spawn multiple items, use the group
+				"spawns": [
+					{
+						class: com.interrupt.dungeoneer.entities.Item,
+						"name": "Item1"
+					},
+					{
+						class: com.interrupt.dungeoneer.entities.Item,
+						"name": "Item2"
+					},
+					{
+						class: com.interrupt.dungeoneer.entities.Item,
+						"name": "Item3"
+					}
+				],
+				attached: [
+					{
+						"class": "com.interrupt.dungeoneer.entities.ParticleEmitter",
+						"id": "",
+						"tex": 8,
+						"artType": "hidden",
+						"spriteAtlas": "vfx",
+						"collision": {
+							"x": 0.2,
+							"y": 0.2,
+							"z": 0.5
+						},
+						"dropSound": "drops/drop_soft.ogg",
+						"particleHalos": true,
+						"particleHalo": "BOTH",
+						"particleLifetime": 100,
+						"particlesCollide": false,
+						"particleSpread": {
+							"x": 1,
+							"y": 1,
+							"z": 1
+						},
+						"particleRandomVelocity": {
+							"x": 0.004,
+							"y": 0.004
+						},
+						"particlesFloat": true,
+						"particleEndScale": 0,
+						"particlesFullbrite": true,
+						"particleSpawnCount": 1,
+						"particleSpawnInterval": 12,
+						"particleRandomSpawnInterval": 5,
+						"particleRandomLifetime": 25,
+						"particleColor": {
+							"r": 0.61960787,
+							"g": 1,
+							"b": 0.4117647,
+							"a": 1
+						},
+						"visibleArea": {
+						},
+						"maxVisibleRadius": 4
+					}
+				]
+			},
+		"Particle Cube Emitter (Firefly)": {
+			"class": "com.interrupt.dungeoneer.entities.ParticleEmitter",
+			"id": "",
+			"tex": 8,
+			"artType": "hidden",
+			"spriteAtlas": "vfx",
+			"collision": {
+				"x": 0.2,
+				"y": 0.2,
+				"z": 0.5
+			},
+			"dropSound": "drops/drop_soft.ogg",
+			"particleHalos": true,
+			"particleHalo": "BOTH",
+			"particleLifetime": 100,
+			"particlesCollide": false,
+			"particleSpread": {
+				"x": 4,
+				"y": 4,
+				"z": 0.9
+			},
+			"particleRandomVelocity": {
+				"x": 0.004,
+				"y": 0.004
+			},
+			"particlesFloat": true,
+			"particleEndScale": 0,
+			"particlesFullbrite": true,
+			"particleSpawnCount": 1,
+			"particleSpawnInterval": 12,
+			"particleRandomSpawnInterval": 5,
+			"particleRandomLifetime": 25,
+			"particleColor": {
+				"r": 0.61960787,
+				"g": 1,
+				"b": 0.4117647,
+				"a": 1
+			},
+			"visibleArea": {
+				"crn": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"min": {
+					"x": 18.05189,
+					"y": -3.5881815,
+					"z": 14.811835
+				},
+				"max": {
+					"x": 24.45189,
+					"y": 3.4118185,
+					"z": 21.211836
+				},
+				"cnt": {
+					"x": 21.25189,
+					"y": -0.088181496,
+					"z": 18.011835
+				},
+				"dim": {
+					"x": 6.4000015,
+					"y": 7,
+					"z": 6.4000006
+				}
+			},
+			"maxVisibleRadius": 4
+		}
+	},
 		"Camera": {
 			"Splash Camera": {
 				class: com.interrupt.dungeoneer.entities.Camera

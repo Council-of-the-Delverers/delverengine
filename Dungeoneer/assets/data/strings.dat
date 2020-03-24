@@ -19,6 +19,11 @@
         "localizedName": "Erase",
         "comment": "Text for the erase button, which will delete the player's save game."
     },
+  "overlays.CharacterOverlay.currencyTitle": {
+    "class": "com.interrupt.dungeoneer.game.LocalizedString",
+    "localizedName": "Other Currencies",
+    "comment": "Text for Other Currencies."
+  },
     "screens.MainMenuScreen.optionsButton": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
         "localizedName": "Options",
@@ -1759,6 +1764,21 @@
         "localizedName": "DMG",
         "comment": ""
     },
+  "items.Weapon.damageType.SLASHING": {
+    "class": "com.interrupt.dungeoneer.game.LocalizedString",
+    "localizedName": "SLASHING",
+    "comment": ""
+  },
+  "items.Weapon.damageType.PIERCING": {
+    "class": "com.interrupt.dungeoneer.game.LocalizedString",
+    "localizedName": "PIERCING",
+    "comment": ""
+  },
+  "items.Weapon.damageType.BLUDGEONING": {
+    "class": "com.interrupt.dungeoneer.game.LocalizedString",
+    "localizedName": "BLUDGEONING",
+    "comment": ""
+  },
     "items.Weapon.damageType.MAGIC": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
         "localizedName": "MAGIC",

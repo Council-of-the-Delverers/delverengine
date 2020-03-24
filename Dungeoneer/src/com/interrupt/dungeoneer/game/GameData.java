@@ -8,7 +8,7 @@ public class GameData {
     public String[] monsterDataFiles = {"monsters.dat"};
     public String[] itemDataFiles = {"items.dat"};
     public String playerDataFile = "player.dat";
-    public boolean playerJumpEnabled = false;
+    public boolean playerJumpEnabled = true;
 
     public void merge(GameData modData) {
         tutorialLevel = modData.tutorialLevel;

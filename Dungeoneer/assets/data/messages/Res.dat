@@ -1,0 +1,8 @@
+{
+	"repeats": true,
+	"messages": [
+		["This test shows how the resistances will work."],
+		["The Left Slime has NO Fire Resistance, the Right one does."]
+		["The one with the Fire Resistance is only affected by the Burning Damage other than the Physical Damage from the Fireball"]
+	]
+}

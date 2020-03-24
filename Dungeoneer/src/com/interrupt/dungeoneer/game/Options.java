@@ -75,7 +75,7 @@ public class Options {
 
 	public int antiAliasingSamples = 0;
 	public boolean vsyncEnabled = true;
-	public int fpsLimit = 120;
+	public int fpsLimit = 1000;
 
 	public boolean enablePostProcessing = false;
 	public int postProcessingQuality = 3;

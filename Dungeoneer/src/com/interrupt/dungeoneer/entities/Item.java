@@ -84,8 +84,12 @@ public class Item extends Entity {
     @EditorProperty(type = "Level Scaling")
     public Integer maxItemLevel = null;
 
-	@EditorProperty
+	@EditorProperty(type = "Rarity")
 	public boolean unique = false;
+	public boolean uncommon = false;
+	public boolean rare = false;
+	public boolean epic = false;
+	public boolean legendary = false;
 
 	@EditorProperty(type = "Triggers")
 	public String triggersOnPickup = null;
@@ -376,8 +380,20 @@ public class Item extends Entity {
 	private static Color RareItemColor = new Color(0.5f, 1f, 0.4f, 1f);
 	private static Color MagicItemColor = new Color(0.1f, 0.8f, 1f, 1f);
 	private static Color UniqueItemColor = new Color(0.9f, 0.7f, 0.1f, 1f);
+	private static Color UncommonItemColor = Color.GREEN;
+	private static Color Rare2ItemColor = Color.BLUE;
+	private static Color EpicItemColor = Color.PURPLE;
+	private static Color LegendaryItemColor = Color.ORANGE;
 	public Color GetTextColor() {
         if(unique) return UniqueItemColor;
+
+        if(uncommon) return UncommonItemColor;
+
+		if(rare) return Rare2ItemColor;
+
+		if(epic) return EpicItemColor;
+
+		if(legendary) return LegendaryItemColor;
 
 		if(enchantment != null && prefixEnchantment != null) {
 			return RareItemColor;
@@ -407,6 +423,15 @@ public class Item extends Entity {
 		float attackSpeedMod = 0;
 		float magicResistMod = 0;
 
+		//New Resist Mods
+		float fireResistMod = 0;
+		float iceResistMod = 0;
+		float poisonResistMod = 0;
+		float lightningResistMod = 0;
+		float slashingResistMod = 0;
+		float piercingResistMod = 0;
+		float bludgeoningResistMod = 0;
+
 		for(ItemModification m : getEnchantments()) {
 			moveMod += m.getMoveSpeedMod(this);
 			hpMod += m.getHpMod(this);
@@ -417,6 +442,13 @@ public class Item extends Entity {
 			knockbackMod += m.getKnockbackMod(this);
 			attackSpeedMod += m.getAttackSpeedMod(this);
 			magicResistMod += m.getMagicResistMod(this);
+			fireResistMod += m.getFireResistMod(this);
+			iceResistMod += m.getIceResistMod(this);
+			poisonResistMod += m.getPoisonResistMod(this);
+			lightningResistMod += m.getLightningResistMod(this);
+			slashingResistMod += m.getSlashingResistMod(this);
+			piercingResistMod += m.getPiercingResistMod(this);
+			bludgeoningResistMod += m.getBludgeoningResistMod(this);
 		}
 
 		// add status texts
@@ -429,6 +461,13 @@ public class Item extends Entity {
 		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoKnockbackText"), knockbackMod);
 		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoAttackSpeedText"), attackSpeedMod);
 		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoMagicResistText"), magicResistMod);
+		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoFireResistText"), fireResistMod);
+		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoPoisonResistText"), poisonResistMod);
+		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoIceResistText"), iceResistMod);
+		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoLightningResistText"), lightningResistMod);
+		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoSlashingResistText"), slashingResistMod);
+		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoPiercingResistText"), piercingResistMod);
+		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoBludgeoningResistText"), bludgeoningResistMod);
 
 		return infoText;
 	}

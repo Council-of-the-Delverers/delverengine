@@ -39,10 +39,46 @@
     },
     {
         "columns": 4,
+        "filename": "vfx.png",
+        "scale": 1,
+        "name": "vfx"
+    },
+    {
+        "columns": 4,
+        "filename": "/sprites/classes/C32.png",
+        "scale": 1,
+        "name": "Classes x32"
+    },
+    {
+        "columns": 4,
+        "filename": "/sprites/classes/C34.png",
+        "scale": 1,
+        "name": "Classes x34"
+    },
+    {
+        "columns": 4,
+        "filename": "/sprites/classes/C42.png",
+        "scale": 1,
+        "name": "Classes x42"
+    },
+    {
+        "columns": 4,
+        "filename": "/sprites/classes/C50.png",
+        "scale": 1,
+        "name": "Classes x50"
+    },
+    {
+        "columns": 4,
         "filename": "fog.png",
         "scale": 1,
         "name": "fog_sprites",
         "filter": true
+    },
+    {
+        "columns": 4,
+        "filename": "sprites/breakables/Chest.png",
+        "scale": 1,
+        "name": "TreasureChest",
     },
     {
         "columns": 16,

@@ -9,13 +9,19 @@ import com.interrupt.managers.StringManager;
 
 
 public class StatusEffect {
-	public enum StatusEffectType { BURNING, DRUNK, INVISIBLE, PARALYZE, POISON, RESTORE, SHIELD, SLOW, LEVITATE, SPEED }
+	public enum StatusEffectType { BURNING, DRUNK, INVISIBLE, PARALYZE, POISON, RESTORE, SHIELD, SLOW, LEVITATE, SPEED, BLEED, SHOCK}
 
 	public String name = StringManager.get("statuseffects.StatusEffect.defaultNameText");
 	public float timer = 1000;
 	public float speedMod = 1;
 	public float damageMod = 1;
 	public float magicDamageMod = 1;
+
+	//Resistance Damage
+	public float fireDamageMod = 1;
+	public float iceDamageMod = 1;
+	public float poisonDamageMod = 1;
+
 	public boolean active = true;
 	public boolean showParticleEffect = true;
 	public String shader = null;
@@ -39,6 +45,8 @@ public class StatusEffect {
 				break;
 			case POISON:
 				return new PoisonEffect();
+			case BLEEDING:
+				return new BleedEffect();
 			case HEALING:
 				break;
 			case PARALYZE:
@@ -48,7 +56,7 @@ public class StatusEffect {
 		return effect;
 	}
 
-	public static StatusEffect getStatusEffect(StatusEffectType effectType) {
+	public static StatusEffect getStatusEffect(StatusEffectType effectType) { //Status Effects
 		switch (effectType) {
 			case BURNING:
 				return new BurningEffect();
@@ -65,6 +73,9 @@ public class StatusEffect {
 			case POISON:
 				return new PoisonEffect();
 
+			case BLEED:
+				return new BleedEffect();
+
 			case RESTORE:
 				return new RestoreHealthEffect();
 
@@ -76,13 +87,14 @@ public class StatusEffect {
 
 			case SPEED:
 				return new SpeedEffect();
+
 		}
 
 		return null;
 	}
 
 	public StatusEffect() { }
-	
+
 	public void tick(Actor owner, float delta) {
 		if (this.timer > 0) {
 			this.timer -= 1 * delta;
@@ -97,7 +109,7 @@ public class StatusEffect {
 	}
 
 	public void forPlayer(Player player) { }
-	
+
 	// Override this for different status effects
 	public void doTick(Actor owner, float delta) {}
 

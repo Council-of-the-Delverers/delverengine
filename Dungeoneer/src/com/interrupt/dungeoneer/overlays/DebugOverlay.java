@@ -581,6 +581,9 @@ public class DebugOverlay extends WindowOverlay {
 	    addItem(contentTable, "ORB", new QuestItem());
 		addItem(contentTable, "Gold", new Gold(200));
 
+		/** TUD DEBUG ITEMS*/
+		addItem(contentTable, "Ython", new Ython(200));
+
 	    addLevelUpItem(contentTable, "LEVEL UP!");
         //addGoDownItem(contentTable, "DOWN");
         addFlightItem(contentTable, "TOGGLE FLIGHT");

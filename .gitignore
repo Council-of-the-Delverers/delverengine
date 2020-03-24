@@ -14,6 +14,7 @@
 save/
 Dungeoneer/save/
 DungeoneerDesktop/save
+Dungeoneer/mods/DAsets
 
 *.iml
 .idea/*
@@ -29,3 +30,6 @@ DelvEdit/build
 build/
 **/BuildConfig.java
 .vscode/*
+.idea/runConfigurations/Editor.xml
+.idea/runConfigurations/Game.xml
+*.xml

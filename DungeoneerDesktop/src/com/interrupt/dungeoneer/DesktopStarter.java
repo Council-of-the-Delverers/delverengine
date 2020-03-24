@@ -17,7 +17,7 @@ public class DesktopStarter {
 		DisplayMode defaultMode = LwjglApplicationConfiguration.getDesktopDisplayMode();
 		
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		config.title = "Delver Engine";
+		config.title = "Delver: The Uncharted Depths";
 		config.fullscreen = Options.instance.fullScreen;
 		config.width = defaultMode.width;
 		config.height = defaultMode.height;
@@ -43,7 +43,7 @@ public class DesktopStarter {
 		
 		if(args != null) {
 			for(String arg : args) {
-				if(arg.toLowerCase().endsWith("debug=true")) {
+				if(arg.toLowerCase().endsWith("gimmedatdebugmenu")) { /** DEBUG MENU SYNTAX */
 					Game.isDebugMode = true;
 				}
 				else if(arg.toLowerCase().endsWith("debug-collision=true")) {

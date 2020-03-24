@@ -1,51 +1,118 @@
 {
 	unique: [
 		{
-			class:com.interrupt.dungeoneer.entities.items.Sword,
-			itemType:sword,
-			tex:0,
-			brokenTex:0,
-			spriteAtlas:"unique",
-			name:"Lucky Testing Dagger",
-			unique: true,
-			baseDamage:1,
-			randDamage:5,
-			durability: 1000,
-			knockback:0.1,
-			reach:0.45,
-			speed:1.0,
-			chargespeed:1.0,
-			cost:1000,
-			pickupSound:"pu_metal.mp3",
-			attackAnimation:"daggerAttack",
-			attackStrongAnimation:"daggerAttackStrong",
-			chargeAnimation:"daggerCharge",
-			dropSound:"drops/drop_metal_01.mp3,drops/drop_metal_02.mp3,drops/drop_metal_03.mp3",
-			minItemLevel: 1,
-			maxItemLevel: 5
+
 		}
 	],
 	melee:{
 		"1" : [
 			{
-				class:com.interrupt.dungeoneer.entities.items.Sword,
-				itemType:sword,
-				tex:0,
-				brokenTex:0,
-				spriteAtlas:"melee",
-				name:"Test Knife",
-				baseDamage:2,
-				randDamage:1,
-				knockback:0.1,
-				reach:0.45,
-				speed:1.0,
-				chargespeed:1.0,
-				cost:5,
-				pickupSound:"pu_metal.mp3",
-				attackAnimation:"daggerAttack",
-				attackStrongAnimation:"daggerAttackStrong",
-				chargeAnimation:"daggerCharge",
-				dropSound:"drops/drop_metal_01.mp3,drops/drop_metal_02.mp3,drops/drop_metal_03.mp3"
+				"class": "com.interrupt.dungeoneer.entities.items.Sword",
+				"roll": 0,
+				"tex": 1,
+				"spriteAtlas": "Classes x34",
+				"spawnChance": 0.6,
+				"calcStepHeight": 0.1,
+				"unique": true,
+				"name": "Angler",
+				"damageType": "SLASHING",
+				"baseDamage": 1,
+				"randDamage": 7,
+				"knockback": 0.2,
+				"reach": 0.45,
+				"speed": 1.1,
+				"chargespeed": 1.1,
+				"durability": 15,
+				"brokenTex": 0,
+				"hitDecal": {
+					"tex": 18,
+					"artType": "sprite",
+					"collision": {
+						"x": 0.2,
+						"y": 0.2,
+						"z": 0.5
+					},
+					"end": 10,
+					"decalWidth": 1,
+					"decalHeight": 1
+				},
+				attached: [
+					{
+						"class": "com.interrupt.dungeoneer.entities.ParticleSphereEmitter",
+						"id": "",
+						"tex": 8,
+						"artType": "hidden",
+						"spriteAtlas": "vfx",
+						"collision": {
+							"x": 0.2,
+							"y": 0.2,
+							"z": 0.5
+						},
+						"dropSound": "drops/drop_soft.ogg",
+						"sphereRadius": 6.0,
+						"particleHalos": true,
+						"particleHalo": "BOTH",
+						"particleLifetime": 100,
+						"particlesCollide": false,
+						"particleSpread": {
+							"x": 4,
+							"y": 4,
+							"z": 0.9
+						},
+						"particleRandomVelocity": {
+							"x": 0.004,
+							"y": 0.004
+						},
+						"particlesFloat": true,
+						"particleEndScale": 0,
+						"particlesFullbrite": true,
+						"particleSpawnCount": 50,
+						"particleSpawnInterval": 12,
+						"particleRandomSpawnInterval": 5,
+						"particleRandomLifetime": 25,
+						"particleColor": {
+							"a": 1
+						},
+						"particleEndColor": {
+							"r": 1,
+							"g": 0.9607843,
+							"a": 1
+						},
+						"visibleArea": {
+							"crn": [
+								{},
+								{},
+								{},
+								{},
+								{},
+								{},
+								{},
+								{}
+							],
+							"min": {
+								"x": 18.05189,
+								"y": -3.5881815,
+								"z": 14.811835
+							},
+							"max": {
+								"x": 24.45189,
+								"y": 3.4118185,
+								"z": 21.211836
+							},
+							"cnt": {
+								"x": 21.25189,
+								"y": -0.088181496,
+								"z": 18.011835
+							},
+							"dim": {
+								"x": 6.4000015,
+								"y": 7,
+								"z": 6.4000006
+							}
+						},
+						"maxVisibleRadius": 4
+					}
+				]
 			}
 		]
 	},
@@ -54,10 +121,11 @@
 			{
 				class:com.interrupt.dungeoneer.entities.items.Bow,
 				itemType:bow,
-				tex:2,
-				name:"Testing Ranged Bow",
+				tex:19,
+				spriteAtlas: "Classes x32",
+				name:"FrostBane",
 				baseDamage:1,
-				randDamage:2,
+				randDamage:5,
 				knockback:0.1,
 				range:4,
 				speed: 1.75,
@@ -79,130 +147,15 @@
 				count:4,
 				yOffset:-0.11,
 				cost:10
-			},
-			{
-                "class":"com.interrupt.dungeoneer.entities.items.Gun",
-                "roll":45,
-                "tex":0,
-                "heldTex":1,
-                "spriteAtlas":"item-guns",
-                "name":"Handgun",
-                "attackAnimation":"gunFire",
-                "attackStrongAnimation":"gunFire",
-                "automatic":false,
-                "projectileNum":1,
-                "projectileSpreadX":3,
-                "projectileSpreadY":3,
-                "cycleTime":7,
-                "ammoType":"BULLET",
-                "twoHanded":true,
-                "baseDamage":10,
-                "randDamage":0,
-                "roll":45,
-                "fireSound": "pistol-shot.mp3",
-                "hitEffect": {
-                    "shakeAmount": 2.0,
-                    "shakeDistance": 2.0,
-                    "lightMod": 0.2,
-                    "explosionLightLifetime": 6.0,
-                    "particleCount": 0,
-                    "damage": 0,
-                    "tex": 18,
-                    "explosionStartTex": 18,
-                    "explosionEndTex": 23,
-                    "explosionAnimSpeed": 22,
-                    "hasHalo": false,
-                    "explodeSound": null,
-                    "fullbrite": false,
-                    "impulseAmount": 0,
-                    "scale": 0.3
-                },
-                "muzzleFlash": {
-                    "shakeAmount": 2.0,
-                    "shakeDistance": 2.0,
-                    "lightMod": 0.2,
-                    "explosionLightLifetime": 6.0,
-                    "particleCount": 0,
-                    "damage": 0,
-                    "tex": 18,
-                    "explosionStartTex": 18,
-                    "explosionEndTex": 23,
-                    "explosionAnimSpeed": 22,
-                    "hasHalo": false,
-                    "explodeSound": null,
-                    "fullbrite": false,
-                    "impulseAmount": 0,
-                    "scale": 0.4,
-                    "color": {"r":0.9,"g":0.6,"b":0.2,"a":1.0},
-                    "fullbrite": true
-                }
-            },
-            {
-                class:com.interrupt.dungeoneer.entities.items.ItemStack,
-                itemType:stack,
-                stackType:"BULLET",
-                tex:3,
-                spriteAtlas:"item-guns",
-                name:"Bullets",
-                count:100,
-                yOffset:-0.11,
-                cost:10
-            }
+			}
 		]
 	},
 
 	armor:{
 		"1" : [
 			{
-				class:com.interrupt.dungeoneer.entities.items.Armor,
-				itemType:armor,
-				tex:8,
-				spriteAtlas:"armor",
-				name:"Test Shirt",
-				armor:3,
-				yOffset:-0.11,
-				cost:8,
-				pickupSound:"pu_gen_v2.mp3"
+
 			},
-			{
-				class:com.interrupt.dungeoneer.entities.items.Armor,
-				itemType:armor,
-				tex:16,
-				spriteAtlas:"armor",
-				name:"Test Pants",
-				armor:1,
-				equipLoc:"PANTS",
-				yOffset:-0.11,
-				cost:8,
-				pickupSound:"pu_gen_v2.mp3"
-			},
-			{
-				class:com.interrupt.dungeoneer.entities.items.Armor,
-				itemType:armor,
-				tex:0,
-				spriteAtlas:"armor",
-				name:"Test Hat",
-				armor:1,
-				equipLoc:"HAT",
-				yOffset:-0.11,
-				cost:8,
-				pickupSound:"pu_gen_v2.mp3"
-			},
-			{
-				class:com.interrupt.dungeoneer.entities.items.Armor,
-				itemType:armor,
-				tex:24,
-				heldTex:32,
-				spriteAtlas:"armor",
-				name:"Test Shield",
-				armor:2,
-				durability: 50,
-				equipLoc:"OFFHAND",
-				yOffset:-0.125,
-				cost:8,
-				pickupSound:"pu_gen_v2.mp3",
-				baseMods: { moveSpeedMod: -1 }
-			}
 		]
 	},
 
@@ -210,8 +163,9 @@
 		{
 			class:com.interrupt.dungeoneer.entities.items.Wand,
 			itemType:wand,
-			name:"Test Wand",
+			name:"Angler",
 			magicStatBoostMod: 6,
+			usesCharges: false,
 			spell: {
 				class:com.interrupt.dungeoneer.entities.spells.MagicMissile,
 				magicMissileProjectile: {
@@ -261,13 +215,12 @@
 				castSoundVolume: 0.1
 			},
 			charges:20,
-			damageType:MAGIC,
+			damageType:FIRE,
 			baseDamage:1,
-			randDamage:1,
 			autoFire: true,
-			autoFireTime: 10,
+			autoFireTime: 6,
 			tex:1,
-			spriteAtlas:"wands",
+			spriteAtlas:"Classes x34",
 			yOffset: 0.0,
 			cost:45
 		}
@@ -410,6 +363,11 @@
 			class:com.interrupt.dungeoneer.entities.items.ItemModification,
 			name:"of Testing",
 			attackSpeedMod:0.3
+		},
+		{
+			class:com.interrupt.dungeoneer.entities.items.ItemModification,
+			name:"of Fire Resistance",
+			fireResistMod:2
 		}
 	],
 

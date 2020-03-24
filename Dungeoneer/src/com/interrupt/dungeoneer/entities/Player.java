@@ -11,6 +11,7 @@ import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.math.collision.BoundingBox;
 import com.badlogic.gdx.math.collision.Ray;
 import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.ArrayMap;
 import com.badlogic.gdx.utils.IntArray;
 import com.interrupt.api.steam.SteamApi;
 import com.interrupt.dungeoneer.Audio;
@@ -49,11 +50,14 @@ import java.util.Random;
 public class Player extends Actor {
 	
 	public int gold = 0;
+	public int ython = 0;
 
 	public float rot = 0;
 	public float yrot = 0;
 	public float rota = 0;
 	public float rotya = 0;
+
+	public float baseSpeed = 0.1F;
 	
 	public float rot2 = 0;
 
@@ -99,6 +103,10 @@ public class Player extends Actor {
 	public int levelNum = 0;
 	
 	// inventory stuff
+	/** Custom Currencies List (Array) */
+	public ArrayMap<String, Integer> currencies = new ArrayMap<String, Integer>();
+	Integer Ython = currencies.get("Ython");
+
 	public Array<Item> inventory = new Array<Item>();
 	public Integer selectedBarItem = null;
 	public Integer heldItem = null;
@@ -233,6 +241,7 @@ public class Player extends Actor {
 
 		canStepUpOn = false;
 	}
+
 
 	public boolean canAddInventorySlot() {
 		return inventorySize - hotbarSize < 36;
@@ -718,7 +727,10 @@ public class Player extends Actor {
 		walkSpeed = getWalkSpeed();
 		rotSpeed = 0.009f;
 		maxRot = 0.06f;
-		
+
+		//Sprinting!
+
+
 		// keep rotation in bounds
 		if(Math.abs(rot) > 6.28318531) {
 			if(rot > 0) rot = rot % 6.28318531f;
@@ -1863,6 +1875,7 @@ public class Player extends Actor {
 		return item == held;
 	}
 
+
 	public boolean addToInventory(Item item) {
 		return addToInventory(item, true);
 	}
@@ -2189,14 +2202,20 @@ public class Player extends Actor {
 	public float getWalkSpeed() {
 		float baseSpeed = 0.10f + stats.SPD * 0.015f;
 		if(statusEffects == null || statusEffects.size <= 0) return baseSpeed * GetEquippedSpeedMod();
-		
+
 		for(StatusEffect s : statusEffects) {
 			if(s.active) baseSpeed *= s.speedMod;
+
+			//Sprinting!
+			if(Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT)) {
+				baseSpeed = 0.25F + (float) this.stats.SPD * 0.015F;
+			}
+
 		}
 		
 		return baseSpeed * GetEquippedSpeedMod();
 	}
-	
+
 	public void setupController() {
 		try {
 			if(Game.instance.input != null) {
@@ -2367,6 +2386,8 @@ public class Player extends Actor {
 
     private transient float t_timeSinceEscapeEffect = 0;
 	private transient Color escapeFlashColor = new Color();
+
+	//Orb Code
 	private void tickEscapeEffects(Level level, float delta) {
 		t_timeSinceEscapeEffect += delta;
 
@@ -2438,6 +2459,7 @@ public class Player extends Actor {
 							if(Game.rand.nextBoolean()) {
 								Explosion e = new Explosion();
 
+								// TODO: Set new Orb Item to spawn a monster ("Monster m = new Monster()")
 								e.spawns = new Array<Entity>();
 								Fire f = new Fire();
 								f.color = new Color(Color.PURPLE);
@@ -2461,6 +2483,7 @@ public class Player extends Actor {
 			}
 		}
 	}
+	// Orb Code Ends
 
 	public void updatePlaytime(float delta) {
 		if(playtime >= 0) {
@@ -2518,4 +2541,6 @@ public class Player extends Actor {
 				itm.drawable.refresh();
 		}
     }
+
+
 }
