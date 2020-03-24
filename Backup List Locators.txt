@@ -1,0 +1,23 @@
+This file contains the changes and additions and where they are located and Search Terms used.
+
+#RightClickEntitiesMenu.java#
+- Added Fate Entities
+Search term: //Fate Entities Menu
+
+Code:
+	fateEntityMenu.sortItems();
+	entityMenu.addItemAt(fateEntityMenu, 0);
+-------------------------------------------------------------------------
+#Actor.java#
+- Added Booleans for Resistances
+Search term: //Resistances
+
+Code:
+	@EditorProperty(group = "Resistances")
+	public boolean Fire = false;
+
+	@EditorProperty(group = "Resistances")
+	public boolean Ice = false;
+
+	@EditorProperty(group = "Resistances")
+	public boolean Poison = false;

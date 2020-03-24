@@ -1,0 +1,6937 @@
+{
+	width: 36,
+	height: 17,
+	tiles: [
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 27,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 27,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			eastTex: 27,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		null,
+		{
+			blockMotion: true,
+			renderSolid: true
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true
+		},
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 27,
+			westTex: 0,
+			bottomNorthTex: 0,
+			bottomWestTex: 19,
+			northTexAtlas: t1,
+			westTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 27,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			floorHeight: 1.4375,
+			ceilHeight: 4.5625,
+			slopeNW: 0.1875,
+			slopeNE: 0.1875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 27,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			floorHeight: 1.4375,
+			ceilHeight: 4.5625,
+			slopeNW: 0.1875,
+			slopeNE: 0.1875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 27,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			floorHeight: 1.1875,
+			ceilHeight: 4.5625,
+			slopeNW: 0.0625,
+			slopeNE: 0.1875,
+			slopeSE: 0.125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 27,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			floorHeight: 1.0625,
+			ceilHeight: 4.5625,
+			slopeNW: 0.0625,
+			slopeNE: 0.1875,
+			slopeSE: 0.125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 27,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			floorHeight: 1.1875,
+			ceilHeight: 4.5625,
+			slopeNW: 0.125,
+			slopeNE: 0.125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 27,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			floorHeight: 1.375,
+			ceilHeight: 4.5625,
+			slopeNW: 0.5625,
+			slopeNE: 0.1875,
+			slopeSW: 0.375
+		},
+		{
+			blockMotion: true,
+			renderSolid: true
+		},
+		{
+			blockMotion: true,
+			renderSolid: true
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			westTex: 0,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 0.8125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 19,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTexAtlas: t1,
+			floorHeight: 1.625,
+			ceilHeight: 4.5625,
+			slopeSE: 0.0625,
+			slopeSW: 0.0625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 10,
+			wallBottomTexAtlas: t1,
+			floorTex: 11,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: 0.3125,
+			ceilHeight: 4.5625,
+			slopeNE: 0.1875,
+			slopeSE: 0.125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 10,
+			wallBottomTexAtlas: t1,
+			floorTex: 11,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: 0.3125,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 10,
+			wallBottomTexAtlas: t1,
+			floorTex: 11,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: 0.0625,
+			ceilHeight: 4.5625,
+			slopeNW: 0.125,
+			slopeNE: 0.25,
+			slopeSE: 0.25
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 4.5625,
+			slopeNE: 0.3125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 3.5,
+			slopeNW: 0.1875,
+			ceilSlopeNW: -1,
+			ceilSlopeSW: -1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: 0.5,
+			ceilHeight: 2.5,
+			slopeNW: 0.875,
+			slopeSW: 0.875,
+			ceilSlopeNW: -1.125,
+			ceilSlopeSW: -1.125
+		},
+		null,
+		{
+			blockMotion: true,
+			renderSolid: true,
+			westTex: 0,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			southTex: 10,
+			bottomSouthTex: 11,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			southTex: 10,
+			bottomSouthTex: 11,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			southTex: 10,
+			bottomSouthTex: 11,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			wallTex: 9,
+			wallTexAtlas: t1-animated,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTex: 8,
+			wallTexAtlas: t1-animated,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			ceilTex: 16,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1-animated,
+			ceilHeight: 1.0625,
+			ceilSlopeNW: -0.4375,
+			ceilSlopeNE: -0.4375
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			southTex: 10,
+			bottomSouthTex: 11,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			ceilHeight: 1.375,
+			ceilSlopeNW: -0.4375,
+			ceilSlopeNE: -0.4375
+		},
+		{
+			wallTex: 8,
+			wallTexAtlas: t1-animated,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			ceilTex: 16,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1-animated,
+			ceilHeight: 1.0625,
+			ceilSlopeNW: -0.4375,
+			ceilSlopeNE: -0.4375
+		},
+		{
+			wallTex: 9,
+			wallTexAtlas: t1-animated,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			southTex: 10,
+			bottomSouthTex: 11,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			southTex: 10,
+			bottomSouthTex: 11,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			southTex: 10,
+			bottomSouthTex: 11,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 5,
+			eastTex: 0,
+			bottomSouthTex: 0,
+			bottomEastTex: 0,
+			southTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true
+		},
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 19,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTexAtlas: t1,
+			floorHeight: 1.8125,
+			ceilHeight: 4.5625,
+			slopeNW: 0.0625,
+			slopeNE: 0.0625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 10,
+			wallBottomTexAtlas: t1,
+			floorTex: 11,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: 0.125,
+			ceilHeight: 4.5625,
+			slopeNW: 0.1875,
+			slopeNE: 0.3125,
+			slopeSE: 0.1875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.125,
+			ceilHeight: 4.5625,
+			slopeNE: 0.125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.4375,
+			ceilHeight: 4.5625,
+			slopeNW: 0.1875,
+			slopeNE: 0.25,
+			slopeSE: 0.1875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.5625,
+			ceilHeight: 3.5,
+			ceilSlopeNW: -1,
+			ceilSlopeSW: -1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			eastTex: 0,
+			bottomSouthTex: 0,
+			bottomEastTex: 0,
+			southTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			westTex: 0,
+			bottomSouthTex: 0,
+			bottomWestTex: 0,
+			southTexAtlas: t1,
+			westTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 10,
+			bottomWestTex: 11,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 1.9166667,
+			ceilSlopeNW: -0.47916684,
+			ceilSlopeNE: -0.47916684
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 1.9166667,
+			ceilSlopeNW: -0.47916684,
+			ceilSlopeNE: -0.47916684
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 1.9166667,
+			ceilSlopeNW: -0.47916684,
+			ceilSlopeNE: -0.47916684
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 3.1875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 1.9166667,
+			ceilSlopeNW: -0.47916672,
+			ceilSlopeNE: -0.47916672
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 1.9166667,
+			ceilSlopeNW: -0.47916672,
+			ceilSlopeNE: -0.47916672
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.75,
+			ceilHeight: 1.9166667,
+			ceilSlopeNW: -0.47916672,
+			ceilSlopeNE: -0.47916672
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 10,
+			bottomEastTex: 11,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 5,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTex: 5,
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 6,
+			ceilTex: 4,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			eastTex: 5,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 19,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTexAtlas: t1,
+			floorHeight: 1.75,
+			ceilHeight: 4.5625,
+			slopeNW: 0.0625,
+			slopeNE: 0.0625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 0,
+			bottomEastTex: 19,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			floorHeight: 0,
+			ceilHeight: 4.5625,
+			slopeNE: 0.1875,
+			slopeSE: 0.0625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.375,
+			ceilHeight: 4.5625,
+			slopeNE: 0.125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.8125,
+			ceilHeight: 4.5625,
+			slopeNW: 0.1875,
+			slopeNE: 0.3125,
+			slopeSE: 0.1875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.8125,
+			ceilHeight: 4.5625,
+			slopeNW: 0.1875,
+			slopeNE: 0.1875,
+			slopeSW: 0.1875
+		},
+		{
+			wallTex: 11,
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			ceilTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.5625,
+			ceilHeight: 2.5,
+			ceilSlopeNW: -1,
+			ceilSlopeSW: -1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			westTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			floorHeight: -0.0625,
+			ceilHeight: 0.25,
+			slopeNW: 0.1875,
+			slopeNE: 0.1875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 0,
+			westTex: 0,
+			bottomEastTex: 0,
+			bottomWestTex: 0,
+			eastTexAtlas: t1,
+			westTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTexAtlas: t1,
+			westTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 10,
+			bottomWestTex: 11,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.3958335,
+			ceilSlopeNW: -0.47916654,
+			ceilSlopeNE: -0.47916654
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.3958335,
+			ceilSlopeNW: -0.47916654,
+			ceilSlopeNE: -0.47916654
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.3958335,
+			ceilSlopeNW: -0.47916654,
+			ceilSlopeNE: -0.47916654
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 3.53125,
+			ceilSlopeNW: -0.65625,
+			ceilSlopeNE: -0.65625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 3.53125,
+			ceilSlopeNW: -0.65625,
+			ceilSlopeNE: -0.65625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 3.84375,
+			ceilSlopeNW: -0.65625,
+			ceilSlopeNE: -0.65625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 3.53125,
+			ceilSlopeNW: -0.65625,
+			ceilSlopeNE: -0.65625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 3.53125,
+			ceilSlopeNW: -0.65625,
+			ceilSlopeNE: -0.65625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.3958333,
+			ceilSlopeNW: -0.47916654,
+			ceilSlopeNE: -0.47916654
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.3958333,
+			ceilSlopeNW: -0.47916654,
+			ceilSlopeNE: -0.47916654
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.3958333,
+			ceilSlopeNW: -0.47916654,
+			ceilSlopeNE: -0.47916654
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 10,
+			bottomEastTex: 11,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 5,
+			eastTex: 0,
+			bottomNorthTex: 0,
+			bottomEastTex: 0,
+			northTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true
+		},
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		{
+			blockMotion: true,
+			renderSolid: true
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 19,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTexAtlas: t1,
+			floorHeight: 1.4375,
+			ceilHeight: 4.5625,
+			slopeNW: 0.125,
+			slopeNE: 0.125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 0,
+			bottomEastTex: 19,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 4.5625,
+			slopeNE: 0.1875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.8125,
+			ceilHeight: 4.5625,
+			slopeNE: 0.1875,
+			slopeSE: 0.1875,
+			slopeSW: 0.125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.8125,
+			ceilHeight: 4.5625,
+			slopeNW: 0.1875,
+			slopeSE: 0.125,
+			slopeSW: 0.1875
+		},
+		{
+			wallTex: 11,
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			ceilTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.5625,
+			ceilHeight: 2,
+			ceilSlopeNW: -1,
+			ceilSlopeSW: -1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			southTex: 0,
+			eastTex: 0,
+			bottomNorthTex: 0,
+			bottomSouthTex: 0,
+			bottomEastTex: 0,
+			northTexAtlas: t1,
+			southTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			ceilHeight: 1,
+			ceilSlopeNW: -0.375,
+			ceilSlopeNE: -0.375
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			ceilHeight: 1,
+			ceilSlopeNW: -0.375,
+			ceilSlopeNE: -0.375
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 1,
+			ceilSlopeNW: -0.375,
+			ceilSlopeNE: -0.375
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 10,
+			bottomWestTex: 11,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			floorHeight: -0.8125,
+			ceilHeight: 1.3125,
+			slopeNW: 0.3125,
+			slopeNE: 0.3125,
+			ceilSlopeNW: -0.375,
+			ceilSlopeNE: -0.375
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875,
+			ceilSlopeNW: -0.4791667,
+			ceilSlopeNE: -0.4791667
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875,
+			ceilSlopeNW: -0.4791667,
+			ceilSlopeNE: -0.4791667
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			southTex: 10,
+			bottomSouthTex: 11,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 4.1875,
+			ceilSlopeNW: -0.65625,
+			ceilSlopeNE: -0.65625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			southTex: 10,
+			bottomSouthTex: 11,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 4.1875,
+			ceilSlopeNW: -0.65625,
+			ceilSlopeNE: -0.65625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			southTex: 10,
+			bottomSouthTex: 11,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 4.5,
+			ceilSlopeNW: -0.65625,
+			ceilSlopeNE: -0.65625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 4.1875,
+			ceilSlopeNW: -0.65625,
+			ceilSlopeNE: -0.65625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 4.1875,
+			ceilSlopeNW: -0.65625,
+			ceilSlopeNE: -0.65625
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875,
+			ceilSlopeNW: -0.47916666,
+			ceilSlopeNE: -0.47916666
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875,
+			ceilSlopeNW: -0.47916666,
+			ceilSlopeNE: -0.47916666
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 10,
+			bottomEastTex: 11,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		null,
+		null,
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1
+		},
+		null,
+		{
+			blockMotion: true,
+			renderSolid: true,
+			westTex: 0,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 0,
+			eastTex: 27,
+			bottomNorthTex: 19,
+			bottomEastTex: 0,
+			northTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			floorHeight: 1.1875,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 4.5625,
+			slopeSW: 0.125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 4.5625,
+			slopeSE: 0.125,
+			slopeSW: 0.1875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.6875,
+			ceilHeight: 4.5625,
+			slopeNE: 0.0625,
+			slopeSE: 0.25,
+			slopeSW: 0.0625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.6875,
+			ceilHeight: 4.5625,
+			slopeNW: 0.0625,
+			slopeSE: 0.0625,
+			slopeSW: 0.0625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.5625,
+			ceilHeight: 3.5,
+			ceilSlopeNW: -1,
+			ceilSlopeSW: -1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			ceilHeight: 1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 10,
+			bottomWestTex: 11,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			floorHeight: -0.8125,
+			ceilHeight: 1.3125
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 10,
+			bottomWestTex: 11,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			floorHeight: -1.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -2.125,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -2.125,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 0,
+			bottomWestTexAtlas: t1,
+			floorHeight: -2.875,
+			ceilHeight: 4.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 21,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -3.0625,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 21,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -3.0625,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			eastTex: 0,
+			bottomSouthTex: 0,
+			bottomEastTex: 0,
+			southTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			eastTex: 0,
+			bottomSouthTex: 0,
+			bottomEastTex: 0,
+			southTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			westTex: 0,
+			bottomSouthTex: 0,
+			bottomWestTex: 0,
+			southTexAtlas: t1,
+			westTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1,
+			southTex: 0,
+			westTex: 0,
+			bottomSouthTex: 0,
+			bottomWestTex: 0,
+			southTexAtlas: t1,
+			westTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			southTex: 0,
+			eastTex: 27,
+			bottomSouthTex: 19,
+			bottomEastTex: 0,
+			southTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			floorHeight: 1.25,
+			ceilHeight: 4.5625,
+			slopeNE: 0.1875,
+			slopeSE: 0.3125,
+			slopeSW: 0.125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 4.5625,
+			slopeNW: 0.125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 4.5625,
+			slopeNW: 0.1875,
+			slopeNE: 0.125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 4.5625,
+			slopeNE: 0.1875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTex: 11,
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			ceilTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.5625,
+			ceilHeight: 2,
+			ceilSlopeNW: -1,
+			ceilSlopeSW: -1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			eastTex: 0,
+			bottomNorthTex: 0,
+			bottomEastTex: 0,
+			northTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 1,
+			ceilSlopeSE: -0.375,
+			ceilSlopeSW: -0.375
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 1,
+			ceilSlopeSE: -0.375,
+			ceilSlopeSW: -0.375
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 1,
+			ceilSlopeSE: -0.375,
+			ceilSlopeSW: -0.375
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 10,
+			bottomWestTex: 11,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			floorHeight: -0.8125,
+			ceilHeight: 1.3125,
+			slopeSE: 0.3125,
+			slopeSW: 0.3125,
+			ceilSlopeSE: -0.375,
+			ceilSlopeSW: -0.375
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 10,
+			bottomWestTex: 11,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			floorHeight: -1.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -2.125,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -2.125,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 0,
+			bottomWestTexAtlas: t1,
+			floorHeight: -2.875,
+			ceilHeight: 4.875,
+			slopeSE: 0.375,
+			slopeSW: 0.375
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 21,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -3.0625,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 21,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -3.0625,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 21,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -1.1875,
+			ceilHeight: 2.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 21,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -1.1875,
+			ceilHeight: 2.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 21,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -1.1875,
+			ceilHeight: 2.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 21,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.75,
+			ceilHeight: 1.1666671,
+			ceilSlopeNW: -0.6666665,
+			ceilSlopeNE: -0.6666665
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 21,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.75,
+			ceilHeight: 1.1666671,
+			ceilSlopeNW: -0.6666665,
+			ceilSlopeNE: -0.6666665
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 21,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: 0.375
+		},
+		null,
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			westTex: 0,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 27,
+			southTex: 27,
+			westTex: 0,
+			bottomNorthTex: 0,
+			bottomSouthTex: 0,
+			bottomWestTex: 19,
+			northTexAtlas: t1,
+			southTexAtlas: t1,
+			westTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTexAtlas: t1,
+			floorHeight: 1.8125,
+			ceilHeight: 4.5625,
+			slopeSE: 0.078125,
+			slopeSW: 0.078125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 0,
+			bottomEastTex: 19,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			floorHeight: -0.75,
+			ceilHeight: 4.5625,
+			slopeSE: 0.1875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.75,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTex: 11,
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			ceilTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.5625,
+			ceilHeight: 2.5,
+			ceilSlopeNW: -1,
+			ceilSlopeSW: -1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			westTex: 0,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 10,
+			bottomWestTex: 11,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 10,
+			bottomWestTex: 11,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			floorHeight: -1.9375,
+			ceilHeight: 2.875,
+			slopeSE: 0.33333343,
+			slopeSW: 0.33333343
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -2.125,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -2.125,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			floorHeight: -2.5,
+			ceilHeight: 4.875,
+			slopeSE: 0.375,
+			slopeSW: 0.375
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 21,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -3.0625,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 21,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -3.0625,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 1.833333,
+			ceilSlopeNW: -0.66666687,
+			ceilSlopeNE: -0.66666687
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 1.833333,
+			ceilSlopeNW: -0.66666687,
+			ceilSlopeNE: -0.66666687
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			eastTex: 0,
+			bottomNorthTex: 0,
+			bottomEastTex: 0,
+			northTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 5,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 5,
+			westTex: 0,
+			bottomSouthTex: 0,
+			bottomWestTex: 0,
+			southTexAtlas: t1,
+			westTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1,
+			southTex: 5,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTexAtlas: t1,
+			eastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			eastTex: 0,
+			bottomNorthTex: 0,
+			bottomEastTex: 0,
+			northTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 19,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTexAtlas: t1,
+			floorHeight: 1.890625,
+			ceilHeight: 4.5625,
+			slopeSE: 0.078125,
+			slopeSW: 0.078125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 10,
+			wallBottomTexAtlas: t1,
+			floorTex: 11,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.1875,
+			ceilHeight: 4.5625,
+			slopeSE: 0.8125,
+			slopeSW: 0.1875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.875,
+			ceilHeight: 4.5625,
+			slopeNE: 0.0625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.75,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.75,
+			ceilHeight: 4.5625,
+			slopeNW: 0.125,
+			slopeNE: 0.125,
+			slopeSE: 0.125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.75,
+			ceilHeight: 3.5,
+			slopeNW: 0.125,
+			slopeNE: 0.125,
+			ceilSlopeNW: -1,
+			ceilSlopeSW: -1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			eastTex: 0,
+			bottomSouthTex: 0,
+			bottomEastTex: 0,
+			southTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			westTex: 0,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 1.1666667,
+			ceilSlopeNW: -0.66666657,
+			ceilSlopeNE: -0.66666657
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 10,
+			bottomWestTex: 11,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			ceilHeight: 1.1666667,
+			ceilSlopeNW: -0.66666657,
+			ceilSlopeNE: -0.66666657
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 10,
+			bottomWestTex: 11,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			floorHeight: -1.6041664,
+			ceilHeight: 2.875,
+			slopeSE: 0.3333333,
+			slopeSW: 0.3333333
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -2.125,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -2.125,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -2.125,
+			ceilHeight: 4.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			floorHeight: -2.125,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			floorHeight: -2.125,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 10,
+			bottomEastTex: 11,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			floorHeight: -1.125,
+			ceilHeight: 2.875,
+			slopeNW: 0.1875,
+			slopeNE: 0.1875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -1.125,
+			ceilHeight: 2.875,
+			slopeNW: 0.1875,
+			slopeNE: 0.1875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 10,
+			bottomEastTex: 11,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			ceilHeight: 2.5,
+			ceilSlopeNW: -0.66666657,
+			ceilSlopeNE: -0.66666657
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 2.5,
+			ceilSlopeNW: -0.66666657,
+			ceilSlopeNE: -0.66666657
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			eastTex: 0,
+			westTex: 0,
+			bottomEastTex: 0,
+			bottomWestTex: 0,
+			eastTexAtlas: t1,
+			westTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1,
+			westTex: 5,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			tileSpaceType: OPEN_SE,
+			wallTex: 5,
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 6,
+			ceilTex: 4,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 2.375
+		},
+		{
+			wallTex: 5,
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 6,
+			ceilTex: 4,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 2.375
+		},
+		{
+			wallTex: 5,
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 6,
+			ceilTex: 4,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 2.375
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 5,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		null,
+		null,
+		null,
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 19,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTexAtlas: t1,
+			floorHeight: 1.96875,
+			ceilHeight: 4.5625,
+			slopeSE: 0.078125,
+			slopeSW: 0.078125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 0,
+			bottomEastTex: 19,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			floorHeight: 1.8125,
+			ceilHeight: 4.5625,
+			slopeNW: 0.3125,
+			slopeSE: 0.5625,
+			slopeSW: 0.0625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.75,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.6875,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.75,
+			ceilHeight: 4.5625,
+			slopeNE: 0.125,
+			slopeSE: 0.125,
+			slopeSW: 0.125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			floorHeight: -0.75,
+			ceilHeight: 3.5,
+			slopeSE: 0.125,
+			slopeSW: 0.1875,
+			ceilSlopeNW: -1,
+			ceilSlopeSW: -1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTexAtlas: t1,
+			floorHeight: 0.5,
+			ceilHeight: 2.5,
+			slopeNW: 0.875,
+			slopeSW: 0.875,
+			ceilSlopeNW: -1.125,
+			ceilSlopeSW: -1.125
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			westTex: 0,
+			bottomSouthTex: 0,
+			bottomWestTex: 0,
+			southTexAtlas: t1,
+			westTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 1.833333,
+			ceilSlopeNW: -0.6666668,
+			ceilSlopeNE: -0.6666668
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 10,
+			bottomWestTex: 11,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			ceilHeight: 1.833333,
+			ceilSlopeNW: -0.6666668,
+			ceilSlopeNE: -0.6666668
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 10,
+			bottomWestTex: 11,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			floorHeight: -1.2708336,
+			ceilHeight: 2.875,
+			slopeSE: 0.3333333,
+			slopeSW: 0.3333333
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -2.125,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -2.125,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			southTex: 10,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			floorHeight: -2.125,
+			ceilHeight: 4.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -2.125,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -2.125,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 10,
+			bottomEastTex: 11,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			floorHeight: -1.3125,
+			ceilHeight: 2.875,
+			slopeNW: 0.1875,
+			slopeNE: 0.1875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -1.3125,
+			ceilHeight: 2.875,
+			slopeNW: 0.1875,
+			slopeNE: 0.1875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 10,
+			bottomEastTex: 11,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.5
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 2.5
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			eastTex: 0,
+			westTex: 0,
+			bottomSouthTex: 0,
+			bottomEastTex: 0,
+			bottomWestTex: 0,
+			southTexAtlas: t1,
+			eastTexAtlas: t1,
+			westTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1,
+			westTex: 5,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTex: 5,
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 6,
+			ceilTex: 4,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 2.375
+		},
+		{
+			wallTex: 5,
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 6,
+			ceilTex: 4,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 2.375
+		},
+		{
+			wallTex: 5,
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 6,
+			ceilTex: 4,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 2.375
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			eastTex: 5,
+			bottomNorthTex: 0,
+			bottomEastTex: 0,
+			northTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true
+		},
+		null,
+		null,
+		null,
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 19,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 10,
+			wallBottomTexAtlas: t1,
+			floorTex: 11,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: 2.046875,
+			ceilHeight: 4.5625,
+			slopeSE: 0.078125,
+			slopeSW: 0.078125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 0,
+			bottomEastTex: 19,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			floorHeight: -0.125,
+			ceilHeight: 4.5625,
+			slopeNE: 1,
+			slopeSE: 0.5
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.5625,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.5625,
+			ceilHeight: 4.5625,
+			slopeSW: 0.0625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			floorHeight: -0.4375,
+			ceilHeight: 3.5,
+			slopeSW: 0.125,
+			ceilSlopeNW: -1,
+			ceilSlopeSW: -1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTexAtlas: t1,
+			floorHeight: 0.5,
+			ceilHeight: 2.5,
+			slopeNW: 0.875,
+			slopeSW: 0.875,
+			ceilSlopeNW: -1.125,
+			ceilSlopeSW: -1.125
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTexAtlas: t1,
+			ceilHeight: 1.5625,
+			slopeNE: 0.75,
+			slopeSE: 0.75,
+			ceilSlopeNE: -1.3125,
+			ceilSlopeSE: -1.3125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			ceilHeight: 2.5,
+			ceilSlopeNW: -0.6666665,
+			ceilSlopeNE: -0.6666665
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 10,
+			bottomWestTex: 11,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			ceilHeight: 2.5,
+			ceilSlopeNW: -0.6666665,
+			ceilSlopeNE: -0.6666665
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			southTex: 10,
+			bottomSouthTex: 11,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 10,
+			bottomNorthTex: 11,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			floorHeight: -1.875,
+			ceilHeight: 4.3125,
+			ceilSlopeSE: -0.625,
+			ceilSlopeSW: -0.625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 10,
+			westTex: 10,
+			bottomNorthTex: 11,
+			bottomWestTex: 0,
+			northTexAtlas: t1,
+			westTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			floorHeight: -1.875,
+			ceilHeight: 4.3125,
+			ceilSlopeSE: -0.625,
+			ceilSlopeSW: -0.625
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 10,
+			eastTex: 10,
+			bottomNorthTex: 11,
+			bottomEastTex: 0,
+			northTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			floorHeight: -1.875,
+			ceilHeight: 4.3125,
+			ceilSlopeSE: -0.625,
+			ceilSlopeSW: -0.625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 10,
+			bottomNorthTex: 11,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			floorHeight: -1.875,
+			ceilHeight: 4.3125,
+			ceilSlopeSE: -0.625,
+			ceilSlopeSW: -0.625
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -1.8125,
+			ceilHeight: 2.875,
+			slopeNW: 0.25,
+			slopeSW: 0.25
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -1.5,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 10,
+			bottomEastTex: 11,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.5,
+			slopeSE: 0.4375,
+			slopeSW: 0.4375
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			ceilHeight: 2.5
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 0,
+			eastTexAtlas: t1,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 5,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTex: 5,
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 6,
+			ceilTex: 4,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 2.375
+		},
+		{
+			wallTex: 5,
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 6,
+			ceilTex: 4,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 2.375
+		},
+		{
+			wallTex: 5,
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTex: 6,
+			ceilTex: 4,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.625,
+			ceilHeight: 2.375
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			eastTex: 5,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		null,
+		null,
+		null,
+		null,
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 19,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 10,
+			wallBottomTexAtlas: t1,
+			floorTex: 11,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: 2.3125,
+			ceilHeight: 4.5625,
+			slopeSE: 0.4375,
+			slopeSW: 0.4375
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 10,
+			wallBottomTexAtlas: t1,
+			floorTex: 11,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: 0.5,
+			ceilHeight: 4.5625,
+			slopeNE: 0.5,
+			slopeSE: 1,
+			slopeSW: 0.1875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.5625,
+			ceilHeight: 4.5625,
+			slopeSE: 0.1875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.3125,
+			ceilHeight: 4.5625,
+			slopeSW: 0.125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			floorHeight: -0.1875,
+			ceilHeight: 3.5,
+			slopeSE: 0.0625,
+			slopeSW: 0.3125,
+			ceilSlopeNW: -1,
+			ceilSlopeSW: -1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTexAtlas: t1,
+			floorHeight: 0.5,
+			ceilHeight: 2.5,
+			slopeNW: 0.875,
+			slopeSW: 0.875,
+			ceilSlopeNW: -1.125,
+			ceilSlopeSW: -1.125
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 1.5625,
+			slopeNE: 0.75,
+			slopeSE: 0.75,
+			ceilSlopeNE: -1.3125,
+			ceilSlopeSE: -1.3125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 2.5
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 10,
+			bottomWestTex: 11,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			floorHeight: -0.875,
+			ceilHeight: 2.5,
+			slopeNE: 0.3125,
+			slopeSE: 0.3125
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 10,
+			bottomWestTex: 11,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.875,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 10,
+			bottomEastTex: 11,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -1.875,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -1.875,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 10,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			floorHeight: -1.875,
+			ceilHeight: 3.1875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -1.875,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -1.875,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -1.8125,
+			ceilHeight: 2.875,
+			slopeNW: 0.25,
+			slopeSW: 0.25
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -1.5,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 10,
+			bottomEastTex: 11,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			ceilHeight: 2.5
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 2.5
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			eastTex: 0,
+			bottomNorthTex: 0,
+			bottomEastTex: 0,
+			northTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 5,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 5,
+			westTex: 0,
+			bottomNorthTex: 0,
+			bottomWestTex: 0,
+			northTexAtlas: t1,
+			westTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 5,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		null,
+		null,
+		null,
+		null,
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 10,
+			wallBottomTexAtlas: t1,
+			floorTex: 11,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: 3.5,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 10,
+			wallBottomTexAtlas: t1,
+			floorTex: 11,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: 1.5,
+			ceilHeight: 4.5625,
+			slopeNE: 0.3125,
+			slopeSE: 1,
+			slopeSW: 0.1875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.0625,
+			ceilHeight: 4.5625,
+			slopeNE: 0.0625,
+			slopeSE: 0.625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.375,
+			ceilHeight: 4.5625,
+			slopeSE: 0.1875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.125,
+			ceilHeight: 4.5625,
+			slopeNW: 0.125,
+			slopeSW: 0.4375
+		},
+		{
+			tileSpaceType: OPEN_NW,
+			wallTexAtlas: t1,
+			wallBottomTex: 19,
+			wallBottomTexAtlas: t1,
+			floorTex: 17,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: 0.375,
+			ceilHeight: 3.5,
+			slopeSE: 0.1875,
+			slopeSW: 0.5,
+			ceilSlopeNW: -1,
+			ceilSlopeSW: -1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			eastTex: 0,
+			bottomNorthTex: 0,
+			bottomEastTex: 0,
+			northTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 1.5625,
+			slopeNE: 0.75,
+			slopeSE: 0.75,
+			ceilSlopeNE: -1.3125,
+			ceilSlopeSE: -1.3125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 2.5
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 10,
+			bottomWestTex: 11,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1,
+			ceilHeight: 2.5
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 10,
+			southTex: 10,
+			bottomNorthTex: 11,
+			bottomSouthTex: 11,
+			northTexAtlas: t1,
+			southTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			southTex: 10,
+			bottomSouthTex: 11,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -1.875,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -1.875,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -1.875,
+			ceilHeight: 3.1875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -1.875,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -1.875,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.9375,
+			ceilHeight: 2.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 10,
+			bottomEastTex: 11,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			ceilHeight: 2.5
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 2.5
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			southTex: 0,
+			westTex: 0,
+			bottomSouthTex: 0,
+			bottomWestTex: 0,
+			southTexAtlas: t1,
+			westTexAtlas: t1,
+			bottomSouthTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			southTex: 0,
+			bottomSouthTex: 0,
+			southTexAtlas: t1,
+			bottomSouthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		null,
+		null,
+		null,
+		null,
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 10,
+			wallBottomTexAtlas: t1,
+			floorTex: 11,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: 3.5,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 10,
+			wallBottomTexAtlas: t1,
+			floorTex: 11,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: 3.5,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 10,
+			wallBottomTexAtlas: t1,
+			floorTex: 11,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: 3.5,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 10,
+			wallBottomTexAtlas: t1,
+			floorTex: 11,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: 3.5,
+			ceilHeight: 4.5625
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 10,
+			wallBottomTexAtlas: t1,
+			floorTex: 11,
+			ceilTex: 27,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: 3.5,
+			ceilHeight: 4.5625
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true
+		},
+		{
+			blockMotion: true,
+			renderSolid: true
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			westTex: 0,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 10,
+			westTex: 10,
+			bottomNorthTex: 11,
+			bottomWestTex: 11,
+			northTexAtlas: t1,
+			westTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			bottomNorthTex: 0,
+			bottomNorthTexAtlas: t1,
+			floorHeight: -0.4375
+		},
+		{
+			wallTex: 10,
+			wallTexAtlas: t1,
+			wallBottomTex: 11,
+			wallBottomTexAtlas: t1,
+			floorTex: 10,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			floorHeight: -0.4375
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 10,
+			eastTex: 10,
+			bottomNorthTex: 11,
+			bottomEastTex: 11,
+			northTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 10,
+			bottomNorthTex: 11,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 10,
+			bottomNorthTex: 11,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			ceilHeight: 0.8125
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 10,
+			bottomNorthTex: 11,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 10,
+			bottomNorthTex: 11,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 10,
+			bottomNorthTex: 11,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 10,
+			bottomNorthTex: 11,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 10,
+			bottomNorthTex: 11,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			eastTex: 0,
+			westTex: 0,
+			bottomEastTex: 0,
+			bottomWestTex: 0,
+			eastTexAtlas: t1,
+			westTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTex: 0,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		null,
+		null,
+		null,
+		null,
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTex: 27,
+			wallTexAtlas: t1,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true
+		},
+		null,
+		null,
+		{
+			blockMotion: true,
+			renderSolid: true,
+			westTex: 0,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			slopeSE: 0.125,
+			slopeSW: 0.125,
+			ceilSlopeSE: -0.875,
+			ceilSlopeSW: -0.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			slopeSE: 0.125,
+			slopeSW: 0.125,
+			ceilSlopeSE: -0.875,
+			ceilSlopeSW: -0.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			slopeSE: 0.125,
+			slopeSW: 0.125,
+			ceilSlopeSE: -0.875,
+			ceilSlopeSW: -0.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 10,
+			bottomNorthTex: 11,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			slopeSE: 0.125,
+			slopeSW: 0.125,
+			ceilSlopeSE: -0.875,
+			ceilSlopeSW: -0.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			northTex: 10,
+			bottomNorthTex: 11,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			slopeSE: 0.125,
+			slopeSW: 0.125,
+			ceilSlopeSE: -0.875,
+			ceilSlopeSW: -0.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			slopeSE: 0.125,
+			slopeSW: 0.125,
+			ceilSlopeSE: -0.875,
+			ceilSlopeSW: -0.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			slopeSE: 0.125,
+			slopeSW: 0.125,
+			ceilSlopeSE: -0.875,
+			ceilSlopeSW: -0.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			ceilHeight: 0.8125,
+			slopeSE: 0.125,
+			slopeSW: 0.125,
+			ceilSlopeSE: -0.875,
+			ceilSlopeSW: -0.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			slopeSE: 0.125,
+			slopeSW: 0.125,
+			ceilSlopeSE: -0.875,
+			ceilSlopeSW: -0.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			slopeSE: 0.125,
+			slopeSW: 0.125,
+			ceilSlopeSE: -0.875,
+			ceilSlopeSW: -0.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			slopeSE: 0.125,
+			slopeSW: 0.125,
+			ceilSlopeSE: -0.875,
+			ceilSlopeSW: -0.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			slopeSE: 0.125,
+			slopeSW: 0.125,
+			ceilSlopeSE: -0.875,
+			ceilSlopeSW: -0.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			slopeSE: 0.125,
+			slopeSW: 0.125,
+			ceilSlopeSE: -0.875,
+			ceilSlopeSW: -0.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			slopeSE: 0.125,
+			slopeSW: 0.125,
+			ceilSlopeSE: -0.875,
+			ceilSlopeSW: -0.875
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			slopeSE: 0.125,
+			slopeSW: 0.125,
+			ceilSlopeSE: -0.875,
+			ceilSlopeSW: -0.875
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			eastTex: 0,
+			westTex: 0,
+			bottomEastTex: 0,
+			bottomWestTex: 0,
+			eastTexAtlas: t1,
+			westTexAtlas: t1,
+			bottomEastTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			wallTexAtlas: t1,
+			northTex: 0,
+			eastTex: 0,
+			bottomNorthTex: 0,
+			bottomEastTex: 0,
+			northTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			eastTex: 0,
+			bottomNorthTex: 0,
+			bottomEastTex: 0,
+			northTexAtlas: t1,
+			eastTexAtlas: t1,
+			bottomNorthTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true
+		},
+		null,
+		null,
+		null,
+		null,
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 27,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		{
+			blockMotion: true,
+			renderSolid: true
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			northTex: 0,
+			bottomNorthTex: 0,
+			northTexAtlas: t1,
+			bottomNorthTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			westTex: 0,
+			bottomWestTex: 0,
+			westTexAtlas: t1,
+			bottomWestTexAtlas: t1
+		},
+		{
+			wallTexAtlas: t1,
+			wallBottomTex: 0,
+			wallBottomTexAtlas: t1,
+			floorTexAtlas: t1,
+			ceilTexAtlas: t1,
+			westTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		{
+			blockMotion: true,
+			renderSolid: true,
+			eastTex: 0,
+			bottomEastTex: 0,
+			eastTexAtlas: t1,
+			bottomEastTexAtlas: t1
+		},
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	entities: [
+		{
+			class: com.interrupt.dungeoneer.entities.Light,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 12,
+				isStatic: true,
+				spriteTex: editor
+			},
+			x: 17.459764,
+			y: 9.345242,
+			z: 1.4302925,
+			hidden: false,
+			isDynamic: false,
+			range: 8
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Light,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 12,
+				isStatic: true,
+				spriteTex: editor
+			},
+			x: 11.417484,
+			y: 2.3260977,
+			z: 1.00016594E-4,
+			isDynamic: false,
+			lightColor: {
+				r: 0.7490196,
+				b: 0.69803923,
+				a: 1
+			},
+			haloSize: 1,
+			haloMode: STENCIL_ONLY
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Light,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 12,
+				isStatic: true,
+				spriteTex: editor
+			},
+			x: 23.754498,
+			y: 2.3260977,
+			z: 1.00016594E-4,
+			isDynamic: false,
+			lightColor: {
+				r: 1,
+				g: 0.16862746,
+				b: 0.19215687,
+				a: 1
+			},
+			haloSize: 1,
+			haloMode: STENCIL_ONLY
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Light,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 12,
+				isStatic: true,
+				spriteTex: editor
+			},
+			x: 23.754498,
+			y: 12.432864,
+			z: 1.0787992,
+			isDynamic: false,
+			lightColor: {
+				g: 0.8352941,
+				b: 0.03137255,
+				a: 1
+			},
+			haloMode: STENCIL_ONLY
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Light,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 12,
+				isStatic: true,
+				spriteTex: editor
+			},
+			x: 11.126986,
+			y: 12.432864,
+			z: 1.0787992,
+			hidden: false,
+			isDynamic: false,
+			lightColor: {
+				r: 0.3764706,
+				g: 0.54901963,
+				b: 1,
+				a: 1
+			}
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.ParticleEmitter,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 14,
+				spriteTex: editor
+			},
+			x: 13.901306,
+			y: 9.738148,
+			z: 2.462421,
+			particleHalo: STENCIL_ONLY,
+			particleLifetime: 90,
+			particleRandomVelocity: {
+				x: 0.05,
+				y: 0.05,
+				z: -0.1
+			},
+			particleRandomSpawnCount: 4,
+			particleEndScale: 0.01,
+			particlesFullbrite: true,
+			particleSpawnInterval: 190,
+			particleRandomSpawnInterval: 100,
+			particleColor: {
+				r: 1,
+				g: 0.93333334,
+				b: 0.043137256,
+				a: 1
+			},
+			maxVisibleRadius: 0.4
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 12.699528,
+			y: 8.001582,
+			z: -0.4373998,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				tex: 1,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 13.370845,
+			y: 7.2318773,
+			z: -0.4373998,
+			tex: 1,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 12.519976,
+			y: 6.4762244,
+			z: -0.4373998,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 13.577299,
+			y: 6.2461963,
+			z: -0.4373998,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				tex: 1,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 12.359355,
+			y: 5.4741173,
+			z: -0.4373998,
+			tex: 1,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				tex: 1,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 14.782758,
+			y: 5.2278275,
+			z: -0.4373998,
+			tex: 1,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				tex: 1,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 16.088533,
+			y: 3.8835425,
+			z: -0.4373998,
+			tex: 1,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				tex: 1,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 16.32344,
+			y: 5.3063345,
+			z: -0.4373998,
+			tex: 1,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 18.5773,
+			y: 5.2461963,
+			z: -0.4373998,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 17.608406,
+			y: 4.1361747,
+			z: -0.4373998,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 19.5773,
+			y: 11.246197,
+			z: -1.3748999,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 17.899466,
+			y: 12.5335455,
+			z: -1.3748999,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 19.466566,
+			y: 13.319879,
+			z: -1.3748999,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 15.616207,
+			y: 12.433988,
+			z: -1.3748999,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				tex: 1,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 12.844685,
+			y: 12.107598,
+			z: -0.4373998,
+			tex: 1,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				tex: 1,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 14.499976,
+			y: 13.091657,
+			z: -0.4373998,
+			tex: 1,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 17.546345,
+			y: 13.300119,
+			z: -1.3748999,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 19.20056,
+			y: 12.308347,
+			z: -1.3748999,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				tex: 1,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 22.088211,
+			y: 3.562776,
+			z: -0.4373998,
+			tex: 1,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				tex: 1,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 23.449947,
+			y: 3.8829908,
+			z: 1.0019541E-4,
+			tex: 1,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				tex: 1,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 24.391388,
+			y: 2.3759136,
+			z: 1.0019541E-4,
+			tex: 1,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				tex: 1,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 22.575592,
+			y: 2.0871592,
+			z: 1.0019541E-4,
+			tex: 1,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				tex: 1,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 10.359355,
+			y: 2.4741173,
+			z: 1.0019541E-4,
+			tex: 1,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				tex: 1,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 11.556788,
+			y: 2.934023,
+			z: 1.0019541E-4,
+			tex: 1,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 10.860868,
+			y: 1.529696,
+			z: 1.0019541E-4,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				tex: 4,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 11.446443,
+			y: 2.297539,
+			z: -0.252359,
+			tex: 4,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				tex: 4,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 23.687752,
+			y: 2.2488744,
+			z: -0.252359,
+			tex: 4,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				tex: 1,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 23.457724,
+			y: 6.3300867,
+			z: 1.0019541E-4,
+			tex: 1,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				tex: 1,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 24.36219,
+			y: 6.6041903,
+			z: 1.0019541E-4,
+			tex: 1,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 20.5531,
+			y: 6.745175,
+			z: -0.4373998,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 21.588257,
+			y: 5.9164686,
+			z: -0.4373998,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 22.346828,
+			y: 6.571028,
+			z: -0.4373998,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 22.063747,
+			y: 8.4611225,
+			z: -0.4373998,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 20.304287,
+			y: 8.559319,
+			z: -0.4373998,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Sprite,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				isStatic: true,
+				spriteTex: sprite
+			},
+			x: 21.198286,
+			y: 8.821176,
+			z: -0.4373998,
+			spriteAtlas: sprite,
+			isDynamic: false
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.ParticleEmitter,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 14,
+				spriteTex: editor
+			},
+			x: 13.83741,
+			y: 11.0016365,
+			z: 2.462421,
+			particleHalo: STENCIL_ONLY,
+			particleLifetime: 90,
+			particleRandomVelocity: {
+				x: 0.05,
+				y: 0.05,
+				z: -0.1
+			},
+			particleRandomSpawnCount: 4,
+			particleEndScale: 0.01,
+			particlesFullbrite: true,
+			particleSpawnInterval: 190,
+			particleRandomSpawnInterval: 100,
+			particleColor: {
+				r: 1,
+				g: 0.93333334,
+				b: 0.043137256,
+				a: 1
+			},
+			maxVisibleRadius: 0.4
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Breakable,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableMesh,
+				textureFile: textures.png,
+				x: 12.379746,
+				y: 10.515788,
+				z: -0.4375,
+				rotZ: 78.35931
+			},
+			x: 12.379746,
+			y: 10.515788,
+			z: -0.4375,
+			isSolid: true,
+			collision: {
+				x: 0.17,
+				y: 0.17,
+				z: 0.4
+			},
+			shadowType: RECTANGLE,
+			stepHeight: 0,
+			calcStepHeight: 0,
+			rotation: {
+				z: 78.35931
+			},
+			meshFile: meshes/chair.obj,
+			textureFile: textures.png,
+			gibNum: 4,
+			lootSpawnChance: 0,
+			surpriseSpawnChance: 0
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Breakable,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableMesh,
+				textureFile: textures.png,
+				x: 12.366897,
+				y: 9.820843,
+				z: -0.4375,
+				rotZ: 101.52439
+			},
+			x: 12.366897,
+			y: 9.820843,
+			z: -0.4375,
+			isSolid: true,
+			collision: {
+				x: 0.17,
+				y: 0.17,
+				z: 0.4
+			},
+			shadowType: RECTANGLE,
+			stepHeight: 0,
+			calcStepHeight: 0,
+			rotation: {
+				z: 101.52439
+			},
+			meshFile: meshes/chair.obj,
+			textureFile: textures.png,
+			gibNum: 4,
+			lootSpawnChance: 0,
+			surpriseSpawnChance: 0
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Model,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableMesh,
+				meshFile: meshes/error_missing.obj,
+				x: 11.688118,
+				y: 10.867192,
+				z: 0.3347707,
+				isStaticMesh: true
+			},
+			x: 11.688118,
+			y: 10.867192,
+			z: 0.3347707,
+			isSolid: true,
+			collision: {
+				x: 0.125,
+				y: 0.125,
+				z: 0.5
+			},
+			isDynamic: false,
+			meshFile: meshes/error_missing.obj
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Model,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableMesh,
+				scale: 1.5,
+				meshFile: meshes/error_missing.obj,
+				x: 11.688118,
+				y: 10.468362,
+				z: 0.3347707,
+				isStaticMesh: true
+			},
+			x: 11.688118,
+			y: 10.468362,
+			z: 0.3347707,
+			isSolid: true,
+			collision: {
+				x: 0.125,
+				y: 0.125,
+				z: 0.5
+			},
+			scale: 1.5,
+			isDynamic: false,
+			meshFile: meshes/error_missing.obj
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Mover,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableMesh,
+				textureFile: textures.png,
+				x: 16.480518,
+				y: 6.260583,
+				z: -1.625
+			},
+			x: 16.480518,
+			y: 6.260583,
+			z: -1.625,
+			isSolid: true,
+			collision: {
+				x: 0.2,
+				y: 0.2,
+				z: 0.1
+			},
+			meshFile: meshes/chair.obj,
+			textureFile: textures.png,
+			moverEndMode: LOOPS,
+			moverMode: STARTS_IMMEDIATELY,
+			movesBy: {
+				z: 1
+			},
+			moveTime: 3,
+			interpolationMode: fade
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Mover,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableMesh,
+				textureFile: textures.png,
+				x: 15.875,
+				y: 6.25,
+				z: -1.625
+			},
+			x: 15.875,
+			y: 6.25,
+			z: -1.625,
+			isSolid: true,
+			collision: {
+				x: 0.2,
+				y: 0.2,
+				z: 0.1
+			},
+			meshFile: meshes/chair.obj,
+			textureFile: textures.png,
+			moverEndMode: LOOPS,
+			moverMode: STARTS_IMMEDIATELY,
+			movesBy: {
+				z: 1
+			},
+			rotatesBy: {
+				z: 90
+			},
+			moveTime: 3,
+			interpolationMode: fade
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Mover,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableMesh,
+				textureFile: textures.png,
+				x: 15.327085,
+				y: 6.260583,
+				z: -1.625
+			},
+			x: 15.327085,
+			y: 6.260583,
+			z: -1.625,
+			isSolid: true,
+			collision: {
+				x: 0.2,
+				y: 0.2,
+				z: 0.1
+			},
+			meshFile: meshes/chair.obj,
+			textureFile: textures.png,
+			movesBy: {
+				z: 1
+			},
+			moveTime: 3,
+			interpolationMode: fade,
+			endWait: 2
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.areas.FogArea,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 19,
+				spriteTex: editor
+			},
+			x: 16.106777,
+			y: 8.688666,
+			z: -3.8446443,
+			tex: 19,
+			collision: {
+				x: 20,
+				y: 20,
+				z: 10
+			},
+			fogColor: {
+				a: 1
+			},
+			fogEnd: 34,
+			viewDistance: 35,
+			changeTime: 0.01,
+			levelFogStart: 500,
+			levelFogEnd: 500,
+			levelViewDistance: 500,
+			levelFogColor: {
+				a: 1
+			}
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.DynamicLight,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 12,
+				spriteTex: editor
+			},
+			x: 17.5,
+			y: 15,
+			lightColor: {
+				x: 0.2,
+				y: 1,
+				z: 1
+			},
+			range: 1.2,
+			lightType: sin_slow,
+			haloSize: 0.20191827
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.areas.SkyboxArea,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 19,
+				spriteTex: editor
+			},
+			x: 4.463463,
+			y: 7.5993915,
+			z: -0.48765823,
+			tex: 19,
+			collision: {
+				x: 8,
+				y: 8,
+				z: 10
+			},
+			skybox: {
+				meshFile: meshes/sky.obj,
+				textureFile: sky.png
+			}
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Model,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableMesh,
+				meshFile: meshes/error_missing.obj,
+				x: 11.688118,
+				y: 10.067236,
+				z: 0.3347707,
+				isStaticMesh: true
+			},
+			x: 11.688118,
+			y: 10.067236,
+			z: 0.3347707,
+			isSolid: true,
+			collision: {
+				x: 0.125,
+				y: 0.125,
+				z: 0.5
+			},
+			isDynamic: false,
+			meshFile: meshes/error_missing.obj
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.triggers.TriggeredMessage,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 16,
+				spriteTex: editor
+			},
+			x: 11.75,
+			y: 10.5,
+			z: 0.10255349,
+			isSolid: true,
+			collision: {
+				x: 0.2,
+				y: 0.2,
+				z: 0.7
+			},
+			floating: true,
+			useVerb: Talk,
+			messageFile: test1.dat
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.triggers.TriggeredMessage,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 16,
+				spriteTex: editor
+			},
+			x: 4.318589,
+			y: 10.262177,
+			z: -0.07557532,
+			isSolid: true,
+			collision: {
+				x: 0.2,
+				y: 0.2,
+				z: 0.7
+			},
+			floating: true,
+			useVerb: Talk,
+			messageFile: test2.dat
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Model,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableMesh,
+				scale: 1.5,
+				meshFile: meshes/error_missing.obj,
+				x: 4.256707,
+				y: 10.230539,
+				z: 0.15664187,
+				isStaticMesh: true
+			},
+			x: 4.256707,
+			y: 10.230539,
+			z: 0.15664187,
+			isSolid: true,
+			collision: {
+				x: 0.125,
+				y: 0.125,
+				z: 0.5
+			},
+			scale: 1.5,
+			isDynamic: false,
+			meshFile: meshes/error_missing.obj
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.areas.TeleportArea,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 11,
+				spriteTex: editor
+			},
+			x: 34.5,
+			y: 7.5,
+			collision: {
+				x: 0.5,
+				y: 0.5,
+				z: 1
+			},
+			toWarpMarkerId: TELEPORT1
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.WarpMarker,
+			id: TELEPORT1,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 3,
+				spriteTex: editor
+			},
+			x: 29.5,
+			y: 14.5,
+			rotation: {
+				z: -180
+			}
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.WarpMarker,
+			id: TELEPORT2,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 3,
+				spriteTex: editor
+			},
+			x: 32.5,
+			y: 7.5,
+			rotation: {
+				z: -180
+			}
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.areas.TeleportArea,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 11,
+				spriteTex: editor
+			},
+			x: 27.5,
+			y: 14.5,
+			collision: {
+				x: 0.5,
+				y: 0.5,
+				z: 1
+			},
+			toWarpMarkerId: TELEPORT2
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Light,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 12,
+				isStatic: true,
+				spriteTex: editor
+			},
+			x: 29.5,
+			y: 10.5,
+			z: 1.082417,
+			isDynamic: false,
+			lightColor: {
+				r: 1,
+				g: 0.81960785,
+				b: 0.41568628,
+				a: 1
+			},
+			range: 2
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.Model,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableMesh,
+				scale: 1.5,
+				meshFile: meshes/error_missing.obj,
+				x: 28.625,
+				y: 9.625,
+				z: 0.25,
+				rotZ: -45,
+				isStaticMesh: true
+			},
+			x: 28.625,
+			y: 9.625,
+			z: 0.25,
+			isSolid: true,
+			collision: {
+				x: 0.125,
+				y: 0.125,
+				z: 0.5
+			},
+			scale: 1.5,
+			isDynamic: false,
+			rotation: {
+				z: -45
+			},
+			meshFile: meshes/error_missing.obj
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.WarpMarker,
+			id: MAIN_ROOM,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 3,
+				spriteTex: editor
+			},
+			x: 17.369638,
+			y: 9.2514925,
+			z: 3.5372043
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.triggers.TriggeredTeleportPlayer,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 11,
+				spriteTex: editor
+			},
+			x: 28.610125,
+			y: 9.603321,
+			z: 0.01690805,
+			isSolid: true,
+			collision: {
+				x: 0.2,
+				y: 0.2,
+				z: 0.8
+			},
+			floating: true,
+			triggerType: PLAYER_TOUCHED,
+			useVerb: USETELEPORTER,
+			doEffects: true,
+			toWarpMarkerId: MAIN_ROOM
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.triggers.TriggeredWarp,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 1,
+				spriteTex: editor
+			},
+			x: 25.372694,
+			y: 3.4996836,
+			isSolid: true,
+			collision: {
+				x: 0.2,
+				y: 0.4,
+				z: 0.8
+			},
+			hidden: false,
+			travelPath: ea755cc5-e21d-4dbc-a141-28b85af7b8f9,
+			unloadParentLevel: false,
+			levelToLoad: levels/mini-level.bin,
+			levelTheme: TESTNIGHT,
+			levelName: ALCOVE
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.WarpMarker,
+			id: MINI_LEVEL_EXIT,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				tex: 3,
+				spriteTex: editor
+			},
+			x: 24.5,
+			y: 3.5,
+			rotation: {
+				z: -180
+			}
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.ItemSpawner,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				tex: 5,
+				spriteTex: editor
+			},
+			x: 13.477065,
+			y: 14.345893,
+			z: 1.00046396E-4,
+			itemType: ranged,
+			itemName: handgun
+		},
+		{
+			class: com.interrupt.dungeoneer.entities.ItemSpawner,
+			drawable: {
+				class: com.interrupt.dungeoneer.gfx.drawables.DrawableSprite,
+				artType: sprite,
+				tex: 5,
+				spriteTex: editor
+			},
+			x: 14.5,
+			y: 14.375,
+			rotation: {
+				z: -90
+			},
+			itemType: ranged,
+			itemName: bullets
+		}
+	],
+	non_collidable_entities: [
+		
+	],
+	fogStart: 500,
+	fogEnd: 500,
+	viewDistance: 500,
+	skyLightColor: {
+		r: 0.5686275,
+		g: 0.627451,
+		b: 0.74509805,
+		a: 1
+	},
+	isLoaded: true,
+	editorMarkers: [
+		{
+			type: monster,
+			x: 18,
+			y: 4
+		},
+		{
+			type: monster,
+			x: 21,
+			y: 5
+		},
+		{
+			type: playerStart,
+			x: 13,
+			y: 12
+		}
+	],
+	t_intersectCheck1: {
+		
+	},
+	t_intersectCheck2: {
+		
+	},
+	t_intersectCheck3: {
+		
+	},
+	ambientTileLighting: {
+		a: 1
+	}
+}
