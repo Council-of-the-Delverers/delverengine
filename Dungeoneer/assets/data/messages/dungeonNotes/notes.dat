@@ -1,9 +1,0 @@
-{
-	repeats: true,
-	pickRandom: true,
-	messages: [
-		[
-			"Something goes here!"
-		],
-	]
-}
