@@ -8,7 +8,6 @@ This is the official repository for the standalone expansion to the game, Delver
 - Magic Resistances (Fire, Ice, Poison)
 - Custom Currencies (Ython, (???))
 - Particle Sphere Emitter
-- Ython Currency
 
 ## Whats planned:
 - TBA
