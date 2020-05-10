@@ -10,5 +10,5 @@ This is the official repository for the standalone expansion to the game, Delver
 - Particle Sphere Emitter
 
 ## Whats planned:
-- TBA
-
+- Bigger Levels
+- Better Fights
