@@ -12,3 +12,4 @@ This is the official repository for the standalone expansion to the game, Delver
 ## Whats planned:
 - Bigger Levels
 - Better Fights
+- Developers are now inside the game
