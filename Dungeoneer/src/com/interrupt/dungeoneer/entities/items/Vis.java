@@ -21,3 +21,5 @@ public class Vis extends Item {
         dropSound = "drops/drop_gold.mp3";
         collision.x = 0.1f;
         collision.y = 0.1f;
+    }
+}
