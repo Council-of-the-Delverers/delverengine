@@ -338,7 +338,7 @@ public class ShopOverlay extends WindowOverlay {
 		itm.x = (player.x + projx * 0.5f);
 		itm.y = (player.y + projy * 0.5f);
 	}
-	//Retrieve Player Currency
+	/** Retrieve Custom Currencies*/
 	protected int getPlayerCurrency(Player player){
 		if(currencyType == TriggeredShop.CurrencyType.ython)
 			return player.ython;
@@ -346,7 +346,7 @@ public class ShopOverlay extends WindowOverlay {
 		return player.gold;
 	}
 
-	//Buy with Currency
+	/** Buy with Custom Currencies */
 	protected void buyWithCurrency(int cost){
 		if(currencyType == TriggeredShop.CurrencyType.ython)
 			player.ython-=cost;
