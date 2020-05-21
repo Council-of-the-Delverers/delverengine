@@ -342,6 +342,8 @@ public class ShopOverlay extends WindowOverlay {
 	protected int getPlayerCurrency(Player player){
 		if(currencyType == TriggeredShop.CurrencyType.ython)
 			return player.ython;
+		if(currencyType == TriggeredShop.CurrencyType.vis)
+			return player.vis;
 
 		return player.gold;
 	}
@@ -350,6 +352,8 @@ public class ShopOverlay extends WindowOverlay {
 	protected void buyWithCurrency(int cost){
 		if(currencyType == TriggeredShop.CurrencyType.ython)
 			player.ython-=cost;
+		if(currencyType == TriggeredShop.CurrencyType.vis)
+			player.vis-=cost;
 
 		player.gold-=cost;
 

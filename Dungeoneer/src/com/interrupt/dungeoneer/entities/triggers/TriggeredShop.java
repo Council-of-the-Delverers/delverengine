@@ -24,7 +24,7 @@ public class TriggeredShop extends Trigger {
 	public enum ShopType { upgrades, scrolls, potions, weapons, wands, armor, persistent }
 
 	/** Custom Currency Types */
-	public enum CurrencyType { gold, ython  }
+	public enum CurrencyType { gold, ython, vis  }
 
 	@EditorProperty
 	public String messageFile = null;
