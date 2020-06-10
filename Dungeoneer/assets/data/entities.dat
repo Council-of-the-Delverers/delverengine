@@ -197,7 +197,7 @@
 			},
 			"Loot Chest": {
 				class:com.interrupt.dungeoneer.entities.Breakable,
-				meshFile:meshes/breakables/Chest.obj,
+				meshFile: "meshes/Breakables/Chest.obj",
 				"textureFile": "sprites/breakables/Chest.png",
 				"scale": 0.35,
 				stepHeight:0.0,
