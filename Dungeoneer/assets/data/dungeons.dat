@@ -1,6 +1,6 @@
 [
 	{
-		class:com.interrupt.dungeoneer.game.Level,
+		class:"com.interrupt.dungeoneer.game.Level",
 		dungeonLevel:0,
 		levelName:"TESTING GROUNDS",
 		darkness:1,

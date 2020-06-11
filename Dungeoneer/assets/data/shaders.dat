@@ -4,7 +4,7 @@
 		"vertex": "magic-item.vert",
 		"fragment": "magic-item.frag",
 		"attributes": {
-			"u_magic_color": { class:com.badlogic.gdx.graphics.Color, r: 0.0, g: 0.05, b: 0.3 }
+			"u_magic_color": { class:"com.badlogic.gdx.graphics.Color", r: 0.0, g: 0.05, b: 0.3 }
 		}
 	},
 	{
@@ -12,7 +12,7 @@
 		"vertex": "magic-item.vert",
 		"fragment": "magic-item.frag",
 		"attributes": {
-			"u_magic_color": { class:com.badlogic.gdx.graphics.Color, r: 0.3, g: 0.05, b: 0.0 }
+			"u_magic_color": { class:"com.badlogic.gdx.graphics.Color", r: 0.3, g: 0.05, b: 0.0 }
 		}
 	},
 	{
@@ -20,7 +20,7 @@
 		"vertex": "magic-item.vert",
 		"fragment": "magic-item.frag",
 		"attributes": {
-			"u_magic_color": { class:com.badlogic.gdx.graphics.Color, r: 0.3, g: 0.3, b: 0.3 }
+			"u_magic_color": { class:"com.badlogic.gdx.graphics.Color", r: 0.3, g: 0.3, b: 0.3 }
 		}
 	},
 	{

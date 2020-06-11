@@ -9,7 +9,7 @@ import com.interrupt.managers.ItemManager;
 public class ItemSpawner extends DirectionalEntity {
 	public ItemSpawner() { artType = ArtType.sprite; tex = 0; spriteAtlas = "editor"; tex = 5; hidden = true; floating = true; }
 
-	public enum ItemType { melee, ranged, armor, wands, potions, scrolls, decorations, unique, junk, food }
+	public enum ItemType { melee, ranged, armor, wands, potions, scrolls, decorations, unique, junk, food, common, uncommon, rare, epic, legendary }
 
 	public enum ItemPlacement { world, player_hotbar, player_inventory, player_equip }
 	

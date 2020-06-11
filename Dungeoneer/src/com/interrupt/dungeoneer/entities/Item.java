@@ -29,6 +29,7 @@ import java.util.Random;
 public class Item extends Entity {
 	public enum ItemType { key, torch, potion, wand, sword, ring, amulet, junk, armor, quest, scroll, bow, thrown, stack, gold };
 	public ItemType itemType;
+	public RarityType rarityType;
 	
 	public enum ItemCondition { broken, worn, normal, fine, excellent };
 	
@@ -85,11 +86,12 @@ public class Item extends Entity {
     public Integer maxItemLevel = null;
 
 	@EditorProperty(type = "Rarity")
-	public boolean unique = false;
+	public boolean common = false;
 	public boolean uncommon = false;
 	public boolean rare = false;
 	public boolean epic = false;
 	public boolean legendary = false;
+	public boolean unique = false;
 
 	@EditorProperty(type = "Triggers")
 	public String triggersOnPickup = null;
@@ -377,13 +379,15 @@ public class Item extends Entity {
 		return "";
 	}
 
-	private static Color RareItemColor = new Color(0.5f, 1f, 0.4f, 1f);
-	private static Color MagicItemColor = new Color(0.1f, 0.8f, 1f, 1f);
-	private static Color UniqueItemColor = new Color(0.9f, 0.7f, 0.1f, 1f);
+	/** Custom Rarity Types */
 	private static Color UncommonItemColor = Color.GREEN;
-	private static Color Rare2ItemColor = Color.BLUE;
+	private static Color RareItemColor = new Color(0.5f, 1f, 0.4f, 1f);
 	private static Color EpicItemColor = Color.PURPLE;
 	private static Color LegendaryItemColor = Color.ORANGE;
+
+	private static Color MagicItemColor = new Color(0.1f, 0.8f, 1f, 1f);
+	private static Color UniqueItemColor = new Color(0.9f, 0.7f, 0.1f, 1f);
+	private static Color Rare2ItemColor = Color.BLUE;
 	public Color GetTextColor() {
         if(unique) return UniqueItemColor;
 

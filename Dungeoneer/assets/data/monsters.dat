@@ -2,7 +2,7 @@
 	monsters:{
 		"TEST" : [
 			{
-				class:com.interrupt.dungeoneer.entities.Monster,
+				class:"com.interrupt.dungeoneer.entities.Monster",
 				tex:0,
 				name:"SLIME",
 				speed:0.003,
@@ -10,7 +10,7 @@
 				atk:4,
 				chasetarget:false,
 				hasAttackAnim:false,
-				bloodType:Slime,
+				bloodType:"Slime",
 				bloodPoolDecal:{
 					"tex":6,
 					"artType":"sprite",
@@ -24,7 +24,7 @@
 				idleSound:"mobs/slime/en_slime_idle_01.mp3,mobs/slime/en_slime_idle_02.mp3,mobs/slime/en_slime_idle_03.mp3",
 				walkAnimation: { start: 0, end: 3, speed: 35 },
 				hurtAnimation: { start: 8, end: 10, speed: 22 },
-				attackAnimation: { start: 4, end: 7, speed: 55, actions:{"6":[{class:com.interrupt.dungeoneer.gfx.animation.DamageAction}]} },
+				attackAnimation: { start: 4, end: 7, speed: 55, actions:{"6":[{class:"com.interrupt.dungeoneer.gfx.animation.DamageAction"}]} },
 				dieAnimation: { start: 8, end: 10, speed: 30 },
 				spriteAtlas: "entities"
 			}

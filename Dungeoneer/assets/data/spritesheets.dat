@@ -44,28 +44,10 @@
         "name": "vfx"
     },
     {
-        "columns": 4,
-        "filename": "/sprites/classes/C32.png",
+        "columns": 10,
+        "filename": "sprites/32/weapons-1.png",
         "scale": 1,
-        "name": "Classes x32"
-    },
-    {
-        "columns": 4,
-        "filename": "/sprites/classes/C34.png",
-        "scale": 1,
-        "name": "Classes x34"
-    },
-    {
-        "columns": 4,
-        "filename": "/sprites/classes/C42.png",
-        "scale": 1,
-        "name": "Classes x42"
-    },
-    {
-        "columns": 4,
-        "filename": "/sprites/classes/C50.png",
-        "scale": 1,
-        "name": "Classes x50"
+        "name": "Weapons-1"
     },
     {
         "columns": 4,

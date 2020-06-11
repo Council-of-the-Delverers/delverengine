@@ -1,12 +1,12 @@
 {
-	class: com.interrupt.dungeoneer.entities.Player,
+	class: "com.interrupt.dungeoneer.entities.Player",
 	maxHp: 8,
 	hp: 8,
 	canLevelUp: false,
 	startingInventory: [
 		{
-			class:com.interrupt.dungeoneer.entities.items.Sword,
-			itemType:sword,
+			class:"com.interrupt.dungeoneer.entities.items.Sword",
+			itemType:"sword",
 			tex:0,
 			brokenTex:0,
 			spriteAtlas:"melee",
