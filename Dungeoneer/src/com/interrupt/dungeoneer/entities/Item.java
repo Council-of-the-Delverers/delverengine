@@ -29,7 +29,6 @@ import java.util.Random;
 public class Item extends Entity {
 	public enum ItemType { key, torch, potion, wand, sword, ring, amulet, junk, armor, quest, scroll, bow, thrown, stack, gold };
 	public ItemType itemType;
-	public RarityType rarityType;
 	
 	public enum ItemCondition { broken, worn, normal, fine, excellent };
 	
