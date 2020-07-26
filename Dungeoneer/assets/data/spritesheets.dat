@@ -50,6 +50,12 @@
         "name": "Weapons-1"
     },
     {
+        "columns": 5,
+        "filename": "sprites/32/ranged-1.png",
+        "scale": 1,
+        "name": "ranged-1"
+    },
+    {
         "columns": 4,
         "filename": "fog.png",
         "scale": 1,

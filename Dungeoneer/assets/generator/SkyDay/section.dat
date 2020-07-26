@@ -5,7 +5,7 @@
 	floors: 1,
 	levelTemplates: [
 		{
-			class:com.interrupt.dungeoneer.game.Level,
+			class:"com.interrupt.dungeoneer.game.Level",
 			theme:"DUNDAY",
 			fogStart:3.0,
 			fogEnd:30.0,
