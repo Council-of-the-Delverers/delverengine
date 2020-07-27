@@ -49,7 +49,11 @@ import java.util.concurrent.Executors;
 
 public class Game {
 	/** Engine version */
+<<<<<<< HEAD
 	public static String VERSION = "The Uncharted Depths: 0.1a";
+=======
+	public static String VERSION = "v1.2.0";
+>>>>>>> f910d7616c0a9911a0bcdf69852e3ad32eb9d2af
 
     /** The save game version, gets saved in the player */
     public static int SAVE_VERSION = 1;

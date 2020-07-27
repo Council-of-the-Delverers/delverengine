@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+# [![delverengine](.media/logo.svg?sanitize=true)](https://github.com/interrupt/delverengine)
+
+# Delver Engine Open Source
+Delver engine and editor source code release
+>>>>>>> f910d7616c0a9911a0bcdf69852e3ad32eb9d2af
 
 # Delver: The Uncharted Depths
 

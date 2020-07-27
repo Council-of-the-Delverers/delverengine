@@ -20,10 +20,9 @@ public class EditorInput implements InputProcessor {
 
     public boolean ignoreRightClick = false;
 
-    EditorFrame editor;
-    public EditorInput(EditorFrame editor) {
-        this.editor = editor;
-    }
+    public float scrollAmount = 0f;
+
+    public EditorInput() {}
 
     @Override
     public boolean keyDown(int i) {
@@ -89,7 +88,7 @@ public class EditorInput implements InputProcessor {
             Gdx.input.setCursorCatched(false);
         }
 
-        editor.editorUi.touchUp(x, y, pointer, button);
+        Editor.app.ui.touchUp(x, y, pointer, button);
 
         return false;
     }
@@ -111,8 +110,8 @@ public class EditorInput implements InputProcessor {
                 }
             }
 
-            editor.rotX += moveX * 0.005f;
-            editor.rotY -= moveY * 0.005f;
+            Editor.app.rotX += moveX * 0.005f;
+            Editor.app.rotY -= moveY * 0.005f;
         }
 
         lastMouseLocation.set(x, y);
@@ -126,7 +125,11 @@ public class EditorInput implements InputProcessor {
     }
 
     @Override
-    public boolean scrolled(int i) { return false; }
+    public boolean scrolled(int amount) {
+        scrollAmount = amount;
+
+        return false;
+    }
 
     public boolean isKeyPressed(int i) {
         return keysDown[i];
@@ -138,5 +141,6 @@ public class EditorInput implements InputProcessor {
 
     public void tick() {
         buttonEvents.clear();
+        scrollAmount = 0f;
     }
 }
