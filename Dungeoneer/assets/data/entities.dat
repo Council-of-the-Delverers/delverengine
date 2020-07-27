@@ -431,7 +431,6 @@
 			"Chair": {class:"com.interrupt.dungeoneer.entities.Breakable",meshFile:"meshes/chair.obj",textureFile: "textures.png",stepHeight:0.0,collision:{x:0.17,y:0.17,z:0.4},isSolid:true,gibNum:4,lootSpawnChance:0, surpriseSpawnChance:0, shadowType: "RECTANGLE"}
 		},
 		"Triggers": {
-<<<<<<< HEAD
 			"Basic": { class: "com.interrupt.dungeoneer.entities.triggers.Trigger",
 				floating: true, triggerType: "PLAYER_TOUCHED" },
 			"ProgressionCheck": { class: "com.interrupt.dungeoneer.entities.triggers.ProgressionTrigger",
@@ -456,7 +455,6 @@
 				floating: true, triggerType: "PLAYER_TOUCHED" },
 			"GameOver": { class: "com.interrupt.dungeoneer.entities.triggers.TriggeredGameOver",
 				floating: true, triggerType: "PLAYER_TOUCHED" },
-=======
 			"Basic": { class: com.interrupt.dungeoneer.entities.triggers.Trigger, floating: true, triggerType: "PLAYER_TOUCHED" },
 			"ProgressionCheck": { class: com.interrupt.dungeoneer.entities.triggers.ProgressionTrigger, floating: true, triggerType: "PLAYER_TOUCHED" },
 			"Conditional": { class: com.interrupt.dungeoneer.entities.triggers.ConditionalTrigger, floating: true, triggerType: "PLAYER_TOUCHED" },
@@ -470,7 +468,6 @@
 			"Message": { class: com.interrupt.dungeoneer.entities.triggers.TriggeredMessage, floating: true, triggerType: "PLAYER_TOUCHED" },
 			"DialogueTree": { class: com.interrupt.dungeoneer.entities.triggers.TriggeredDialogue, floating: true, triggerType: "PLAYER_TOUCHED" },
 			"GameOver": { class: com.interrupt.dungeoneer.entities.triggers.TriggeredGameOver, floating: true, triggerType: "PLAYER_TOUCHED" },
->>>>>>> f910d7616c0a9911a0bcdf69852e3ad32eb9d2af
 			"Button": {
 				"class": "com.interrupt.dungeoneer.entities.triggers.ButtonModel",
 				"floating": true,
@@ -484,7 +481,6 @@
 				"triggeredRotation": {},
 				"triggerAnimationTime": 10
 			},
-<<<<<<< HEAD
 			"Repeater": { class: "com.interrupt.dungeoneer.entities.triggers.RepeatingTrigger",
 				floating: true },
 			"DamageTrigger": { class: "com.interrupt.dungeoneer.entities.triggers.DamageTrigger",
@@ -495,7 +491,6 @@
 				floating: true, triggerType: "PLAYER_TOUCHED" },
 			"InventoryCheck": { class: "com.interrupt.dungeoneer.entities.triggers.TriggeredInventoryCheck",
 				floating: true, triggerType: "PLAYER_TOUCHED" },
-=======
 			"Repeater": { class: com.interrupt.dungeoneer.entities.triggers.RepeatingTrigger, floating: true },
 			"Elevator": { class: com.interrupt.dungeoneer.entities.triggers.TriggeredElevator, floating: true, triggerType: "PLAYER_TOUCHED" },
 			"DamageTrigger": { class: com.interrupt.dungeoneer.entities.triggers.DamageTrigger, floating: true, isSolid: true },
@@ -503,7 +498,6 @@
 			"DeleteTrigger": { class: com.interrupt.dungeoneer.entities.triggers.TriggeredDelete, floating: true, triggerType: "PLAYER_TOUCHED" },
 			"LevelSwapTrigger": { class: com.interrupt.dungeoneer.entities.triggers.LevelSwap, floating: true, triggerType: "PLAYER_TOUCHED", triggerResets: false },
 			"InventoryCheck": { class: com.interrupt.dungeoneer.entities.triggers.TriggeredInventoryCheck, floating: true, triggerType: "PLAYER_TOUCHED" },
->>>>>>> f910d7616c0a9911a0bcdf69852e3ad32eb9d2af
 			"Lever": {
 				class: "com.interrupt.dungeoneer.entities.Group",
 				entities: [
