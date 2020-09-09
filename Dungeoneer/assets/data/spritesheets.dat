@@ -38,6 +38,18 @@
         "name": "particle"
     },
     {
+        "columns": 6,
+        "filename": "sprites/32/LEO32-Magic.png",
+        "scale": 1,
+        "name": "LeoMagic"
+    },
+    {
+        "columns": 2,
+        "filename": "sprites/32/LEO32-Other.png",
+        "scale": 1,
+        "name": "LeoOther"
+    },
+    {
         "columns": 5,
         "filename": "sprites/NPC.png",
         "scale": 1,
