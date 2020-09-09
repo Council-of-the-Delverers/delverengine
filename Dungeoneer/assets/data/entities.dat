@@ -418,6 +418,19 @@
 			"maxVisibleRadius": 4
 		}
 	},
+		"Fate NPCs": {
+			"Folf-Lay": {
+					class: "com.interrupt.dungeoneer.entities.Npc",
+					tex: 0,
+					baseAnimation: { start: 0, end: 3, speed: 65 },
+					spriteAtlas: "Fate-NPC",
+			},
+			"Folf": {
+				class: "com.interrupt.dungeoneer.entities.Npc",
+				tex: 4,
+				spriteAtlas: "Fate-NPC",
+			}
+		},
 		"Camera": {
 			"Splash Camera": {
 				class: "com.interrupt.dungeoneer.entities.Camera"

@@ -38,6 +38,12 @@
         "name": "particle"
     },
     {
+        "columns": 5,
+        "filename": "sprites/NPC.png",
+        "scale": 1,
+        "name": "Fate-NPC"
+    },
+    {
         "columns": 4,
         "filename": "vfx.png",
         "scale": 1,
