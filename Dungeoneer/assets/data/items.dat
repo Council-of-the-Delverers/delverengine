@@ -11,7 +11,8 @@
 				"itemType": "sword",
 				"name": "Sword 1",
 				"spriteAtlas":"Weapons-1",
-				"tex": 0,
+				"tex": 3,
+				"heldTex": 4,
 				"baseDamage": 5,
 				"reach": 1.0,
 				"speed": 1.0

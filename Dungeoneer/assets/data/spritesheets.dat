@@ -39,13 +39,13 @@
     },
     {
         "columns": 6,
-        "filename": "sprites/32/LEO32-Magic.png",
+        "filename": "sprites/32/LEO32Magic.png",
         "scale": 1,
         "name": "LeoMagic"
     },
     {
         "columns": 2,
-        "filename": "sprites/32/LEO32-Other.png",
+        "filename": "sprites/32/LEO32Other.png",
         "scale": 1,
         "name": "LeoOther"
     },
