@@ -282,13 +282,12 @@
 						class: "com.interrupt.dungeoneer.entities.Group",
 						entities: [
 							{
-								class: "com.interrupt.dungeoneer.entities.Item",
-								"name": "Item1",
+								class: "com.interrupt.dungeoneer.entities.ItemSpawner",
 								"x": 0.5,
 								"y": 0.5
 							},
 							{
-								class: "com.interrupt.dungeoneer.entities.Item",
+								class: "com.interrupt.dungeoneer.entities.ItemSpawner",
 								"y": 0.5
 							},
 							{

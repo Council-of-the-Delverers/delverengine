@@ -23,5 +23,11 @@
         "filename": "sprites/tiles/Castle-test.png",
         "scale": 1,
         "name": "Castle-test",
+    },
+    {
+        "columns": 4,
+        "filename": "sprites/tiles/SpidCave.png",
+        "scale": 1,
+        "name": "Spider Cave",
     }
 ]
