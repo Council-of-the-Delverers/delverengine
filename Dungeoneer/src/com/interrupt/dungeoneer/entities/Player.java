@@ -63,6 +63,10 @@ public class Player extends Actor {
 	public float rot2 = 0;
 
 	public float jumpHeight = 0.05f;
+	// Sprinting
+	private float sprintModifier = 0.15f;
+	private boolean isSprinting = false;
+
 	public float eyeHeight = 0.12f;
 	public float headBobSpeed = 0.319f;
 	public float headBobHeight = 0.3f;
@@ -225,6 +229,8 @@ public class Player extends Actor {
 		hidden = true;
 		mass = 2f;
 		canStepUpOn = false;
+		// Sprinting
+		isSprinting = Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT);
 	}
 	
 	public Player(Game game) {
@@ -2206,6 +2212,12 @@ public class Player extends Actor {
 	
 	public float getWalkSpeed() {
 		float baseSpeed = 0.10f + stats.SPD * 0.015f;
+
+		// Sprinting
+		if(Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT)) {
+			baseSpeed = sprintModifier + (float) this.stats.SPD * 0.020F;
+		}
+
 		if(statusEffects == null || statusEffects.size <= 0) return baseSpeed * GetEquippedSpeedMod();
 
 		for(StatusEffect s : statusEffects) {
