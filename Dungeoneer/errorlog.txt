@@ -1236,3 +1236,25 @@ java.lang.NullPointerException
 	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
 	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
 
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.GdxRuntimeException: File not found: levels\first-death-screen-splash.bin (Internal)
+	at com.badlogic.gdx.files.FileHandle.read(FileHandle.java:142)
+	at com.interrupt.dungeoneer.serializers.v1.LevelSerializer.loadLevel(LevelSerializer.java:59)
+	at com.interrupt.dungeoneer.serializers.KryoSerializer.loadLevel(KryoSerializer.java:42)
+	at com.interrupt.dungeoneer.game.Level.load(Level.java:474)
+	at com.interrupt.dungeoneer.game.Level.loadForSplash(Level.java:232)
+	at com.interrupt.dungeoneer.screens.BaseScreen.loadBackgroundLevel(BaseScreen.java:382)
+	at com.interrupt.dungeoneer.screens.BaseScreen.show(BaseScreen.java:183)
+	at com.interrupt.dungeoneer.screens.GameOverScreen.show(GameOverScreen.java:222)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.ShowGameOverScreen(GameApplication.java:117)
+	at com.interrupt.dungeoneer.game.Game.OnGameOver(Game.java:898)
+	at com.interrupt.dungeoneer.game.Game.tick(Game.java:533)
+	at com.interrupt.dungeoneer.GameManager.tick(GameManager.java:113)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:73)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.interrupt.dungeoneer.editor.EditorApplication.render(EditorApplication.java:480)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+

@@ -6,7 +6,8 @@
 			"27": { class:com.interrupt.dungeoneer.tiles.TileData, drawCeiling: false, drawWalls: false }
 		},
 		"Keep": {
-			"31": { class:com.interrupt.dungeoneer.tiles.TileData, isWater: true, lightColor: { r: 0, g: 0.25, b: 1 }, mapColor: { r: 0, g: 0.5, b: 1.0 }, particleTex: 28, flowTex: 27, edgeTex: 23, walkSound: "footsteps/feet_water_01.mp3,footsteps/feet_water_02.mp3,footsteps/feet_water_03.mp3,footsteps/feet_water_04.mp3", ambientSound: "ambient/env_waterfall.mp3", ambientSoundVolume: 0.05, flowingSoundVolume: 0.6, ambientSoundRadius: 8.0 }
+			"31": { class:com.interrupt.dungeoneer.tiles.TileData, isWater: true, lightColor: { r: 0, g: 0.25, b: 1 }, mapColor: { r: 0, g: 0.5, b: 1.0 }, particleTex: 28, flowTex: 27, edgeTex: 23, walkSound: "footsteps/feet_water_01.mp3,footsteps/feet_water_02.mp3,footsteps/feet_water_03.mp3,footsteps/feet_water_04.mp3", ambientSound: "ambient/env_waterfall.mp3", ambientSoundVolume: 0.05, flowingSoundVolume: 0.6, ambientSoundRadius: 8.0 },
+			"37": { class:com.interrupt.dungeoneer.tiles.TileData, darkenFloor: true, mapColor: { r: 0.0, g: 0.0, b: 0.0 }, entitiesCanSpawn: false, hurts: 1000, damageType: "PHYSICAL" }
 		}
 	}
 }
