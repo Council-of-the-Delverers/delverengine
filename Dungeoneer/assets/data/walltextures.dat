@@ -29,5 +29,17 @@
         "filename": "sprites/tiles/SpidCave.png",
         "scale": 1,
         "name": "Spider Cave",
+    },
+    {
+        "columns": 4,
+        "filename": "sprites/tiles/Desert.png",
+        "scale": 1,
+        "name": "Desert",
+    },
+    {
+        "columns": 4,
+        "filename": "sprites/tiles/Ravine1.png",
+        "scale": 1,
+        "name": "Ravine",
     }
 ]
