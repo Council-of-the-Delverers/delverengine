@@ -2271,6 +2271,11 @@ public class Player extends Actor {
 	public float getMagicResistModBoost() {
 		return stats.magicResistMod + calculatedStats.magicResistMod;
 	}
+
+	@Override
+	public float getFireResistModBoost() {
+		return stats.fireResistMod + calculatedStats.fireResistMod;
+	}
 	
 	public int getMagicStatBoost() {
 		return Math.max(0, stats.MAG - 4 + calculatedStats.MAG);

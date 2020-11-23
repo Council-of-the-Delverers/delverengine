@@ -73,8 +73,8 @@ public class Actor extends Entity {
 	public BloodType bloodType = BloodType.Red;
 
 
-	//Resistance Variables
-	// NOTE: the Fire Resistance damages with the Burn Effect. not the Physical DMG from the item.
+	// Resistance Variables
+	// NOTE: the Resistances protect against the elemental effects. not the Physical Damage from the item.
 	@EditorProperty(group = "Resistances")
 	public float iceResistMod = 0.0f;
 	@EditorProperty(group = "Resistances")
@@ -181,9 +181,20 @@ public class Actor extends Entity {
 		return stats.knockbackMod;
 	}
 
-	public float getMagicResistModBoost() {
-		return stats.magicResistMod;
+	public float getMagicResistModBoost() { return stats.magicResistMod; }
+
+	//Resistance Mod Boosts
+	public float getFireResistModBoost() {
+		return stats.fireResistMod;
 	}
+	public float getIceResistModBoost() {
+		return stats.iceResistMod;
+	}
+	public float getPoisonResistModBoost() { return stats.poisonResistMod; }
+	public float getLightningResistModBoost() {
+		return stats.lightningResistMod;
+	}
+
 
 	public float fireResistMod() { return fireResistMod; }
 
@@ -208,13 +219,15 @@ public class Actor extends Entity {
 					{
 						damage *= s.damageMod;
 					}
-					if(damageType == DamageType.POISON)
+
+					//Resistance Damages
+					//if(damageType == DamageType.POISON)
 					{
-						damage *= s.poisonDamageMod;
+						//damage *= s.poisonDamageMod;
 					}
-					if(damageType == DamageType.ICE)
+					//if(damageType == DamageType.ICE)
 					{
-						damage *= s.iceDamageMod;
+						//damage *= s.iceDamageMod;
 					}
 					if(damageType == DamageType.FIRE)
 					{
@@ -240,16 +253,16 @@ public class Actor extends Entity {
 			damage = (int)Math.ceil(damage * (1f - getMagicResistModBoost()));
 		}
 		if(damageType == DamageType.FIRE) {
-			damage = (int)Math.ceil(damage * (1f - fireResistMod()));
+			damage = (int)Math.ceil(damage * (1f - getFireResistModBoost()));
 		}
 		if(damageType == DamageType.ICE) {
-			damage = (int)Math.ceil(damage * (1f - iceResistMod()));
+			damage = (int)Math.ceil(damage * (1f - getIceResistModBoost()));
 		}
 		if(damageType == DamageType.POISON) {
-			damage = (int)Math.ceil(damage * (1f - poisonResistMod()));
+			damage = (int)Math.ceil(damage * (1f - getPoisonResistModBoost()));
 		}
 		if(damageType == DamageType.LIGHTNING) {
-			damage = (int)Math.ceil(damage * (1f - lightningResistMod()));
+			damage = (int)Math.ceil(damage * (1f - getLightningResistModBoost()));
 		}
 
 		// Healing should heal

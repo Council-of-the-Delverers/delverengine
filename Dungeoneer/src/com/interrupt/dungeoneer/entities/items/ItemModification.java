@@ -92,13 +92,19 @@ public class ItemModification {
 
     public float getMagicResistMod(Item owner) { return magicResistMod + (magicResistMod * owner.itemLevel * 0.05f); }
 
+    //Enable Resistances to take away elemental damage like Armor
     public float getFireResistMod(Item owner) { return fireResistMod + (fireResistMod * owner.itemLevel * 0.05f); }
+    public float increaseFireResistMod(int value) { return fireResistMod += value; }
 
     public float getIceResistMod(Item owner) { return iceResistMod + (iceResistMod * owner.itemLevel * 0.05f); }
+    public float increaseIceResistMod(int value) { return iceResistMod += value; }
 
     public float getPoisonResistMod(Item owner) { return poisonResistMod + (poisonResistMod * owner.itemLevel * 0.05f); }
+    public float increasePoisonResistMod(int value) { return poisonResistMod += value; }
 
     public float getLightningResistMod(Item owner) { return lightningResistMod + (lightningResistMod * owner.itemLevel * 0.05f); }
+    public float increaseLightningResistMod(int value) { return lightningResistMod += value; }
+
 
     public float getSlashingResistMod(Item owner) { return slashingResistMod + (slashingResistMod * owner.itemLevel * 0.05f); }
 

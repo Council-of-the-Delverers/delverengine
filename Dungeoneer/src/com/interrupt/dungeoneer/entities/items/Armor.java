@@ -18,7 +18,12 @@ public class Armor extends Item {
 
 	public String set = null;
 	
-	public Armor() { equipLoc = "ARMOR"; isSolid = true; yOffset = -0.1f; equipSound = "/ui/ui_equip_armor.mp3"; }
+	public Armor() {
+		equipLoc = "ARMOR";
+		isSolid = true;
+		yOffset = -0.1f;
+		equipSound = "/ui/ui_equip_armor.mp3";
+	}
 	
 	public Armor(int ac, String equipLoc, int tex)
 	{
@@ -42,7 +47,13 @@ public class Armor extends Item {
 	public int GetArmor() {
 		int mod = 0;
 		if(enchantment != null) mod += enchantment.getArmorMod(this);
+
+		//Resistance Basemods
 		if(baseMods != null) mod += baseMods.getArmorMod(this);
+		if(baseMods != null) mod += baseMods.getFireResistMod(this);
+		if(baseMods != null) mod += baseMods.getIceResistMod(this);
+		if(baseMods != null) mod += baseMods.getPoisonResistMod(this);
+		if(baseMods != null) mod += baseMods.getLightningResistMod(this);
 
 		if(identified) {
 			for (ItemModification enchantment : getEnchantments()) {

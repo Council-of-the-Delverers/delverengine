@@ -38,7 +38,8 @@
 		},
 		"Fate Entities": {
 			"Basic Monster": {
-				class: "com.interrupt.dungeoneer.entities.Monster"
+				class: "com.interrupt.dungeoneer.entities.Monster",
+
 			},
 			"Basic Monster (Emit)": {
 				class: "com.interrupt.dungeoneer.entities.Monster",
