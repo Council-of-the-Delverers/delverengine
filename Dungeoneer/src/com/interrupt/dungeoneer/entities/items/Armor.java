@@ -50,10 +50,17 @@ public class Armor extends Item {
 
 		//Resistance Basemods
 		if(baseMods != null) mod += baseMods.getArmorMod(this);
+
+		//Elemental Basemods
 		if(baseMods != null) mod += baseMods.getFireResistMod(this);
 		if(baseMods != null) mod += baseMods.getIceResistMod(this);
 		if(baseMods != null) mod += baseMods.getPoisonResistMod(this);
 		if(baseMods != null) mod += baseMods.getLightningResistMod(this);
+
+		//Physical Basemods
+		if(baseMods != null) mod += baseMods.getBludgeoningResistMod(this);
+		if(baseMods != null) mod += baseMods.getPiercingResistMod(this);
+		if(baseMods != null) mod += baseMods.getSlashingResistMod(this);
 
 		if(identified) {
 			for (ItemModification enchantment : getEnchantments()) {

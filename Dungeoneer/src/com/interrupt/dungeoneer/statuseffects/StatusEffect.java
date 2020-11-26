@@ -21,6 +21,10 @@ public class StatusEffect {
 	public float fireDamageMod = 1;
 	public float iceDamageMod = 1;
 	public float poisonDamageMod = 1;
+	public float lightningDamageMod = 1;
+	public float bludgeoningDamageMod = 1;
+	public float piercingDamageMod = 1;
+	public float slashingDamageMod = 1;
 
 	public boolean active = true;
 	public boolean showParticleEffect = true;
@@ -34,6 +38,15 @@ public class StatusEffect {
 		switch (damageType) {
 			case PHYSICAL:
 				break;
+
+				//Custom Damage Cases
+			case BLUDGEONING:
+				break;
+			case PIERCING:
+				break;
+			case SLASHING:
+				break;
+
 			case MAGIC:
 				break;
 			case FIRE:

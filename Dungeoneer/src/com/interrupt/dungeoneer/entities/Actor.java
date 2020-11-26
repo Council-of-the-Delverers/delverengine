@@ -183,16 +183,27 @@ public class Actor extends Entity {
 
 	public float getMagicResistModBoost() { return stats.magicResistMod; }
 
-	//Resistance Mod Boosts
+	//Resistance Mod Boosts (Elemental)
 	public float getFireResistModBoost() {
 		return stats.fireResistMod;
 	}
 	public float getIceResistModBoost() {
 		return stats.iceResistMod;
 	}
-	public float getPoisonResistModBoost() { return stats.poisonResistMod; }
+	public float getPoisonResistModBoost() {
+		return stats.poisonResistMod;
+	}
 	public float getLightningResistModBoost() {
 		return stats.lightningResistMod;
+	}
+
+	//Resistance Mod Boosts (Physical)
+	public float getBludgeoningResistModBoost() {
+		return stats.bludgeoningResistMod;
+	}
+	public float getPiercingResistModBoost() { return stats.piercingResistMod; }
+	public float getSlashingResistModBoost() {
+		return stats.slashingResistMod;
 	}
 
 
@@ -221,17 +232,34 @@ public class Actor extends Entity {
 					}
 
 					//Resistance Damages
-					//if(damageType == DamageType.POISON)
+					if(damageType == DamageType.BLUDGEONING)
 					{
-						//damage *= s.poisonDamageMod;
+						damage *= s.bludgeoningDamageMod;
 					}
-					//if(damageType == DamageType.ICE)
+					if(damageType == DamageType.PIERCING)
 					{
-						//damage *= s.iceDamageMod;
+						damage *= s.piercingDamageMod;
+					}
+					if(damageType == DamageType.SLASHING)
+					{
+						damage *= s.slashingDamageMod;
+					}
+
+					if(damageType == DamageType.POISON)
+					{
+						damage *= s.poisonDamageMod;
+					}
+					if(damageType == DamageType.ICE)
+					{
+						damage *= s.iceDamageMod;
 					}
 					if(damageType == DamageType.FIRE)
 					{
 						damage *= s.fireDamageMod;
+					}
+					if(damageType == DamageType.LIGHTNING)
+					{
+						damage *= s.lightningDamageMod;
 					}
 				}
 			}
@@ -248,7 +276,7 @@ public class Actor extends Entity {
 		}
 
 		// Make it so each resistance can be turned on and off
-		// Some base stats affect magic damage / RESISTANCES
+		// Some base stats affect magic damage / Resistance Mod Boosts (Elemental)
 		if(damageType == DamageType.PHYSICAL) {
 			damage = (int)Math.ceil(damage * (1f - getMagicResistModBoost()));
 		}
@@ -263,6 +291,17 @@ public class Actor extends Entity {
 		}
 		if(damageType == DamageType.LIGHTNING) {
 			damage = (int)Math.ceil(damage * (1f - getLightningResistModBoost()));
+		}
+
+		//Resistance Modboost (Physical)
+		if(damageType == DamageType.BLUDGEONING) {
+			damage = (int)Math.ceil(damage * (1f - getBludgeoningResistModBoost()));
+		}
+		if(damageType == DamageType.PIERCING) {
+			damage = (int)Math.ceil(damage * (1f - getPiercingResistModBoost()));
+		}
+		if(damageType == DamageType.SLASHING) {
+			damage = (int)Math.ceil(damage * (1f - getSlashingResistModBoost()));
 		}
 
 		// Healing should heal

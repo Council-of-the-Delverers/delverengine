@@ -2272,9 +2272,35 @@ public class Player extends Actor {
 		return stats.magicResistMod + calculatedStats.magicResistMod;
 	}
 
+	// Resistance Overrides (Elemental)
 	@Override
 	public float getFireResistModBoost() {
 		return stats.fireResistMod + calculatedStats.fireResistMod;
+	}
+	@Override
+	public float getPoisonResistModBoost() {
+		return stats.poisonResistMod + calculatedStats.poisonResistMod;
+	}
+	@Override
+	public float getIceResistModBoost() {
+		return stats.iceResistMod + calculatedStats.iceResistMod;
+	}
+	@Override
+	public float getLightningResistModBoost() {
+		return stats.lightningResistMod + calculatedStats.lightningResistMod;
+	}
+
+
+	//Resistance Overrides (Physical)
+	@Override
+	public float getBludgeoningResistModBoost() { return stats.bludgeoningResistMod + calculatedStats.bludgeoningResistMod; }
+	@Override
+	public float getPiercingResistModBoost() {
+		return stats.piercingResistMod + calculatedStats.piercingResistMod;
+	}
+	@Override
+	public float getSlashingResistModBoost() {
+		return stats.slashingResistMod + calculatedStats.slashingResistMod;
 	}
 	
 	public int getMagicStatBoost() {

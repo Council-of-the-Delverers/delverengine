@@ -18,6 +18,11 @@ public class ItemModification {
     protected int damageMod = 0;
     protected float knockbackMod = 0;
 
+    //Custom Damage Mods
+    protected int bludgeoningDamageMod = 0;
+    protected int piercingDamageMod = 0;
+    protected int slashingDamageMod = 0;
+
     // Resistances
     protected float magicResistMod = 0f;
     protected float fireResistMod = 0f;
@@ -78,6 +83,17 @@ public class ItemModification {
         return damageMod + (int)(damageMod * owner.itemLevel * 0.5f);
     }
 
+    //Custom Wiring
+    public int getPiercingDamageMod(Item owner) {
+        return piercingDamageMod + (int)(damageMod * owner.itemLevel * 0.5f);
+    }
+    public int getBludgeoningDamageMod(Item owner) {
+        return bludgeoningDamageMod + (int)(damageMod * owner.itemLevel * 0.5f);
+    }
+    public int getSlashingDamageMod(Item owner) {
+        return slashingDamageMod + (int)(damageMod * owner.itemLevel * 0.5f);
+    }
+
     public float getKnockbackMod(Item owner) {
         return knockbackMod + (knockbackMod * owner.itemLevel * 0.05f);
     }
@@ -123,6 +139,12 @@ public class ItemModification {
         costMod += Math.min(attackMod * 10, 0);
         costMod += Math.min(10 / attackSpeedMod, 0);
         costMod += Math.min(damageMod, 0);
+
+        // Custom Cost Mods
+        costMod += Math.min(bludgeoningDamageMod, 0);
+        costMod += Math.min(piercingDamageMod, 0);
+        costMod += Math.min(slashingDamageMod, 0);
+
         costMod += Math.min(25 * knockbackMod, 0);
         costMod += Math.min(1000 * magicResistMod, 0);
         costMod += Math.min(1000 * fireResistMod, 0);
