@@ -11,7 +11,7 @@
 				"yOffset": -0.11,
 				"cost": 8,
 				"pickupSound": "pu_gen_v2.mp3",
-				"baseMods": { attackMod: 0.1, bludgeoningResistMod: 4 }
+				"baseMods": { attackMod: 0.1, piercingResistMod: 0.5 }
 			}
 		]
 	},

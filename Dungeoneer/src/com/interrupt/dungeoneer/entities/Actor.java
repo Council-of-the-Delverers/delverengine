@@ -234,7 +234,7 @@ public class Actor extends Entity {
 					//Resistance Damages
 					if(damageType == DamageType.BLUDGEONING)
 					{
-						damage *= s.bludgeoningDamageMod;
+						damage *= s.damageMod;
 					}
 					if(damageType == DamageType.PIERCING)
 					{
@@ -277,32 +277,66 @@ public class Actor extends Entity {
 
 		// Make it so each resistance can be turned on and off
 		// Some base stats affect magic damage / Resistance Mod Boosts (Elemental)
-		if(damageType == DamageType.PHYSICAL) {
-			damage = (int)Math.ceil(damage * (1f - getMagicResistModBoost()));
+		switch(damageType) {
+			//Elemental Cases
+			case PHYSICAL:
+				damage = (int)Math.ceil(damage * (1f - getMagicResistModBoost()));
+
+				break;
+
+			case FIRE:
+				damage = (int)Math.ceil(damage * (1f - getFireResistModBoost()));
+				break;
+
+			case POISON:
+				damage = (int)Math.ceil(damage * (1f - getPoisonResistModBoost()));
+				break;
+
+			case ICE:
+				damage = (int)Math.ceil(damage * (1f - getIceResistModBoost()));
+				break;
+
+			//Physical Cases
+			case BLUDGEONING:
+				damage = (int)Math.ceil(damage * (1f - getBludgeoningResistModBoost()));
+				break;
+
+			case PIERCING:
+				damage = (int)Math.ceil(damage - getPiercingResistModBoost() * 1f);
+				break;
+
+			case SLASHING:
+				damage = (int)Math.ceil(damage * (1f - getSlashingResistModBoost()));
+				break;
 		}
-		if(damageType == DamageType.FIRE) {
-			damage = (int)Math.ceil(damage * (1f - getFireResistModBoost()));
-		}
-		if(damageType == DamageType.ICE) {
-			damage = (int)Math.ceil(damage * (1f - getIceResistModBoost()));
-		}
-		if(damageType == DamageType.POISON) {
-			damage = (int)Math.ceil(damage * (1f - getPoisonResistModBoost()));
-		}
-		if(damageType == DamageType.LIGHTNING) {
-			damage = (int)Math.ceil(damage * (1f - getLightningResistModBoost()));
-		}
+		if(damage < 0) damage = 0;
+
+		//if(damageType == DamageType.PHYSICAL) {
+			//damage = (int)Math.ceil(damage * (1f - getMagicResistModBoost()));
+		//}
+		//if(damageType == DamageType.FIRE) {
+			//damage = (int)Math.ceil(damage * (1f - getFireResistModBoost()));
+		//}
+		//if(damageType == DamageType.ICE) {
+			//damage = (int)Math.ceil(damage * (1f - getIceResistModBoost()));
+		//}
+		//if(damageType == DamageType.POISON) {
+			//damage = (int)Math.ceil(damage * (1f - getPoisonResistModBoost()));
+		//}
+		//if(damageType == DamageType.LIGHTNING) {
+			//damage = (int)Math.ceil(damage * (1f - getLightningResistModBoost()));
+		//}
 
 		//Resistance Modboost (Physical)
-		if(damageType == DamageType.BLUDGEONING) {
-			damage = (int)Math.ceil(damage * (1f - getBludgeoningResistModBoost()));
-		}
-		if(damageType == DamageType.PIERCING) {
-			damage = (int)Math.ceil(damage * (1f - getPiercingResistModBoost()));
-		}
-		if(damageType == DamageType.SLASHING) {
-			damage = (int)Math.ceil(damage * (1f - getSlashingResistModBoost()));
-		}
+		//if(damageType == DamageType.BLUDGEONING) {
+			//damage = (int)Math.ceil(damage * (1f - getBludgeoningResistModBoost()));
+		//}
+		//if(damageType == DamageType.PIERCING) {
+			//damage = (int)Math.ceil(damage * (1f - getPiercingResistModBoost()));
+		//}
+		//if(damageType == DamageType.SLASHING) {
+			//damage = (int)Math.ceil(damage * (1f - getSlashingResistModBoost()));
+		//}
 
 		// Healing should heal
 		if(damageType == DamageType.HEALING) damage *= -1f;

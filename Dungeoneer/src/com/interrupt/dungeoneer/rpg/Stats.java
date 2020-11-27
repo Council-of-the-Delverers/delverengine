@@ -143,6 +143,10 @@ public class Stats {
 		iceResistMod += m.getIceResistMod(i);
 		poisonResistMod += m.getPoisonResistMod(i);
 		lightningResistMod += m.getLightningResistMod(i);
+
+		bludgeoningResistMod += m.getBludgeoningResistMod(i);
+		piercingResistMod += m.getPiercingResistMod(i);
+		slashingResistMod += m.getSlashingResistMod(i);
 	}
 
 	public boolean statsChanged() {
