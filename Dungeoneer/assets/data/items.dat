@@ -152,7 +152,7 @@
 				"spriteAtlas": "ranged-1",
 				"name":"FrostBane",
 				"legendary": true,
-				"damageType": "PIERCING",
+				"damageType": "PHYSICAL",
 				"baseDamage":1,
 				"randDamage":5,
 				"knockback":0.1,

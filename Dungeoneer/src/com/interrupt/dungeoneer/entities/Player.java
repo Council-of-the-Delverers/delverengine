@@ -2111,8 +2111,6 @@ public class Player extends Actor {
 				Weapon w = (Weapon)held;
 				int randDamage = w.getRandDamage();
 				int baseDamage = w.getBaseDamage() + w.getElementalDamage() + getDamageStatBoost();
-				int bonusBaseDamage = w.getBonusBaseDamage();
-				int bonusRandDamage = w.getBonusRandDamage();
 
 				if(randDamage == 0) return Integer.toString(baseDamage);
 				return MessageFormat.format(StringManager.get("entities.Player.weaponAttackText"), baseDamage, (randDamage + baseDamage));

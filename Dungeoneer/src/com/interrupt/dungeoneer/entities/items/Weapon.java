@@ -42,6 +42,7 @@ public class Weapon extends Item {
 		BLEEDING,
 	}
 
+	//Get 2 damage types to a weapom?
 	public enum BonusDamageType {
 		FIRE,
 		ICE,
@@ -171,14 +172,12 @@ public class Weapon extends Item {
 	public String GetItemText() {
 		int dmg = getBaseDamage();
 		int rdmg = getRandDamage();
-		int bdmg = getBonusBaseDamage();
-		int rbdmg = getBonusRandDamage();
 
 		String dmgType = Weapon.damageTypeToString(this.damageType);
 		String bdmgType = Weapon.bonusDamageTypeToString(this.bonusDamageType);
 		//if(damageType == DamageType.PHYSICAL) dmgType = "DMG";
 		
-		String infoText = MessageFormat.format(StringManager.get("items.Weapon.damageRangeText"), dmg, (dmg + rdmg), dmgType.toLowerCase(), bdmg, (bdmg + rbdmg), bdmgType.toLowerCase());
+		String infoText = MessageFormat.format(StringManager.get("items.Weapon.damageRangeText"), dmg, (dmg + rdmg), dmgType.toLowerCase());
 		if(getElementalDamage() > 0)
 			infoText += "\n" + MessageFormat.format(StringManager.get("items.Weapon.elementalDamageText"), getElementalDamage(), Weapon.damageTypeToString(getDamageType()));
 		
@@ -200,31 +199,6 @@ public class Weapon extends Item {
 		    dmgMod += (itemLevel * 0.75f);
 		
 		return Math.max(1, baseDamage + dmgMod);
-	}
-
-	public int getBonusBaseDamage() {
-		int bdmgMod = 0;
-		if(this.itemCondition != null) bdmgMod = (this.itemCondition.ordinal() * 2) - 4;
-
-		for(ItemModification enchantment : getEnchantments()) {
-			if((enchantment.damageType == null || enchantment.damageType == DamageType.ICE)) bdmgMod += enchantment.damageMod;
-		}
-
-		// item scaling
-		if(itemLevel > 1)
-			bdmgMod += (itemLevel * 0.75f);
-
-		return Math.max(1, bonusBaseDamage + bdmgMod);
-	}
-
-	public int getBonusRandDamage() {
-		int bdmgMod = 0;
-
-		// item scaling
-		if(itemLevel > 1)
-			bdmgMod += (itemLevel * 0.75f);
-
-		return Math.max(1, bonusRandDamage + bdmgMod);
 	}
 
 
