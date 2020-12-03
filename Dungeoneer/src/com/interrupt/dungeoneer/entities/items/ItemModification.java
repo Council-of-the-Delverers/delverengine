@@ -23,6 +23,11 @@ public class ItemModification {
     protected int piercingDamageMod = 0;
     protected int slashingDamageMod = 0;
 
+    protected int fireDamageMod = 0;
+    protected int iceDamageMod = 0;
+    protected int poisonDamageMod = 0;
+    protected int lightningDamageMod = 0;
+
     // Resistances
     protected float magicResistMod = 0f;
     protected float fireResistMod = 0f;
@@ -41,6 +46,7 @@ public class ItemModification {
     protected int slashingResist = 0;
     protected int piercingResist = 0;
     protected int bludgeoningResist = 0;
+    protected int iceDamage = 0;
 
     public DamageType damageType = DamageType.PHYSICAL;
 
@@ -61,6 +67,10 @@ public class ItemModification {
 
     public int getMoveSpeedMod(Item owner) {
         return moveSpeedMod;
+    }
+
+    public int getIceDamageMod(Item owner) {
+        return iceDamageMod + (int)(iceDamageMod * owner.itemLevel * 0.5f);
     }
 
     public int getAgilityMod(Item owner) {
@@ -106,6 +116,8 @@ public class ItemModification {
         armorMod += value;
     }
 
+    //public void increaseIceDamageMod(int value) { iceDamageMod += value; }
+
     public float getMagicResistMod(Item owner) { return magicResistMod + (magicResistMod * owner.itemLevel * 0.05f); }
 
     //Enable Resistances to take away elemental damage like Armor
@@ -120,7 +132,6 @@ public class ItemModification {
 
     public float getLightningResistMod(Item owner) { return lightningResistMod + (lightningResistMod * owner.itemLevel * 0.05f); }
     public float increaseLightningResistMod(int value) { return lightningResistMod += value; }
-
 
     public float getSlashingResistMod(Item owner) { return slashingResistMod + (slashingResistMod * owner.itemLevel * 0.05f); }
 
@@ -144,6 +155,10 @@ public class ItemModification {
         costMod += Math.min(bludgeoningDamageMod, 0);
         costMod += Math.min(piercingDamageMod, 0);
         costMod += Math.min(slashingDamageMod, 0);
+
+        costMod += Math.min(iceDamageMod, 0);
+
+
 
         costMod += Math.min(25 * knockbackMod, 0);
         costMod += Math.min(1000 * magicResistMod, 0);

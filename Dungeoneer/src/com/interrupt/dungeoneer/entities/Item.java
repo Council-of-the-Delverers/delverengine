@@ -446,6 +446,9 @@ public class Item extends Entity {
 		float attackSpeedMod = 0;
 		float magicResistMod = 0;
 
+		//Custom Damage Mod Floats
+		int iceDamageMod = 0;
+
 		//New Resist Mods
 		float fireResistMod = 0;
 		float iceResistMod = 0;
@@ -460,6 +463,11 @@ public class Item extends Entity {
 			hpMod += m.getHpMod(this);
 			agilityMod += m.getAgilityMod(this);
 			armorMod += m.getArmorMod(this);
+
+			//Custom Item Mods
+			iceDamageMod += m.getIceDamageMod(this);
+
+
 			magicMod += m.getMagicMod(this);
 			attackMod += m.getAttackMod(this);
 			knockbackMod += m.getKnockbackMod(this);
@@ -486,6 +494,9 @@ public class Item extends Entity {
 		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoMagicResistText"), magicResistMod);
 		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoFireResistText"), fireResistMod);
 		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoPoisonResistText"), poisonResistMod);
+
+		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoIceDamageText"), iceDamageMod);
+
 		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoIceResistText"), iceResistMod);
 		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoLightningResistText"), lightningResistMod);
 		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoSlashingResistText"), slashingResistMod);

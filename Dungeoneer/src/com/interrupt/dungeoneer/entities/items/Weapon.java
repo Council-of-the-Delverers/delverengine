@@ -1,6 +1,8 @@
 package com.interrupt.dungeoneer.entities.items;
 
 import java.text.MessageFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import com.badlogic.gdx.Gdx;
@@ -40,6 +42,26 @@ public class Weapon extends Item {
 		BLEEDING,
 	}
 
+	public enum BonusDamageType {
+		FIRE,
+		ICE,
+		LIGHTNING,
+		POISON,
+		PARALYZE,
+		VAMPIRE,
+		PIERCING,
+		BLUDGEONING,
+		SLASHING,
+		BLEEDING,
+	}
+
+	@EditorProperty
+	public BonusDamageType bonusDamageType = BonusDamageType.ICE;
+
+	public static String bonusDamageTypeToString(BonusDamageType bType) {
+		return StringManager.get("items.Weapon.bonusDamageType." + bType.toString().toUpperCase());
+	}
+
 	public ItemModification baseMods;
 	
 	@EditorProperty
@@ -48,12 +70,18 @@ public class Weapon extends Item {
 	public static String damageTypeToString(DamageType dType) {
 		return StringManager.get("items.Weapon.damageType." + dType.toString().toUpperCase());
 	}
-	
+
 	public Weapon() { }
-	
+
+	@EditorProperty
+	protected int bonusBaseDamage = 2;
+
+	@EditorProperty
+	protected int bonusRandDamage = 2;
+
 	@EditorProperty
 	protected int baseDamage = 2;
-	
+
 	@EditorProperty
 	protected int randDamage = 2;
 	
@@ -138,15 +166,19 @@ public class Weapon extends Item {
 		this.reach = this.reach * 0.75f;
 	}
 
+	//Custom Item Texts
 	@Override
 	public String GetItemText() {
 		int dmg = getBaseDamage();
 		int rdmg = getRandDamage();
-		
+		int bdmg = getBonusBaseDamage();
+		int rbdmg = getBonusRandDamage();
+
 		String dmgType = Weapon.damageTypeToString(this.damageType);
+		String bdmgType = Weapon.bonusDamageTypeToString(this.bonusDamageType);
 		//if(damageType == DamageType.PHYSICAL) dmgType = "DMG";
 		
-		String infoText = MessageFormat.format(StringManager.get("items.Weapon.damageRangeText"), dmg, (dmg + rdmg), dmgType.toLowerCase());
+		String infoText = MessageFormat.format(StringManager.get("items.Weapon.damageRangeText"), dmg, (dmg + rdmg), dmgType.toLowerCase(), bdmg, (bdmg + rbdmg), bdmgType.toLowerCase());
 		if(getElementalDamage() > 0)
 			infoText += "\n" + MessageFormat.format(StringManager.get("items.Weapon.elementalDamageText"), getElementalDamage(), Weapon.damageTypeToString(getDamageType()));
 		
@@ -169,7 +201,33 @@ public class Weapon extends Item {
 		
 		return Math.max(1, baseDamage + dmgMod);
 	}
-	
+
+	public int getBonusBaseDamage() {
+		int bdmgMod = 0;
+		if(this.itemCondition != null) bdmgMod = (this.itemCondition.ordinal() * 2) - 4;
+
+		for(ItemModification enchantment : getEnchantments()) {
+			if((enchantment.damageType == null || enchantment.damageType == DamageType.ICE)) bdmgMod += enchantment.damageMod;
+		}
+
+		// item scaling
+		if(itemLevel > 1)
+			bdmgMod += (itemLevel * 0.75f);
+
+		return Math.max(1, bonusBaseDamage + bdmgMod);
+	}
+
+	public int getBonusRandDamage() {
+		int bdmgMod = 0;
+
+		// item scaling
+		if(itemLevel > 1)
+			bdmgMod += (itemLevel * 0.75f);
+
+		return Math.max(1, bonusRandDamage + bdmgMod);
+	}
+
+
 	public int getElementalDamage() {
 		if(!identified || enchantment == null || enchantment.damageType == DamageType.PHYSICAL) return 0;
 		return enchantment.damageMod;

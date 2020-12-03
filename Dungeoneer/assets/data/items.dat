@@ -148,17 +148,20 @@
 			{
 				"class": "com.interrupt.dungeoneer.entities.items.Bow",
 				"itemType": "bow",
-				"tex":19,
-				"spriteAtlas": "Classes x32",
+				"tex": 2,
+				"spriteAtlas": "ranged-1",
 				"name":"FrostBane",
+				"legendary": true,
+				"damageType": "PIERCING",
 				"baseDamage":1,
 				"randDamage":5,
 				"knockback":0.1,
 				"range":4,
 				"speed": 1.75,
 				"cost":20,
-				"yOffset": 0.05,
-				"twoHanded":true
+				"yOffset": -0.18,
+				"scale": 0.60,
+				"twoHanded":true,
 			},
 			{
 				"class": "com.interrupt.dungeoneer.entities.items.ItemStack",
@@ -166,10 +169,12 @@
 				"item": {
 					"class": "com.interrupt.dungeoneer.entities.projectiles.Missile",
 					"name":"Arrow",
-					"tex": 73
+					"spriteAtlas": "ranged-1",
+					"tex": 3,
 				},
 				"stackType":"ARROW",
 				"tex":3,
+				"spriteAtlas": "ranged-1",
 				"name":"Testing Arrows",
 				"count":4,
 				"yOffset":-0.11,

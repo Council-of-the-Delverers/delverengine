@@ -280,25 +280,24 @@ public class Actor extends Entity {
 		switch(damageType) {
 			//Elemental Cases
 			case PHYSICAL:
-				damage = (int)Math.ceil(damage * (1f - getMagicResistModBoost()));
-
+				damage = (int)Math.ceil(damage - getMagicResistModBoost() * 1f);
 				break;
 
 			case FIRE:
-				damage = (int)Math.ceil(damage * (1f - getFireResistModBoost()));
+				damage = (int)Math.ceil(damage - getFireResistModBoost() * 1f);
 				break;
 
 			case POISON:
-				damage = (int)Math.ceil(damage * (1f - getPoisonResistModBoost()));
+				damage = (int)Math.ceil(damage - getPoisonResistModBoost() * 1f);
 				break;
 
 			case ICE:
-				damage = (int)Math.ceil(damage * (1f - getIceResistModBoost()));
+				damage = (int)Math.ceil(damage - getIceResistModBoost() * 1f);
 				break;
 
 			//Physical Cases
 			case BLUDGEONING:
-				damage = (int)Math.ceil(damage * (1f - getBludgeoningResistModBoost()));
+				damage = (int)Math.ceil(damage - getBludgeoningResistModBoost() * 1f);
 				break;
 
 			case PIERCING:
@@ -306,7 +305,7 @@ public class Actor extends Entity {
 				break;
 
 			case SLASHING:
-				damage = (int)Math.ceil(damage * (1f - getSlashingResistModBoost()));
+				damage = (int)Math.ceil(damage - getSlashingResistModBoost() * 1f);
 				break;
 		}
 		if(damage < 0) damage = 0;
