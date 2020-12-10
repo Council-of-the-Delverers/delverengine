@@ -669,6 +669,41 @@
         "localizedName": "???",
         "comment": "Text shown for unidentified items."
     },
+  "entities.Item.modificationInfoIceResistText": {
+    "class": "com.interrupt.dungeoneer.game.LocalizedString",
+    "localizedName": "Ice Resistance",
+    "comment": ""
+  },
+  "entities.Item.modificationInfoFireResistText": {
+    "class": "com.interrupt.dungeoneer.game.LocalizedString",
+    "localizedName": "Fire Resistance",
+    "comment": ""
+  },
+  "entities.Item.modificationInfoPoisonResistText": {
+    "class": "com.interrupt.dungeoneer.game.LocalizedString",
+    "localizedName": "Poison Resistance",
+    "comment": ""
+  },
+  "entities.Item.modificationInfoLightningResistText": {
+    "class": "com.interrupt.dungeoneer.game.LocalizedString",
+    "localizedName": "Lightning Resistance",
+    "comment": ""
+  },
+  "entities.Item.modificationInfoPiercingResistText": {
+    "class": "com.interrupt.dungeoneer.game.LocalizedString",
+    "localizedName": "Piercing Resistance",
+    "comment": ""
+  },
+  "entities.Item.modificationInfoBludgeoningResistText": {
+    "class": "com.interrupt.dungeoneer.game.LocalizedString",
+    "localizedName": "Bludgeoning Resistance",
+    "comment": ""
+  },
+  "entities.Item.modificationInfoSlashingResistText": {
+    "class": "com.interrupt.dungeoneer.game.LocalizedString",
+    "localizedName": "Slashing Resistance",
+    "comment": ""
+  },
     "entities.Item.modificationInfoSpeedText": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
         "localizedName": "Speed",

@@ -11,7 +11,6 @@ import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.math.collision.BoundingBox;
 import com.badlogic.gdx.math.collision.Ray;
 import com.badlogic.gdx.utils.Array;
-import com.badlogic.gdx.utils.ArrayMap;
 import com.badlogic.gdx.utils.IntArray;
 import com.interrupt.api.steam.SteamApi;
 import com.interrupt.dungeoneer.Audio;
@@ -42,37 +41,50 @@ import com.interrupt.dungeoneer.tiles.ExitTile;
 import com.interrupt.dungeoneer.tiles.Tile;
 import com.interrupt.helpers.PlayerHistory;
 import com.interrupt.managers.StringManager;
+//import com.zel.lua.entity.LuaPlayer;
+import javafx.scene.input.KeyCode;
 
 import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Random;
 
 public class Player extends Actor {
-	
+	/** Player gold amount. */
 	public int gold = 0;
-	public int ython = 0;
-	public int vis = 200;
 
+	/** Player z-axis rotation. */
 	public float rot = 0;
+
+	/** Player y-axis rotation. */
 	public float yrot = 0;
+
 	public float rota = 0;
 	public float rotya = 0;
 
-	public float baseSpeed = 0.1F;
-	
 	public float rot2 = 0;
 
+	/** Player jump height. */
 	public float jumpHeight = 0.05f;
-	// Sprinting
-	private float sprintModifier = 0.15f;
-	private boolean isSprinting = false;
 
+	/** Player eye height. */
 	public float eyeHeight = 0.12f;
+
+	public float standingHeight = 0.12f;
+	public float crouchHeight = 0f;
+	public float proneHeight = -0.25f;
+
+	/** Head bob speed. */
 	public float headBobSpeed = 0.319f;
+
+	/** Head bob height. */
 	public float headBobHeight = 0.3f;
-	
+
+	public float headBobStanding = 0.319f;
+	public float headBobCrouch = 0.225f;
+	public float headBobProne = 0.110f;
+
 	public boolean hasAttacked;
-	
+
 	private float attackSpeed = 1;
 	private float attackChargeSpeed = 1;
 
@@ -80,147 +92,156 @@ public class Player extends Actor {
 	private float tickcount = 0;
 
 	private float playtime = -1;
-	
+
 	public boolean ignoreStairs = false;
 	public float spawnX, spawnY;
-	
+
+	/** Player key count. */
 	public int keys = 0;
-	
+
 	public float attackChargeTime = 40;
 	public float attackCharge = 0;
 
 	@Deprecated
 	public float attackDelay = 0.0f;
-	
+
 	public float headbob = 0;
 	public transient Float stepUpLerp = null;
 	public transient Float stepUpTimer = null;
-	
+
 	public boolean doingHeldItemTransition = false;
 	public float heldItemTransitionEnd = 0;
 	public float heldItemTransition = 0;
-	
+
 	private boolean wasOnFloorLast = false;
 	private float lastSplashTime = 0;
-	
-	private float stepHeight = 0.35f;
-	private float lastZ;
-	
-	public boolean isHoldingOrb = false;
-	
-	public int levelNum = 0;
-	
-	// inventory stuff
-	/** Custom Currencies List (Array) */
-	public ArrayMap<String, Integer> currencies = new ArrayMap<String, Integer>();
-	Integer Ython = currencies.get("Ython");
-	Integer Vis = currencies.get("Vis");
 
+	private float stepHeight = 0.35f;
+	private float stepStanding = 0.35f;
+	private float crouchStep = 0.23f;
+	private float proneStep = 0.12f;
+
+	private float lastZ;
+
+	public boolean isHoldingOrb = false;
+
+	public int levelNum = 0;
+
+	/** Player inventory. */
 	public Array<Item> inventory = new Array<Item>();
 	public Integer selectedBarItem = null;
 	public Integer heldItem = null;
 
-	// items to start with!
+	/** New game player inventory. */
 	public Array<Entity> startingInventory = new Array<Entity>();
-	
+
 	public HashMap<String,Item> equippedItems = new HashMap<String,Item>();
-	
+
 	// audio stuff
 	private Long torchSoundInstance = null;
 	private Long stepsSoundInstance = null;
-	
+
 	private Integer tapLength = null;
 
 	public int hotbarSize = 5;
 	public int inventorySize = 23;
-	
+
 	public Item hovering = null;
-	
+
 	private boolean attackButtonWasPressed = false;
-	
+
 	float walkVel = 0.05f;
 	float walkSpeed = 0.15f;
+	float sprintMul = 1.15f;
+	float standSpeed = 0.15f;
+	float crouchSpeed = 0.075f;
+	float proneSpeed = 0.025f;
 	float minWalkSpeed = 0.01f;
 	float rotSpeed = 0.009f;
 	float maxRot = 0.06f;
-	
+
 	private transient float xm = 0;
 	private transient float zm = 0;
 	private transient float deltaX = 0;
 	private transient float deltaY = 0;
-	
+
 	public transient float friction = 1f;
-	
+
 	public float randomSeed = 1;
-	
+
 	private transient Vector2 walkVelVector = new Vector2();
 	private transient Vector2 lastDelta = new Vector2();
 	private transient Collision hitLoc = new Collision();
 	private transient float nextx;
 	private transient float nexty;
-	
+
 	private transient boolean touchingItem = false;
-	
+
 	Vector3 tempVec1 = new Vector3();
 	Vector3 tempVec2 = new Vector3();
 	Vector3 tempVec3 = new Vector3();
 	Vector3 tempVec4 = new Vector3();
-	
+
+	/** Player light color. */
 	public Color torchColor = new Color(1f, 0.8f, 0.4f, 1f);
-	private Color originalTorchColor = null;
+
+	/** Player light range. */
 	public float torchRange = 3.0f;
-	
+
+	private Color originalTorchColor = null;
+
 	public boolean inEditor = false;
-	
+
 	public static transient ControllerState controllerState = new ControllerState();
-	
+
 	private transient Array<Entity> pickList = new Array<Entity>();
-	
+
 	private HashMap<String, Float> messageViews = new HashMap<String, Float>();
-	
+
 	public transient LerpedAnimation handAnimation = null;
-	
+
 	public PlayerHistory history = new PlayerHistory();
-	
+
 	public transient boolean wasGamepadDragging = false;
-	
+
 	public float screenshakeAmount = 0;
 	public transient Vector2 screenshake = new Vector2();
-	
+
 	public Array<Potion> shuffledPotions = new Array<Potion>();
 	public Array<PotionType> discoveredPotions = new Array<PotionType>();
-	
+
 	private transient float footstepsTimer = 30;
-	
+
 	private transient boolean holdingTwoHanded = false;
-	
+
 	public HashMap<String,String> seenMessages = new HashMap<String, String>();
-	
+
 	public Stats calculatedStats = new Stats();
 
-    public transient boolean isOnLadder = false;
+	public transient boolean isOnLadder = false;
 
-    public LerpedAnimation dyingAnimation = null;
-    public transient boolean isDead = false;
+	public LerpedAnimation dyingAnimation = null;
+	public transient boolean isDead = false;
 
-    public transient float strafeCameraAngleMod = 0f;
+	public transient float strafeCameraAngleMod = 0f;
 
-    private boolean canLevelUp = true;
+	/** Does player level up? */
+	private boolean canLevelUp = true;
 
-    private Array<TravelInfo> travelPath = new Array<TravelInfo>();
-    public String levelName = "UNKNOWN";
+	private Array<TravelInfo> travelPath = new Array<TravelInfo>();
+	public String levelName = "UNKNOWN";
 
-    protected float tossPower = 0f;
+	protected float tossPower = 0f;
 
 	private transient Color t_vislightColor = new Color();
-    public transient float visiblityMod = 0f;
+	public transient float visiblityMod = 0f;
 
-    public boolean makeEscapeEffects = true;
+	public boolean makeEscapeEffects = true;
 
-    public boolean godMode = false;
+	public boolean godMode = false;
 
-    // Used to act on breaking changes between save versions
-    public int saveVersion = -1;
+	// Used to act on breaking changes between save versions
+	public int saveVersion = -1;
 
 	public Player() {
 		isSolid = true;
@@ -229,30 +250,27 @@ public class Player extends Actor {
 		hidden = true;
 		mass = 2f;
 		canStepUpOn = false;
-		// Sprinting
-		isSprinting = Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT);
 	}
-	
+
 	public Player(Game game) {
 		z = 0;
 		rot = (float)Math.PI * -0.5f;
-		
+
 		maxHp = 8;
 		hp = maxHp;
-		
+
 		collision.set(0.2f,0.2f,0.65f);
-		
+
 		isSolid = true;
-		
+
 		dropSound = "drops/drop_soft.mp3";
-		
+
 		mass = 2f;
 
 		game.player = this;
 
 		canStepUpOn = false;
 	}
-
 
 	public boolean canAddInventorySlot() {
 		return inventorySize - hotbarSize < 36;
@@ -327,26 +345,26 @@ public class Player extends Actor {
 			startingInventory.clear();
 		}
 	}
-	
+
 	public void init() {
 		makeStartingInventory();
 		setupController();
 	}
-	
+
 	@Override
 	public void checkAngles(Level level, float delta)
 	{
 		if(level.collidesWithAngles(x + xa * delta, y, collision, this)) xa = 0;
 		if(level.collidesWithAngles(x, y + ya * delta, collision, this)) ya = 0;
 	}
-	
+
 	@Override
 	public void tick(Level level, float delta) {
 
-        setMusicVolume();
-		
+		setMusicVolume();
+
 		stepUpTick(delta);
-		
+
 		calculatedStats.Recalculate(this);
 
 		// refresh the UI if it's being shown
@@ -355,32 +373,34 @@ public class Player extends Actor {
 		}
 
 		if(hp > getMaxHp()) hp = getMaxHp();
-		
+
 		nextx = x + xa * delta;
 		nexty = y + ya * delta;
-		
+
 		// check for an item collision first
 		if(!inEditor) {
 			Entity item = level.checkItemCollision(nextx, y, collision.x);
 			if(item == null) item = level.checkItemCollision(x, nexty, collision.x);
 			if(item != null) item.encroached(this);
 		}
-		
+
 		Vector3 floorSlope = level.getSlope(x, y, z, collision.x);
-		
+
 		float slopeXMod = (floorSlope.x * Math.abs(floorSlope.x)) * 0.01f;
 		float slopeYMod = (floorSlope.y * Math.abs(floorSlope.y)) * 0.01f;
-		
+
 		if(Math.abs(slopeXMod) < 0.003f) slopeXMod = 0;
 		if(Math.abs(slopeYMod) < 0.003f) slopeYMod = 0;
 
 		if(isOnFloor) {
-            xa += slopeXMod * delta;
-            ya += slopeYMod * delta;
-        }
-		
+			xa += slopeXMod * delta;
+			ya += slopeYMod * delta;
+		}
+
 		// room to move in X?
 		if (!isSolid || level.isFree(nextx, y, z, collision, stepHeight, false, hitLoc)) {
+			runPushCheck(level, delta, CollisionAxis.X);
+
 			Entity encroaching = null;
 			if(isSolid) {
 				encroaching = level.getHighestEntityCollision(nextx, y, z, collision, this);
@@ -388,12 +408,12 @@ public class Player extends Actor {
 					encroaching = level.checkStandingRoomWithEntities(nextx, y, z, collision, this);
 				}
 			}
-			
+
 			if(encroaching == null || z > encroaching.z + encroaching.collision.z - stepHeight) {
 				// are we touching an entity?
 				if(encroaching != null) {
 					// maybe we can climb on it
-					if( z > encroaching.z + encroaching.collision.z - stepHeight && 
+					if( z > encroaching.z + encroaching.collision.z - stepHeight &&
 							level.collidesWorldOrEntities(nextx, y, encroaching.z + encroaching.collision.z, collision, this) && encroaching.canStepUpOn) {
 						x += xa * delta;
 						stepUp((encroaching.z + encroaching.collision.z) - z);
@@ -401,10 +421,10 @@ public class Player extends Actor {
 						encroaching.steppedOn(this);
 					}
 					else {
-						xa = 0;
 						if(!inEditor) {
 							encroaching.encroached(this);
 						}
+						xa = 0;
 					}
 				}
 				else {
@@ -412,18 +432,20 @@ public class Player extends Actor {
 				}
 			}
 			else {
-				xa = 0;
 				if(!inEditor) {
 					encroaching.encroached(this);
 				}
+				xa = 0;
 			}
 		}
 		else {
 			xa = 0;
 		}
-		
+
 		// room to move in Y?
 		if (!isSolid || level.isFree(x, nexty, z, collision, stepHeight, false, hitLoc)) {
+			runPushCheck(level, delta, CollisionAxis.Y);
+
 			Entity encroaching = null;
 			if(isSolid) {
 				encroaching = level.getHighestEntityCollision(x, nexty, z, collision, this);
@@ -431,12 +453,12 @@ public class Player extends Actor {
 					encroaching = level.checkStandingRoomWithEntities(x, nexty, z, collision, this);
 				}
 			}
-			
+
 			if(encroaching == null || z > encroaching.z + encroaching.collision.z - stepHeight) {
 				// are we touching an entity?
 				if(encroaching != null) {
 					// maybe we can climb on it
-					if( z > encroaching.z + encroaching.collision.z - stepHeight && 
+					if( z > encroaching.z + encroaching.collision.z - stepHeight &&
 							level.collidesWorldOrEntities(x, nexty, encroaching.z + encroaching.collision.z, collision, this) && encroaching.canStepUpOn) {
 						y += ya * delta;
 						stepUp((encroaching.z + encroaching.collision.z) - z);
@@ -444,10 +466,10 @@ public class Player extends Actor {
 						encroaching.steppedOn(this);
 					}
 					else {
-						ya = 0;
 						if(!inEditor) {
 							encroaching.encroached(this);
 						}
+						ya = 0;
 					}
 				}
 				else {
@@ -455,28 +477,28 @@ public class Player extends Actor {
 				}
 			}
 			else {
-				ya = 0;
 				if(!inEditor) {
 					encroaching.encroached(this);
 				}
+				ya = 0;
 			}
 		}
 		else {
 			ya = 0;
 		}
-		
+
 		// Falling and stepping physics
 		isOnEntity = false;
 		Array<Entity> allStandingOn = level.getEntitiesColliding(x, y, (z + za * delta) - 0.02f, this);
 		Entity standingOn = null;
-		
+
 		// check which entity standing on is the highest
 		for(Entity on : allStandingOn) {
 			if(isSolid) {
 				if(standingOn == null || on.z + on.collision.z > standingOn.z + standingOn.collision.z) {
 					standingOn = on;
 				}
-				
+
 				if(standingOn != null) {
 					standingOn.encroached(this);
 					if(standingOn instanceof Actor || standingOn instanceof Trigger) {
@@ -488,51 +510,51 @@ public class Player extends Actor {
 			}
 		}
 
-        // ceiling collision?
-        if (isSolid && (za > 0 && !level.isFree(x, y, z + za, collision, stepHeight, false, null))) {
-            za = 0;
-        }
-		
+		// ceiling collision?
+		if (isSolid && (za > 0 && !level.isFree(x, y, z + za, collision, stepHeight, false, null))) {
+			za = 0;
+		}
+
 		if(standingOn == null) {
 			z += za * delta;
 		}
 		else if(za <= 0) {
 			isOnEntity = true;
 		}
-		
+
 		boolean wasOnFloor = isOnFloor;
 		float lastZa = za;
-		
+
 		float floorHeight = level.maxFloorHeight(x, y, z, collision.x);
 
 		float floorClampMod = 0.035f;
 		if(floating || za > 0) floorClampMod = 0f;
 
 		isOnFloor = z <= (floorHeight + 0.5f) + floorClampMod;
-		
+
 		if(!isOnFloor && !isOnEntity) {
-            if(!isOnLadder && !floating)
-                za -= 0.0035f * delta; // falling; add gravity
-        }
+			if(!isOnLadder && !floating)
+				za -= 0.0035f * delta; // falling; add gravity
+		}
 		else if(!isOnLadder)
 		{
 			float stepUpToHeight = floorHeight + 0.5f;
 			if(standingOn != null && standingOn.z + standingOn.collision.z - z < stepHeight && standingOn.z + standingOn.collision.z > stepUpToHeight) stepUpToHeight = standingOn.z + standingOn.collision.z;
 
 			if(isSolid) {
-                if (level.collidesWorldOrEntities(x, y, stepUpToHeight, collision, this)) {
-                    if (stepUpToHeight > z) {
-                        stepUp(stepUpToHeight - z);
-                        z = stepUpToHeight;
-                    } else if (isOnFloor && !isOnEntity) {
-                        z = floorHeight + 0.5f;
-                    } else if (isOnEntity) {
-                        z = stepUpToHeight;
-                    }
-                }
-            }
+				if (level.collidesWorldOrEntities(x, y, stepUpToHeight, collision, this)) {
+					if (stepUpToHeight > z) {
+						stepUp(stepUpToHeight - z);
+						z = stepUpToHeight;
+					} else if (isOnFloor && !isOnEntity) {
+						z = floorHeight + 0.5f;
+					} else if (isOnEntity) {
+						z = stepUpToHeight;
+					}
+				}
+			}
 
-            if(!floating) {
+			if(!floating) {
 				if(isOnEntity && standingOn != null) {
 					za = Math.max(za - (0.0035f * delta), standingOn.za);
 				}
@@ -541,11 +563,11 @@ public class Player extends Actor {
 				}
 			}
 		}
-		
+
 		// headbob
 		headbob = (float)Math.sin(tickcount * headBobSpeed) * Math.min((Math.abs(xa) + Math.abs(ya)), (headBobHeight * 0.5f)) * headBobHeight;
-        if(floating) headbob = 0;
-		
+		if(floating) headbob = 0;
+
 		// water movement
 		inwater = false;
 		Tile waterTile = level.findWaterTile(x, y, z, collision);
@@ -556,7 +578,7 @@ public class Player extends Actor {
 				if(waterTile.data.hurts > 0)
 					lavaHurtTimer = 0;
 			}
-			
+
 			if(waterTile.data.hurts > 0) {
 				lavaHurtTimer -= delta;
 				if(lavaHurtTimer <= 0) {
@@ -564,7 +586,7 @@ public class Player extends Actor {
 					this.hit(0, 0, waterTile.data.hurts, 0, waterTile.data.damageType, null);
 				}
 			}
-			
+
 			// walk sound
 			if(isOnFloor && waterTile.data.walkSound != null) {
 				footstepsTimer -= delta;
@@ -575,25 +597,25 @@ public class Player extends Actor {
 					Audio.playSound(waterTile.data.walkSound, stepvol * 4f, 0.9f + Game.rand.nextFloat() * 0.2f);
 				}
 			}
-			
+
 			// water friction!
 			friction = 0.08f;
 			xa -= ((xa - (xa * 0.5f)) * friction) * delta;
 			ya -= ((ya - (ya * 0.5f)) * friction) * delta;
-			
+
 			// let the player climb up out of the water
 			stepHeight = 0.3499f + (waterTile.floorHeight + 0.5f - z);
-			
+
 			headbob = (float)Math.sin(tickcount / 24.0f) * (headBobHeight * 0.067f);
 			inwater = true;
 		}
 		else {
 			stepHeight = 0.35f;
-			
+
 			// check if this tile hurts the player
 			Tile current = level.getTileOrNull((int)(x), (int)(y));
 			if(current == null) current = Tile.solidWall;
-			
+
 			if(current != null && current.data.hurts > 0 && z <= current.getMaxFloorHeight() + 0.5f && isOnFloor) {
 				lavaHurtTimer -= delta;
 				if(lavaHurtTimer <= 0) {
@@ -601,7 +623,7 @@ public class Player extends Actor {
 					this.hit(0, 0, current.data.hurts, 0, current.data.damageType, null);
 				}
 			}
-			
+
 			// walk sound
 			if(isOnFloor && current.data.walkSound != null) {
 				footstepsTimer -= delta;
@@ -621,12 +643,12 @@ public class Player extends Actor {
 					Audio.playSound(Tile.emptyWall.data.walkSound, stepvol * 2f, 0.9f + Game.rand.nextFloat() * 0.2f);
 				}
 			}
-			
+
 			// friction!
 			if(isOnFloor) friction = current.data.friction;
 			else if(isOnEntity || isOnLadder) friction = 1f;
 			else friction = 0.1f;
-			
+
 			xa -= ((xa - (xa * 0.8f)) * friction) * delta;
 			ya -= ((ya - (ya * 0.8f)) * friction) * delta;
 
@@ -634,7 +656,7 @@ public class Player extends Actor {
 				current.data.applyStatusEffect(this);
 			}
 		}
-		
+
 		// floor drop effects
 		if(wasOnFloor == false && isOnFloor == true && !inwater) {
 			if(Math.abs(lastZa) > 0.03f) {
@@ -642,7 +664,7 @@ public class Player extends Actor {
 				if(Math.abs(lastZa) > 0.06f) makeFallingDustEffect();
 			}
 		}
-		
+
 		// decay screenshake
 		screenshakeAmount = Math.max(screenshakeAmount -= delta * 0.1f, 0);
 
@@ -652,22 +674,22 @@ public class Player extends Actor {
 			screenshake.y = (float)Math.cos(Game.instance.time * 0.9f) * shakeMod * 0.36f;
 		}
 
-        // ladder movement
-        if(isOnLadder) {
-            if(walkVelVector.y > 0f || this.zm > 0f) {
-                float ladderMul = yrot;
-                if (ladderMul > 0.2f) ladderMul = 0.2f;
-                else if (ladderMul < -0.2f) ladderMul = -0.2f;
-                za = ladderMul * 0.1f;
-            }
-            else za = 0f;
+		// ladder movement
+		if(isOnLadder) {
+			if(walkVelVector.y > 0f || this.zm > 0f) {
+				float ladderMul = yrot;
+				if (ladderMul > 0.2f) ladderMul = 0.2f;
+				else if (ladderMul < -0.2f) ladderMul = -0.2f;
+				za = ladderMul * 0.1f;
+			}
+			else za = 0f;
 
-            if (isOnFloor && za < 0f) za = 0f;
+			if (isOnFloor && za < 0f) za = 0f;
 
-            isOnLadder = false;
-        }
+			isOnLadder = false;
+		}
 
-        // don't get sick
+		// don't get sick
 		if(drunkMod > 0) {
 			if(drunkMod > 6) drunkMod = 6;
 			drunkMod -= delta * 0.02;
@@ -677,107 +699,172 @@ public class Player extends Actor {
 		}
 	}
 
-    private void setMusicVolume() {
-        float musicLerp = Math.max(hp == 0 ? 0 : (float) hp / (float) maxHp, 0f);
-        if(isDead) musicLerp = 0f;
-        Audio.setMusicTargetVolume(musicLerp);
-    }
+	private void runPushCheck(Level level, float delta, CollisionAxis collisionAxis) {
 
-    public void die() {
-        Gdx.app.log("DelverGame", "Oh noes :( Player is dying!");
-        Array<LerpFrame> deathFrames = new Array<LerpFrame>();
+		float checkX = x;
+		float checkY = y;
 
-        floating = false;
+		if(collisionAxis == CollisionAxis.X) {
+			checkX = nextx;
+		}
+		else if(collisionAxis == CollisionAxis.Y) {
+			checkY = nexty;
+		}
 
-        if(!inwater) {
-            deathFrames.add(new LerpFrame(new Vector3(), new Vector3(), 275f));
-            deathFrames.add(new LerpFrame(new Vector3(0, -0.3f, 0.1f), new Vector3(0, 0, 70), 1000f));
-            deathFrames.add(new LerpFrame(new Vector3(0, -0.3f, 0.1f), new Vector3(0, 0, 70), 10f));
-        }
-        else {
-            deathFrames.add(new LerpFrame(new Vector3(), new Vector3(), 275f));
-            deathFrames.add(new LerpFrame(new Vector3(0, 0f, 0.1f), new Vector3(70, 0, 0), 1000f));
-            deathFrames.add(new LerpFrame(new Vector3(0, 0f, 0.1f), new Vector3(70, 0, 0), 10f));
-        }
+		// This is all the same collision check from the tick function copy pasted here, probably should generalize this
+		Entity encroaching = null;
+		if(isSolid) {
+			encroaching = level.getHighestEntityCollision(checkX, checkY, z, collision, this);
+			if(encroaching == null) {
+				encroaching = level.checkStandingRoomWithEntities(checkX, checkY, z, collision, this);
+			}
+		}
 
-        dyingAnimation = new LerpedAnimation(deathFrames);
-        dyingAnimation.play(6f, Interpolation.pow4In);
+		if(encroaching == null || z > encroaching.z + encroaching.collision.z - stepHeight) {
+			// are we touching an entity?
+			if(encroaching != null) {
+				// maybe we can climb on it
+				if( z > encroaching.z + encroaching.collision.z - stepHeight &&
+						level.collidesWorldOrEntities(checkX, checkY, encroaching.z + encroaching.collision.z, collision, this) && encroaching.canStepUpOn) {
+					// can climb, no push
+				}
+				else {
+					encroaching.push(this, level, delta, collisionAxis);
+				}
+			}
+		}
+		else {
+			encroaching.push(this, level, delta, collisionAxis);
+		}
+	}
 
-        Audio.playSound("sfx_death.mp3", 1f);
+	private void setMusicVolume() {
+		float musicLerp = Math.max(hp == 0 ? 0 : (float) hp / (float) maxHp, 0f);
+		if(isDead) musicLerp = 0f;
+		Audio.setMusicTargetVolume(musicLerp);
+	}
 
-        dropItem(selectedBarItem, Game.instance.level, 0.075f);
+	public void die() {
+		Gdx.app.log("DelverGame", "Oh noes :( Player is dying!");
+		Array<LerpFrame> deathFrames = new Array<LerpFrame>();
 
-        isDead = true;
-    }
+		floating = false;
+
+		if(!inwater) {
+			deathFrames.add(new LerpFrame(new Vector3(), new Vector3(), 275f));
+			deathFrames.add(new LerpFrame(new Vector3(0, -0.3f, 0.1f), new Vector3(0, 0, 70), 1000f));
+			deathFrames.add(new LerpFrame(new Vector3(0, -0.3f, 0.1f), new Vector3(0, 0, 70), 10f));
+		}
+		else {
+			deathFrames.add(new LerpFrame(new Vector3(), new Vector3(), 275f));
+			deathFrames.add(new LerpFrame(new Vector3(0, 0f, 0.1f), new Vector3(70, 0, 0), 1000f));
+			deathFrames.add(new LerpFrame(new Vector3(0, 0f, 0.1f), new Vector3(70, 0, 0), 10f));
+		}
+
+		dyingAnimation = new LerpedAnimation(deathFrames);
+		dyingAnimation.play(6f, Interpolation.pow4In);
+
+		Audio.playSound("sfx_death.mp3", 1f);
+
+		dropItem(selectedBarItem, Game.instance.level, 0.075f);
+
+		isDead = true;
+	}
 
 	public void editorTick(Level level, float delta) {
 		walkVel = 0.05f;
 		walkSpeed = 0.15f;
 		rotSpeed = 0.009f;
 		maxRot = 0.06f;
-		
+
 		isSolid = true;
-		
+
 		tick(level, delta);
 	}
-	
+
 	public void tick(Level level, float delta, GameInput input) {
 
 		boolean isInOverlay = OverlayManager.instance.current() != null && OverlayManager.instance.current().catchInput;
 
-        // don't do anything if the player is dead.
-        if(isDead) {
-            dyingAnimation.animate(delta);
-        }
+		// don't do anything if the player is dead.
+		if(isDead) {
+			dyingAnimation.animate(delta);
+		}
 		else {
-            tickStatusEffects(delta);
-        }
-		
+			tickStatusEffects(delta);
+		}
+
 		// reset movement speed
 		walkVel = 0.05f;
 		walkSpeed = getWalkSpeed();
 		rotSpeed = 0.009f;
 		maxRot = 0.06f;
 
-		//Sprinting!
-
-
 		// keep rotation in bounds
 		if(Math.abs(rot) > 6.28318531) {
 			if(rot > 0) rot = rot % 6.28318531f;
 			else if(rot < 0) rot = rot % 6.28318531f;
 		}
-		
-		boolean up = false, down = false, left = false, right = false, turnLeft = false, turnRight = false, turnUp = false, turnDown = false, attack = false, jump = false;
 
-        if(!isDead && !isInOverlay) {
-            up = input.isMoveForwardPressed();
-            down = input.isMoveBackwardsPressed();
-            left = input.isStrafeLeftPressed();
-            right = input.isStrafeRightPressed();
-            turnLeft = input.isTurnLeftPressed();
-            turnRight = input.isTurnRightPressed();
-            turnUp = input.isLookUpPressed();
-            turnDown = input.isLookDownPressed();
-            attack = input.isAttackPressed() || controllerState.attack;
-            jump = input.isJumpPressed();
-        }
+		boolean up = false, down = false, left = false, right = false, turnLeft = false, turnRight = false, turnUp = false, turnDown = false, attack = false, jump = false, crouch = false, prone = false, sprint = false;
+
+		if(!isDead && !isInOverlay) {
+			up = input.isMoveForwardPressed();
+			down = input.isMoveBackwardsPressed();
+			left = input.isStrafeLeftPressed();
+			right = input.isStrafeRightPressed();
+			turnLeft = input.isTurnLeftPressed();
+			turnRight = input.isTurnRightPressed();
+			turnUp = input.isLookUpPressed();
+			turnDown = input.isLookDownPressed();
+			attack = input.isAttackPressed() || controllerState.attack;
+			jump = input.isJumpPressed();
+			crouch = input.isCrouchPressed();
+			prone = input.isPronePressed();
+			sprint = input.isSprintPressed();
+		}
+
+		//eyeHeight = (prone ? proneHeight : (crouch ? crouchHeight : standingHeight));
+
+		if(prone) {
+			eyeHeight = proneHeight;
+			stepHeight = proneStep;
+			walkSpeed = proneSpeed;
+			headBobSpeed = headBobProne;
+		} else if(crouch) {
+			eyeHeight = crouchHeight;
+			stepHeight = crouchStep;
+			walkSpeed = crouchSpeed;
+			headBobSpeed = headBobCrouch;
+		} else {
+			eyeHeight = standingHeight;
+			stepHeight = stepStanding;
+			if(sprint) {
+				walkSpeed = walkSpeed * sprintMul;
+				headBobSpeed = headBobStanding * sprintMul;
+			} else {
+				walkSpeed = standSpeed;
+				headBobSpeed = headBobStanding;
+			}
+		}
+
+
 
 		// Update player visibility
 		Color lightColor = level.getLightColorAt(x, y, z, null, t_vislightColor);
 		visiblityMod = Math.max(Math.max(lightColor.r, lightColor.g), lightColor.b);
 		visiblityMod *= visiblityMod;
-		
+
 		if(heldItem != null) {
 			if(handAnimation != null && handAnimation.playing) handAnimation.animate(delta);
 		}
 		else if(heldItem == null) handAnimation = null;
-		
+
 		// Check for mobile attack press
 		if(Game.isMobile && !isInOverlay)
 		{
 			attack = input.isAttackPressed() || Game.hud.isAttackPressed() || controllerState.attack;
-			
+
 			if(!attack && (input.isLeftTouched()) )
 			{
 				if(tapLength == null) tapLength = 0;
@@ -788,59 +875,59 @@ public class Player extends Actor {
 				if(tapLength < 10) {
 					Use(level, Gdx.input.getX(),Gdx.input.getY());
 				}
-				
+
 				tapLength = null;
 			}
 		}
-		
+
 		lastZ = z;
-		
+
 		// check to see if the player has moved far enough away from the stairs
 		if(ignoreStairs)
 		{
 			float distance = Math.max(Math.abs(x - spawnX), Math.abs(y - spawnY));
 			if(distance > 1) ignoreStairs = false;
 		}
-		
+
 		// charging an attack makes walking slower
 		if(attackCharge > 0)
 		{
 			float walkMod = attackCharge / attackChargeTime;
 			walkMod = Math.min(walkMod, 1);
-			
+
 			walkVel *= ( 1 - ( 0.5f * walkMod ) * (1.2 - stats.DEX * 0.06f) );
-			
+
 			// if not holding anything, cancel the attack
 			if(GetHeldItem() == null) attackCharge = 0;
 		}
-		
+
 		if(GetHeldItem() instanceof Weapon) attackChargeSpeed = ((Weapon)GetHeldItem()).getChargeSpeed() + getAttackSpeedStatBoost();
 		else attackChargeSpeed = 1;
-		
+
 		xm = 0;
 		zm = 0;
-		
+
 		walkVelVector.set(0,0);
 		if(up) walkVelVector.y += 1;
 		if(down) walkVelVector.y -= 1;
 		if(left) walkVelVector.x += 1;
 		if(right) walkVelVector.x -= 1;
-		
+
 		walkVelVector = walkVelVector.nor();
-		
+
 		// walking backwards is slower
 		if(walkVelVector.y < 0) {
 			walkVelVector.x *= 0.8f;
 			walkVelVector.y *= 0.5f;
 		}
-		
+
 		zm += walkVelVector.y * walkVel;
 		xm += walkVelVector.x * walkVel;
 
 		// angle the camera a tad when strafing
-        strafeCameraAngleMod *= (0.825f);
-        strafeCameraAngleMod += (xm * delta);
-		
+		strafeCameraAngleMod *= (0.825f);
+		strafeCameraAngleMod += (xm * delta);
+
 		//controllers!
 		if(input.usingGamepad && !isDead && !isInOverlay) {
 			if(input.isCursorCatched()) {
@@ -864,9 +951,9 @@ public class Player extends Actor {
 				input.gamepadCursorPosition.y = Math.min(input.gamepadCursorPosition.y, Gdx.graphics.getHeight());
 				input.gamepadCursorPosition.x = Math.max(input.gamepadCursorPosition.x, 0);
 				input.gamepadCursorPosition.y = Math.max(input.gamepadCursorPosition.y, 0);
-				
+
 				Game.ui.mouseMoved((int)input.gamepadCursorPosition.x, Gdx.graphics.getHeight() - (int)input.gamepadCursorPosition.y);
-				
+
 				if(controllerState.use) {
 					wasGamepadDragging = true;
 					input.touchDown((int)input.gamepadCursorPosition.x, Gdx.graphics.getHeight() - (int)input.gamepadCursorPosition.y, input.gamepadPointerNum, 0);
@@ -877,7 +964,7 @@ public class Player extends Actor {
 				}
 			}
 		}
-		
+
 		touchingItem = false;
 		boolean inOverlay = OverlayManager.instance.current() != null && OverlayManager.instance.current().catchInput;
 
@@ -888,10 +975,10 @@ public class Player extends Actor {
 			else if(Gdx.input.justTouched() && !attack && input.uiTouchPointer == null && input.lastTouchedPointer != null) {
 				Entity touching = pickEntity(level, Gdx.input.getX(input.lastTouchedPointer), Gdx.input.getY(input.lastTouchedPointer), 0.9f);
 				if(touching != null) input.uiTouchPointer = input.lastTouchedPointer;
-				
+
 				if(touching != null && touching instanceof Item) {
 					touchingItem = true;
-					
+
 					// drag item
 					if(touching.isActive) {
 						if(touching instanceof Key || touching instanceof Gold) {
@@ -910,16 +997,16 @@ public class Player extends Actor {
 				}
 			}
 		}
-		
+
 		hovering = null;
 		if(!touchingItem && !Game.isMobile && !input.isCursorCatched()) {
 			hovering = pickItem(level, input.getPointerX(), input.getPointerY(), 0.9f);
 		}
-		
+
 		if(!isDead && (!Game.isMobile || input.isCursorCatched()) && !OverlayManager.instance.shouldPauseGame()) {
 			String useText = ReadableKeys.keyNames.get(Actions.keyBindings.get(Action.USE));
 			if(Game.isMobile) useText = StringManager.get("entities.Player.mobileUseText");
-			
+
 			Entity centered = pickEntity(level, Gdx.graphics.getWidth() / 2, Gdx.graphics.getHeight() / 2, 0.7f);
 			if(centered != null && centered != this) {
 				if(centered instanceof Trigger) {
@@ -928,7 +1015,13 @@ public class Player extends Actor {
 						Game.ShowUseMessage(MessageFormat.format(StringManager.get("entities.Player.useText"), useText, t.getUseVerb()));
 					}
 				}
-				else if(centered instanceof Item && (Math.abs(centered.xa) < 0.01f && Math.abs(centered.ya) < 0.01f && Math.abs(centered.za) < 0.01f)) Game.ShowUseMessage(MessageFormat.format(StringManager.get("entities.Player.getItemText"), useText, ((Item) (centered)).GetName() + "\n" + ((Item) (centered)).GetInfoText()), ((Item) (centered)).GetTextColor());
+				else if(centered instanceof Item && (Math.abs(centered.xa) < 0.01f && Math.abs(centered.ya) < 0.01f && Math.abs(centered.za) < 0.01f)) {
+					Item i = (Item)centered;
+
+					if (!i.isPickup) {
+						Game.ShowUseMessage(MessageFormat.format(StringManager.get("entities.Player.getItemText"), useText, ((Item) (centered)).GetName() + "\n" + ((Item) (centered)).GetInfoText()), ((Item) (centered)).GetTextColor());
+					}
+				}
 				else if(centered instanceof Stairs) Game.ShowUseMessage(MessageFormat.format(StringManager.get("entities.Player.useText"), useText, ((Stairs) (centered)).getUseText()));
 				else if(centered instanceof Door) Game.ShowUseMessage(MessageFormat.format(StringManager.get("entities.Player.useText"), useText, ((Door)centered).getUseText()));
 				else if(centered instanceof ButtonModel) Game.ShowUseMessage(MessageFormat.format(StringManager.get("entities.Player.useText"), useText, ((ButtonModel)centered).useVerb));
@@ -937,18 +1030,18 @@ public class Player extends Actor {
 			else {
 				// check for a wall hit
 				Ray ray = Game.camera.getPickRay(Gdx.graphics.getWidth() / 2, Gdx.graphics.getHeight() / 2);
-				
+
 				float projx = ray.direction.x * 0.7f;
 				float projy = ray.direction.z * 0.7f;
-				
+
 				int checkx = (int)(Math.floor(ray.origin.x + projx));
 				int checky = (int)(Math.floor(ray.origin.z + projy));
-				
+
 				Tile hit = level.getTile(checkx, checky);
 				if(hit instanceof ExitTile) Game.ShowUseMessage(MessageFormat.format(StringManager.get("entities.Player.exitDungeonText"),useText));
 			}
 		}
-		
+
 		// keyboard input
 		if(turnLeft) {
 			rota += rotSpeed * delta;
@@ -958,10 +1051,10 @@ public class Player extends Actor {
 			rota -= rotSpeed * delta;
 			if(rota < -maxRot) rota = -maxRot;
 		}
-		
+
 		rot += rota;
 		rota *= 0.8;
-		
+
 		if(turnUp) {
 			rotya += (rotSpeed * 0.6f) * delta;
 			if(rotya > maxRot) rotya = maxRot;
@@ -970,139 +1063,139 @@ public class Player extends Actor {
 			rotya -= (rotSpeed * 0.6f) * delta;
 			if(rotya < -maxRot) rotya = -maxRot;
 		}
-		
+
 		yrot += rotya;
 		rotya *= 0.8;
 
 		if(jump && (isOnFloor || isOnEntity) && !isOnLadder) {
 			za += jumpHeight;
 		}
-		
+
 		// touch movement
 		if(Game.isMobile && !isDead && !isInOverlay) {
 			float max = 60;
-			
+
 			if(input.isLeftTouched() && !(touchingItem && input.uiTouchPointer == input.leftPointer)) {
 				deltaX = input.getLeftTouchPosition().x - Gdx.input.getX(input.leftPointer);
 				deltaY = input.getLeftTouchPosition().y - Gdx.input.getY(input.leftPointer);
-				
+
 				deltaX *= Math.abs(deltaX);
 				deltaY *= Math.abs(deltaY);
-				
+
 				deltaX *= GameScreen.cDelta;
 				deltaY *= GameScreen.cDelta;
-				
+
 				if(deltaY > max) deltaY = max;
 				else if(deltaY < -max) deltaY = -max;
-				
+
 				if(deltaX > max) deltaX = max;
 				else if(deltaX < -max) deltaX = -max;
-				
+
 				deltaY /= max;
 				deltaX /= max;
-				
+
 				if(Math.abs(deltaX) < 0.1f ) deltaX = 0;
 				if(Math.abs(deltaY) < 0.1f ) deltaY = 0;
-				
+
 				if(!Game.ignoreTouch) {
 					zm += (deltaY) * walkVel;
 					xm += (deltaX) * walkVel;
 				}
 			}
-			
+
 			if((Game.hud.isAttackPressed()) && !(touchingItem && input.uiTouchPointer == input.rightPointer)) {
-				
+
 				deltaX = 0;
 				deltaY = 0;
-				
+
 				Integer thisX = 0;
 				Integer thisY = 0;
-				
+
 				if(input.isRightTouched()) {
 					thisX = Gdx.input.getX(input.rightPointer);
 					thisY = Gdx.input.getY(input.rightPointer);
 				}
-				else if(Game.hud.isAttackPressed() && input.uiTouchPointer != null) {					
+				else if(Game.hud.isAttackPressed() && input.uiTouchPointer != null) {
 					thisX = Gdx.input.getX(input.uiTouchPointer);
 					thisY = Gdx.input.getY(input.uiTouchPointer);
 				}
-				
+
 				if(lastDelta == null) {
 					lastDelta = new Vector2(thisX,thisY);
 				}
-				
+
 				deltaX = (int)lastDelta.x - thisX;
 				deltaY = (int)lastDelta.y - thisY;
-				
+
 				if(Options.instance != null && Options.instance.mouseInvert) deltaY *= -1;
-				
+
 				deltaX *= Options.instance.mouseXSensitivity;
 				deltaY *= Options.instance.mouseYSensitivity;
-				
+
 				if(!Game.ignoreTouch) {
 					rotya += (deltaY / 800f) * Game.GetUiSize() / 85f;
 					rota += (deltaX / 400f) * Game.GetUiSize() / 85f;
 				}
-				
+
 				lastDelta.set(thisX, thisY);
 			}
-			
+
 			if(!(Game.hud.isAttackPressed())) {
 				lastDelta = null;
 			}
 		}
-		
+
 		// reset the ignore touch flag
 		if(Game.ignoreTouch) {
 			Game.ignoreTouch = false;
 		}
-		
+
 		tickcount += delta;
 		if(hasAttacked && !attack) hasAttacked = false;
 		if(doingHeldItemTransition) heldItemTransition += delta;
-		
+
 		// vertical look clamp
 		if(yrot > 1.3) yrot = 1.3f;
 		if(yrot < -1.3) yrot = -1.3f;
-		
+
 		// walk!
 		float xMod = (float)(xm * Math.cos(rot) + zm * Math.sin(rot)) * walkSpeed * delta;
 		float yMod = (float)(zm * Math.cos(rot) - xm * Math.sin(rot)) * walkSpeed * delta;
 
-        // flight controls!
-        if(floating) {
+		// flight controls!
+		if(floating) {
 
-            float flySpeed = stats.SPD * 0.1f;
+			float flySpeed = stats.SPD * 0.1f;
 
-            if(!isOnFloor && !isOnEntity) {
-                xMod = GameManager.renderer.camera.direction.x * zm * flySpeed;
-                yMod = GameManager.renderer.camera.direction.z * zm * flySpeed;
+			if(!isOnFloor && !isOnEntity) {
+				xMod = GameManager.renderer.camera.direction.x * zm * flySpeed;
+				yMod = GameManager.renderer.camera.direction.z * zm * flySpeed;
 
-                xMod += (float) (xm * Math.cos(rot)) * flySpeed * delta;
-                yMod += (float) (-xm * Math.sin(rot)) * flySpeed * delta;
-            }
+				xMod += (float) (xm * Math.cos(rot)) * flySpeed * delta;
+				yMod += (float) (-xm * Math.sin(rot)) * flySpeed * delta;
+			}
 
-            za += (GameManager.renderer.camera.direction.y) * 0.008f * walkVelVector.y * flySpeed;
+			za += (GameManager.renderer.camera.direction.y) * 0.008f * walkVelVector.y * flySpeed;
 
-            float flightFriction = 0.4f;
-            za -= ((za - (za * 0.8f)) * flightFriction) * delta;
-            xa -= ((xa - (xa * 0.8f)) * flightFriction) * delta;
-            ya -= ((ya - (ya * 0.8f)) * flightFriction) * delta;
-        }
+			float flightFriction = 0.4f;
+			za -= ((za - (za * 0.8f)) * flightFriction) * delta;
+			xa -= ((xa - (xa * 0.8f)) * flightFriction) * delta;
+			ya -= ((ya - (ya * 0.8f)) * flightFriction) * delta;
+		}
 
-        if(isOnLadder) {
-            xMod *= 0.5f;
-            yMod *= 0.5f;
-        }
-		
+		if(isOnLadder) {
+			xMod *= 0.5f;
+			yMod *= 0.5f;
+		}
+
 		xa += xMod * Math.min(friction * 1.4f, 1f);
 		ya += yMod * Math.min(friction * 1.4f, 1f);
-		
+
 		tick(level, delta);
-		
+
 		if(handAnimateTimer > 0) {
 			handAnimateTimer -= delta;
-			
+
 			Item held = GetHeldItem();
 			if(held != null && held instanceof Weapon) {
 				((Weapon)held).tickAttack(this, level, delta);
@@ -1119,9 +1212,9 @@ public class Player extends Actor {
 				if(held instanceof Weapon) attackOnRelease = ((Weapon)held).chargesAttack;
 				if(held instanceof Wand && ((Wand)held).autoFire) attackOnRelease = false;
 				if(held instanceof Gun) {
-				    attackOnRelease = false;
-                    if(!attack) ((Gun)held).resetTrigger();
-                }
+					attackOnRelease = false;
+					if(!attack) ((Gun)held).resetTrigger();
+				}
 
 				if((!attack && attackCharge > 0 && !hasAttacked)) {
 					if(attackOnRelease) {
@@ -1198,43 +1291,43 @@ public class Player extends Actor {
 			{
 				if(attack)
 				{
-					Armor a = (Armor)held; 
+					Armor a = (Armor)held;
 					ChangeHeldItem(null, true);
 					equip(a);
 				}
 			}
 		}
 
-        if(!isDead && !isInOverlay) {
-            if(input.doUseAction() ||
-                    controllerState.buttonEvents.contains(Action.USE, true)) Use(level);
+		if(!isDead && !isInOverlay) {
+			if(input.doUseAction() ||
+					controllerState.buttonEvents.contains(Action.USE, true)) Use(level);
 
-            // inventory actions
-            if(input.keyEvents.contains(Input.Keys.NUM_1)) DoHotbarAction(1);
-            if(input.keyEvents.contains(Input.Keys.NUM_2)) DoHotbarAction(2);
-            if(input.keyEvents.contains(Input.Keys.NUM_3)) DoHotbarAction(3);
-            if(input.keyEvents.contains(Input.Keys.NUM_4)) DoHotbarAction(4);
-            if(input.keyEvents.contains(Input.Keys.NUM_5)) DoHotbarAction(5);
-            if(input.keyEvents.contains(Input.Keys.NUM_6)) DoHotbarAction(6);
+			// inventory actions
+			if(input.keyEvents.contains(Input.Keys.NUM_1)) DoHotbarAction(1);
+			if(input.keyEvents.contains(Input.Keys.NUM_2)) DoHotbarAction(2);
+			if(input.keyEvents.contains(Input.Keys.NUM_3)) DoHotbarAction(3);
+			if(input.keyEvents.contains(Input.Keys.NUM_4)) DoHotbarAction(4);
+			if(input.keyEvents.contains(Input.Keys.NUM_5)) DoHotbarAction(5);
+			if(input.keyEvents.contains(Input.Keys.NUM_6)) DoHotbarAction(6);
 			if(input.keyEvents.contains(Input.Keys.NUM_7)) DoHotbarAction(7);
 			if(input.keyEvents.contains(Input.Keys.NUM_8)) DoHotbarAction(8);
 			if(input.keyEvents.contains(Input.Keys.NUM_9)) DoHotbarAction(9);
 			if(input.keyEvents.contains(Input.Keys.NUM_0)) DoHotbarAction(10);
 
-            if(input.isDropPressed() && Game.instance.menuMode == Game.MenuMode.Hidden) {
-                chargeDrop(delta);
-            }
-            else {
-            	if(tossPower > 0 && selectedBarItem != null) {
+			if(input.isDropPressed() && Game.instance.menuMode == Game.MenuMode.Hidden) {
+				chargeDrop(delta);
+			}
+			else {
+				if(tossPower > 0 && selectedBarItem != null) {
 					Audio.playSound("inventory/drop_item.mp3", 0.7f, Game.rand.nextFloat() * 0.1f + 0.95f);
 					tossHeldItem(level, tossPower);
 					tossPower = 0f;
 				}
 			}
 
-            // Debug stuff!
-            if(Game.isDebugMode) {
-            	try {
+			// Debug stuff!
+			if(Game.isDebugMode) {
+				try {
 					if (input.keyEvents.contains(Keys.K))
 						OverlayManager.instance.push(new DebugOverlay(this));
 					else if (input.keyEvents.contains(Keys.L))
@@ -1243,11 +1336,11 @@ public class Player extends Actor {
 						Game.instance.level.up.changeLevel(level);
 				}
 				catch(Exception ex) {
-            		Gdx.app.error("DelverDebug", ex.getMessage());
+					Gdx.app.error("DelverDebug", ex.getMessage());
 				}
-            }
+			}
 
-            // gamepad menu input
+			// gamepad menu input
 			/*
             if(controllerState.buttonEvents.contains(ControllerState.Buttons.HOTBAR_RIGHT, true)) {
                 if(Game.hotbar.gamepadPosition == null) Game.hotbar.gamepadPosition = 0;
@@ -1262,58 +1355,58 @@ public class Player extends Actor {
             }
             */
 
-            if(input.doInventoryAction()) {
-                Game.instance.toggleInventory();
-            }
-            else if (Game.instance.menuMode != Game.MenuMode.Hidden && Game.gamepadManager.controllerState.menuButtonEvents.contains(ControllerState.MenuButtons.CANCEL, true)) {
-            	if (Game.instance.menuMode == Game.MenuMode.Inventory) {
-            		Game.instance.toggleInventory();
+			if(input.doInventoryAction()) {
+				Game.instance.toggleInventory();
+			}
+			else if (Game.instance.menuMode != Game.MenuMode.Hidden && Game.gamepadManager.controllerState.menuButtonEvents.contains(ControllerState.MenuButtons.CANCEL, true)) {
+				if (Game.instance.menuMode == Game.MenuMode.Inventory) {
+					Game.instance.toggleInventory();
 				}
 				else {
-            		Game.instance.toggleCharacterScreen();
+					Game.instance.toggleCharacterScreen();
 				}
 
-            	Game.gamepadManager.controllerState.clearEvents();
-            	Game.gamepadManager.controllerState.resetState();
+				Game.gamepadManager.controllerState.clearEvents();
+				Game.gamepadManager.controllerState.resetState();
 			}
 
 			if (input.keyEvents.contains(Keys.C)) {
 				Game.instance.toggleCharacterScreen();
 			}
 
-            if (input.doNextItemAction()) {
-                wieldNextHotbarItem();
-            }
+			if (input.doNextItemAction()) {
+				wieldNextHotbarItem();
+			}
 
-            if (input.doPreviousItemAction()) {
-                wieldPreviousHotbarItem();
-            }
+			if (input.doPreviousItemAction()) {
+				wieldPreviousHotbarItem();
+			}
 
-            if (input.doMapAction()) {
+			if (input.doMapAction()) {
 
-            	// toggle map!
-            	if(OverlayManager.instance.current() == null)
-                	OverlayManager.instance.push(new MapOverlay());
+				// toggle map!
+				if(OverlayManager.instance.current() == null)
+					OverlayManager.instance.push(new MapOverlay());
 				else
 					OverlayManager.instance.clear();
 
-                if (GameManager.renderer.showMap && Game.instance.getShowingMenu()) {
-                    Game.instance.toggleInventory();
-                }
+				if (GameManager.renderer.showMap && Game.instance.getShowingMenu()) {
+					Game.instance.toggleInventory();
+				}
 
-                if (GameManager.renderer.showMap) Audio.playSound("/ui/ui_map_open.mp3", 0.3f);
-                else Audio.playSound("/ui/ui_map_close.mp3", 0.3f);
-            }
+				if (GameManager.renderer.showMap) Audio.playSound("/ui/ui_map_open.mp3", 0.3f);
+				else Audio.playSound("/ui/ui_map_close.mp3", 0.3f);
+			}
 
-            if (input.doBackAction()) {
-                if (Game.instance.getShowingMenu())
-                    Game.instance.toggleInventory();
-                else if (Game.instance.getInteractMode())
-                    Game.instance.toggleInteractMode();
-            }
-        }
+			if (input.doBackAction()) {
+				if (Game.instance.getShowingMenu())
+					Game.instance.toggleInventory();
+				else if (Game.instance.getInteractMode())
+					Game.instance.toggleInteractMode();
+			}
+		}
 
-        if (Game.isDebugMode) {
+		if (Game.isDebugMode) {
 			Level currentLevel = Game.instance.level;
 
 			float r = currentLevel.fogColor.r;
@@ -1357,9 +1450,9 @@ public class Player extends Actor {
 			tickEscapeEffects(level, delta);
 		}
 
-        updatePlayerLight(level, delta);
-        tickAttached(level, delta);
-    }
+		updatePlayerLight(level, delta);
+		tickAttached(level, delta);
+	}
 
 	private void chargeDrop(float delta) {
 		if(heldItem == null) return;
@@ -1380,59 +1473,59 @@ public class Player extends Actor {
 	}
 
 	private void updatePlayerLight(Level level, float delta) {
-    	if (this.originalTorchColor == null) {
-    		this.originalTorchColor = new Color(this.torchColor);
+		if (this.originalTorchColor == null) {
+			this.originalTorchColor = new Color(this.torchColor);
 		}
 
 		torchColor.set(this.originalTorchColor);
 
-    	// tick held items
-        Item primaryHeld = GetHeldItem();
-        if(primaryHeld != null) primaryHeld.tickEquipped(this, level, delta, "PRIMARY");
+		// tick held items
+		Item primaryHeld = GetHeldItem();
+		if(primaryHeld != null) primaryHeld.tickEquipped(this, level, delta, "PRIMARY");
 
-        Item offhandItem = equippedItems.get("OFFHAND");
-        if(offhandItem != null && !isHoldingTwoHanded()) offhandItem.tickEquipped(this, level, delta, "OFFHAND");
+		Item offhandItem = equippedItems.get("OFFHAND");
+		if(offhandItem != null && !isHoldingTwoHanded()) offhandItem.tickEquipped(this, level, delta, "OFFHAND");
 
-        // update player light
-        if(!torchColor.equals(Color.BLACK)) {
-            com.interrupt.dungeoneer.gfx.DynamicLight light = GlRenderer.getLight();
-            if (light != null) {
-                light.color.set(torchColor.r, torchColor.g, torchColor.b);
-                light.position.set(x, z + getStepUpValue(), y);
-                light.range = this.torchRange;
+		// update player light
+		if(!torchColor.equals(Color.BLACK)) {
+			com.interrupt.dungeoneer.gfx.DynamicLight light = GlRenderer.getLight();
+			if (light != null) {
+				light.color.set(torchColor.r, torchColor.g, torchColor.b);
+				light.position.set(x, z + getStepUpValue(), y);
+				light.range = this.torchRange;
 
-                GlRenderer.playerLightColor.set(torchColor.r, torchColor.g, torchColor.b);
-            }
-        }
+				GlRenderer.playerLightColor.set(torchColor.r, torchColor.g, torchColor.b);
+			}
+		}
 
-        // update some flags
-        holdingTwoHanded = (primaryHeld != null && primaryHeld instanceof Weapon && ((Weapon)primaryHeld).twoHanded);
+		// update some flags
+		holdingTwoHanded = (primaryHeld != null && primaryHeld instanceof Weapon && ((Weapon)primaryHeld).twoHanded);
 
-        // clamp visibility mod value
-        visiblityMod = Math.min(1f, visiblityMod);
-    }
+		// clamp visibility mod value
+		visiblityMod = Math.min(1f, visiblityMod);
+	}
 
-    private void playIdleAnimation(Item held) {
-        if(handAnimation == null && held instanceof Weapon) {
-            Weapon w = (Weapon)held;
-            handAnimation = Game.animationManager.getAnimation(w.chargeAnimation);
-            if(handAnimation == null) handAnimation = Game.animationManager.getAnimation(w.attackAnimation);
-            if(handAnimation != null) {
-                handAnimation.play(0f);
-                handAnimation.stop();
-            }
-        }
-    }
+	private void playIdleAnimation(Item held) {
+		if(handAnimation == null && held instanceof Weapon) {
+			Weapon w = (Weapon)held;
+			handAnimation = Game.animationManager.getAnimation(w.chargeAnimation);
+			if(handAnimation == null) handAnimation = Game.animationManager.getAnimation(w.attackAnimation);
+			if(handAnimation != null) {
+				handAnimation.play(0f);
+				handAnimation.stop();
+			}
+		}
+	}
 
-    private void playTossChargeAnimation(float animationSpeed) {
+	private void playTossChargeAnimation(float animationSpeed) {
 		LerpedAnimation previousAnimation = handAnimation;
 		handAnimation = Game.animationManager.decorationCharge;
 		if(handAnimation != null) handAnimation.play(animationSpeed * 0.03f, previousAnimation);
 	}
-	
+
 	private void playChargeAnimation(float animationSpeed) {
 		LerpedAnimation previousAnimation = handAnimation;
-		
+
 		Item w = GetHeldItem();
 		w.onChargeStart();
 
@@ -1457,18 +1550,18 @@ public class Player extends Actor {
 	}
 
 	private static Vector3 pickEntityTemp1 = new Vector3();
-    private static Vector3 pickEntityTemp2 = new Vector3();
+	private static Vector3 pickEntityTemp2 = new Vector3();
 	private Entity pickEntity(Level level, int pickX, int pickY, float maxDistance) {
 		if(Game.camera == null) return null;
-		
+
 		Vector3 levelIntersection = tempVec1.set(Vector3.Zero);
 		Vector3 intersection = tempVec2.set(Vector3.Zero);
 		Vector3 testPos = tempVec3.set(Vector3.Zero);
-		
+
 		Ray ray = Game.camera.getPickRay(pickX, pickY);
 		boolean hitLevel = Collidor.intersectRayTriangles(ray, GameManager.renderer.GetCollisionTrianglesAlong(ray,maxDistance), levelIntersection, null);
 		float worldHitDistance = tempVec4.set(ray.origin).sub(levelIntersection).len();
-		
+
 		Array<Entity> toCheck = level.spatialhash.getEntitiesAt(x, y, maxDistance);
 		toCheck.removeValue(this, true);
 
@@ -1478,15 +1571,15 @@ public class Player extends Actor {
 				testPos.x = e.x;
 				testPos.z = e.y;
 				testPos.y = e.z;
-				
+
 				float colSizeMod = 0;
 				if(e instanceof Item) {
 					testPos.y = e.z - 0.34f;
 					colSizeMod = 0.2f;
 				}
 				else if(e instanceof Stairs) {
-				    colSizeMod = 0.6f;
-                }
+					colSizeMod = 0.6f;
+				}
 
 				if(e instanceof Item || e instanceof Stairs) {
 					if(Intersector.intersectRaySphere(ray, testPos, e.collision.x / 1.5f + colSizeMod, intersection)) {
@@ -1499,36 +1592,36 @@ public class Player extends Actor {
 					}
 				}
 				else {
-                    BoundingBox b = CachePools.getAABB(e);
-                    if(Intersector.intersectRayBounds(ray, b, intersection)) {
-                        Vector3 start = pickEntityTemp1.set(ray.origin);
-                        Vector3 end = pickEntityTemp2.set(intersection);
-                        float distance = start.sub(end).len();
+					BoundingBox b = CachePools.getAABB(e);
+					if(Intersector.intersectRayBounds(ray, b, intersection)) {
+						Vector3 start = pickEntityTemp1.set(ray.origin);
+						Vector3 end = pickEntityTemp2.set(intersection);
+						float distance = start.sub(end).len();
 
-                        if(distance < (maxDistance + colSizeMod) && (!hitLevel || (distance < worldHitDistance * 1.1f))) {
-                            pickList.add(e);
-                        }
-                    }
-                }
+						if(distance < (maxDistance + colSizeMod) && (!hitLevel || (distance < worldHitDistance * 1.1f))) {
+							pickList.add(e);
+						}
+					}
+				}
 			}
 		}
-		
+
 		Entity found = null;
-		
+
 		// get the first item in the list, or anything else
 		for(int i = 0; i < pickList.size; i++) {
 			Entity e = pickList.get(i);
 			if(found == null || e instanceof Item)
 				found = e;
 		}
-		
+
 		// clean up and return!
 		pickList.clear();
 		return found;
 	}
-	
+
 	public void Use(Level level)
-	{	
+	{
 		// try simple using first
 		if(Game.isMobile) {
 			Array<Entity> entities = Game.instance.level.entities;
@@ -1573,13 +1666,13 @@ public class Player extends Actor {
 				}
 			}
 		}
-		
+
 		// use the entity / wall hit by the camera ray
 		float usedist = 0.95f;
 		Tile hit = null;
-		
+
 		Entity centered = pickEntity(level, Gdx.graphics.getWidth() / 2, (int)(Gdx.graphics.getHeight() / 2), 0.7f);
-		
+
 		if(centered != null)
 		{
 			float projx = ( 0f * (float)Math.cos(rot) + (float)Math.sin(rot)) * 1f;
@@ -1587,34 +1680,34 @@ public class Player extends Actor {
 			centered.use(this, projx, projy);
 			return;
 		}
-		
+
 		// check for a wall hit
 		for(int i = 1; i < 10 && hit == null; i++)
 		{
 			float dstep = (i / 6.0f) * usedist;
 			float projx = Game.camera.direction.x * dstep;
 			float projy = Game.camera.direction.z * dstep;
-			
+
 			int checkx = (int)(Math.floor(x + projx));
 			int checky = (int)(Math.floor(y + projy));
 			hit = level.getTile(checkx, checky);
 			if(hit != null && !hit.blockMotion) hit = null;
 		}
-		
+
 		if(hit != null)
 		{
 			hit.use();
 		}
 	}
-	
+
 	private void Use(Level level, int touchX, int touchY) {
 		// use the entity / wall hit by the camera ray
 		float usedist = 0.95f;
 		Entity near = null;
 		Tile hit = null;
-		
+
 		Entity centered = pickEntity(level, touchX, touchY, 0.9f);
-		
+
 		if(centered != null && !(centered instanceof Stairs))
 		{
 			float projx = ( 0 * (float)Math.cos(rot) + (float)Math.sin(rot)) * 1;
@@ -1622,22 +1715,22 @@ public class Player extends Actor {
 			centered.use(this, projx, projy);
 			return;
 		}
-		
+
 		Ray ray = Game.camera.getPickRay(touchX, touchY);
-		
+
 		// check for a wall hit
 		for(int i = 1; i < 10 && near == null && hit == null; i++)
 		{
 			float dstep = (i / 6.0f) * usedist;
 			float projx = ray.direction.x * dstep;
 			float projy = ray.direction.z * dstep;
-			
+
 			int checkx = (int)(Math.floor(ray.origin.x + projx));
 			int checky = (int)(Math.floor(ray.origin.z + projy));
 			hit = level.getTile(checkx, checky);
 			if(hit != null && !hit.blockMotion) hit = null;
 		}
-		
+
 		if(hit != null)
 		{
 			hit.use();
@@ -1645,40 +1738,40 @@ public class Player extends Actor {
 	}
 
 	public void playAttackAnimation(Weapon w, float attackPower) {
-        playAttackAnimation(w, attackPower, ((w.getSpeed() + getAttackSpeedStatBoost()) * 0.25f) + ((stats.DEX - 4) * 0.015f));
+		playAttackAnimation(w, attackPower, ((w.getSpeed() + getAttackSpeedStatBoost()) * 0.25f) + ((stats.DEX - 4) * 0.015f));
 	}
 
-    public void playAttackAnimation(Weapon w, float attackPower, float speed) {
-        // may have to blend with the previous animation
-        LerpedAnimation previousAnimation = null;
-        if(handAnimation != null) {
-            previousAnimation = handAnimation;
-        }
+	public void playAttackAnimation(Weapon w, float attackPower, float speed) {
+		// may have to blend with the previous animation
+		LerpedAnimation previousAnimation = null;
+		if(handAnimation != null) {
+			previousAnimation = handAnimation;
+		}
 
-        // play either the weak or strong attack animation
-        if(attackPower < 0.5f || w.attackStrongAnimation == null )
-            handAnimation = Game.animationManager.getAnimation(w.attackAnimation);
-        else
-            handAnimation = Game.animationManager.getAnimation(w.attackStrongAnimation);
+		// play either the weak or strong attack animation
+		if(attackPower < 0.5f || w.attackStrongAnimation == null )
+			handAnimation = Game.animationManager.getAnimation(w.attackAnimation);
+		else
+			handAnimation = Game.animationManager.getAnimation(w.attackStrongAnimation);
 
-        if(handAnimation != null) {
-            if(previousAnimation != null) previousAnimation.stop();
-            handAnimation.play(speed, previousAnimation);
-        }
-    }
-	
+		if(handAnimation != null) {
+			if(previousAnimation != null) previousAnimation.stop();
+			handAnimation.play(speed, previousAnimation);
+		}
+	}
+
 	private void Attack(Level lvl)
 	{
 		hasAttacked = true;
 		float attackPower = attackCharge / attackChargeTime;
 		attackCharge = 0;
-		
+
 		Item held = GetHeldItem();
 		if(held == null) return;
 		else if(held instanceof Weapon)
 		{
 			Weapon w = (Weapon)held;
-			
+
 			// start the attack
 			playAttackAnimation(w, attackPower);
 			w.doAttack(this, lvl, attackPower);
@@ -1687,13 +1780,13 @@ public class Player extends Actor {
 		{
 			dropItem(held, lvl, attackPower);
 			heldItem = null;
-			
+
 			held.xa = (Game.camera.direction.x) * (attackPower * 0.3f);
 			held.ya = (Game.camera.direction.z) * (attackPower * 0.3f);
 			held.za = (Game.camera.direction.y) * (attackPower * 0.3f);
-			
+
 			held.za += attackPower * 0.05;
-			
+
 			if (held instanceof Potion) ((Potion)held).activateExplosion(false);
 		}
 
@@ -1716,20 +1809,20 @@ public class Player extends Actor {
 
 		held.tossItem(level, attackPower);
 	}
-	
+
 	public Item dropItem(Integer invLocation, Level level, float throwPower) {
 		if(invLocation == null || invLocation < 0 || invLocation >= inventory.size) return null;
 		Item itm = inventory.get(invLocation);
 		dropItem(itm, level, throwPower);
 		if(invLocation == selectedBarItem) selectedBarItem = null;
-		
+
 		return itm;
 	}
-	
+
 	public void throwItem(Item itm, Level level, float throwPower, float xOffset) {
 		float projx = ( 0 * (float)Math.cos(rot) + 1 * (float)Math.sin(rot)) * 1;
 		float projy = (1 * (float)Math.cos(rot) - 0 * (float)Math.sin(rot)) * 1;
-		
+
 		itm.isActive = true;
 		itm.isDynamic = true;
 		itm.z = z + 0.5f;
@@ -1737,44 +1830,44 @@ public class Player extends Actor {
 		itm.ya = projy * (throwPower * 0.3f);
 		itm.za = throwPower * 0.05f;
 		itm.ignorePlayerCollision = true;
-		
+
 		level.SpawnEntity(itm);
-		
+
 		itm.x = (x + projx * 0.25f);
 		itm.y = (y + projy * 0.25f);
-		
+
 		float x_projx = ( 0 * (float)Math.cos(rot + 1.8f) + 1 * (float)Math.sin(rot + 1.8f)) * 1;
 		float y_projy = (1 * (float)Math.cos(rot + 1.8f) - 0 * (float)Math.sin(rot + 1.8f)) * 1;
-		
+
 		itm.xa -= x_projx * xOffset;
 		itm.ya -= y_projy * xOffset;
 	}
-	
+
 	public void dropItemFromInv(Integer invLocation, Level level, float throwPower, float xOffset) {
 		Item itm = dropItem(invLocation, level, throwPower);
 		if(itm == null) return;
-		
+
 		float projx = ( 0 * (float)Math.cos(rot) + 1 * (float)Math.sin(rot)) * 1;
 		float projy = (1 * (float)Math.cos(rot) - 0 * (float)Math.sin(rot)) * 1;
-		
+
 		itm.x = (x + projx * 0f);
 		itm.y = (y + projy * 0f);
-		
+
 		float x_projx = ( 0 * (float)Math.cos(rot + 1.8) + 1 * (float)Math.sin(rot + 1.8)) * 1;
 		float y_projy = (1 * (float)Math.cos(rot + 1.8) - 0 * (float)Math.sin(rot + 1.8)) * 1;
-		
+
 		itm.xa -= x_projx * xOffset;
 		itm.ya -= y_projy * xOffset;
 
 		itm.ignorePlayerCollision = true;
 	}
-	
+
 	public void dropItem(Item itm, Level level, float throwPower) {
-        if(itm == null) return;
+		if(itm == null) return;
 
 		float projx = (0 * (float)Math.cos(rot) + 1 * (float)Math.sin(rot)) * 1;
 		float projy = (1 * (float)Math.cos(rot) - 0 * (float)Math.sin(rot)) * 1;
-		
+
 		itm.isActive = true;
 		itm.x = (x + projx * 0);
 		itm.y = (y + projy * 0);
@@ -1784,26 +1877,26 @@ public class Player extends Actor {
 		itm.za = throwPower * 0.05f;
 		itm.ignorePlayerCollision = true;
 		itm.spawnChance = 1f;
-		
+
 		level.SpawnEntity(itm);
 		itm.isDynamic = true;
-		
+
 		removeFromInventory(itm);
 	}
-	
+
 	private void splash(Level level, float splashZ, Tile tile)
 	{
 		if(tickcount - lastSplashTime < 30) return;
 		lastSplashTime = tickcount;
-		
+
 		Random r = new Random();
 		int particleCount = 19;
 		particleCount *= Options.instance.gfxQuality;
-		
+
 		for(int i = 0; i < particleCount; i++)
 		{
-            Particle p = CachePools.getParticle(x, y, splashZ, r.nextFloat() * 0.04f - 0.02f, r.nextFloat() * 0.04f - 0.02f, r.nextFloat() * 0.01f + 0.015f, tile.data.particleTex, tile.data.particleColor, tile.data.particleFullbrite);
-            p.endScale = 0.1f;
+			Particle p = CachePools.getParticle(x, y, splashZ, r.nextFloat() * 0.04f - 0.02f, r.nextFloat() * 0.04f - 0.02f, r.nextFloat() * 0.01f + 0.015f, tile.data.particleTex, tile.data.particleColor, tile.data.particleFullbrite);
+			p.endScale = 0.1f;
 			level.SpawnNonCollidingEntity(p);
 		}
 
@@ -1846,12 +1939,12 @@ public class Player extends Actor {
 		float volume = Math.min(Math.abs(za) * 2.25f, 0.35f);
 		Audio.playSound("splash2.mp3", volume);
 	}
-	
+
 	public void ChangeHeldItem(Integer invPos, boolean doTransition)
 	{
 		if(handAnimation == null || !handAnimation.playing) {
 			selectedBarItem = invPos;
-			
+
 			if(doTransition) {
 				doingHeldItemTransition = true;
 				heldItemTransitionEnd = 16;
@@ -1859,7 +1952,7 @@ public class Player extends Actor {
 			} else {
 				doingHeldItemTransition = false;
 			}
-			
+
 			handAnimation = null;
 			heldItem = invPos;
 
@@ -1873,31 +1966,30 @@ public class Player extends Actor {
 		Game.instance.refreshMenu();
 		tossPower = 0f;
 	}
-	
+
 	public Boolean isEquipped(Item item) {
 		if(item == GetHeldItem()) return true;
 		if(equippedItems.containsValue(item)) return true;
-		
+
 		return false;
 	}
-	
+
 	public Boolean isHeld(Item item) {
 		Item held = GetHeldItem();
 		return item == held;
 	}
 
-
 	public boolean addToInventory(Item item) {
 		return addToInventory(item, true);
 	}
-	
+
 	public boolean addToInventory(Item item, boolean autoEquip)
 	{
 		if(item instanceof Key) {
 			keys++;
 			return true;
 		}
-		
+
 		if(inventory.contains(item, true)) return false;
 
 		// this might be a stack
@@ -1913,10 +2005,10 @@ public class Player extends Actor {
 				}
 			}
 		}
-		
+
 		if(inventory.size < inventorySize) inventory.add(item);
 		else
-		{		
+		{
 			// find an open spot
 			boolean foundSpot = false;
 			for(int i = 0; i < inventorySize && !foundSpot; i++)
@@ -1935,7 +2027,7 @@ public class Player extends Actor {
 		}
 
 		item.onPickup();
-		
+
 		Game.RefreshUI();
 		return true;
 	}
@@ -1956,32 +2048,37 @@ public class Player extends Actor {
 
 		return false;
 	}
-	
+
 	public void removeFromInventory(Item item)
 	{
 		if(!inventory.contains(item, true)) return;
 		dequip(item);
-		
+
 		// save all the equipped items, so we can update their locations when the array changes
 		Item held = GetHeldItem();
-		
+
 		int pos = inventory.indexOf(item, true);
 		inventory.set(pos, null);
-		
+
 		// reset the item locations
 		if(held != null) heldItem = inventory.indexOf(held, true);
-		
+
 		Game.RefreshUI();
 	}
-	
+
+	/** Returns true if player inventory has space for an item. */
+	public boolean hasFreeInventorySpace() {
+		return inventory.contains(null, true);
+	}
+
 	public void equip(Item item) {
 		equip(item, true);
 	}
-	
+
 	public void equip(Item item, boolean doTransition) {
 		int itempos = inventory.indexOf(item, true);
 		if(selectedBarItem != null && selectedBarItem == itempos) selectedBarItem = null;
-			
+
 		if(item instanceof Weapon || item instanceof Decoration || item instanceof Potion || item instanceof Food || item instanceof FusedBomb) {
 			ChangeHeldItem(itempos, doTransition);
 		}
@@ -1991,61 +2088,61 @@ public class Player extends Actor {
 
 		Game.instance.refreshMenu();
 	}
-	
+
 	public void equipArmor(Item item, boolean playSound) {
 		equipArmor(item);
 		if(playSound) Audio.playSound("ui/ui_equip_armor.mp3", 0.4f);
 	}
-	
+
 	public void equipArmor(Item item) {
 		if(equippedItems.containsKey(item.equipLoc))
 		{
 			int swappos = inventory.indexOf(item, true);
 			if(swappos >= 0) inventory.set(swappos, equippedItems.get(item.equipLoc));
 		}
-		
+
 		equippedItems.put(item.equipLoc, item);
-		
+
 		int itempos = inventory.indexOf(item, true);
 		if(itempos >= 0) inventory.set(inventory.indexOf(item, true), null);
-		
+
 		Game.hotbar.refresh();
 		Game.bag.refresh();
 		Game.hud.refreshEquipLocations();
 	}
-	
+
 	public void wieldNextHotbarItem(){
 		int num = Game.instance.player.hotbarSize;
 		int i=selectedBarItem==null?0:(selectedBarItem+1) % num;
 		ChangeHeldItem(i, true);
 	}
-	
+
 	public void wieldPreviousHotbarItem(){
 		int num = Game.instance.player.hotbarSize;
 		int i=selectedBarItem==null ? (num - 1):(selectedBarItem + (num - 1)) % num;
 		ChangeHeldItem(i, true);
 	}
-	
+
 	public void dequip(Item item) {
 		if(!equipped(item)) return;
 		int itempos = inventory.indexOf(item, true);
 		if(selectedBarItem != null && selectedBarItem == itempos) selectedBarItem = null;
-		
+
 		if(item instanceof Weapon || item instanceof Decoration || item instanceof Potion || item instanceof Food) {
 			heldItem = null;
 		}
 
 		Game.instance.refreshMenu();
 	}
-	
+
 	// Check if an item is equipped
 	public boolean equipped(Item item) {
 		if((item instanceof Weapon || item instanceof Decoration || item instanceof Potion || item instanceof Food) && GetHeldItem() == item) return true;
 		else if(equippedItems.containsValue(item)) return true;
-		
+
 		return false;
 	}
-	
+
 	public Item GetHeldItem() {
 		if(heldItem == null || heldItem < 0 || heldItem >= inventory.size) return null;
 		return inventory.get(heldItem);
@@ -2054,17 +2151,17 @@ public class Player extends Actor {
 	public Item GetHeldOffhandItem() {
 		return equippedItems.get("OFFHAND");
 	}
-	
+
 	public Armor GetEquippedArmor() {
 		Item itm = equippedItems.get("ARMOR");
 		if(itm instanceof Armor) return (Armor)itm;
 		return null;
 	}
-	
+
 	public Item GetEquippedRing() {
 		return equippedItems.get("RING");
 	}
-	
+
 	public Item GetEquippedAmulet() {
 		return equippedItems.get("AMULET");
 	}
@@ -2097,13 +2194,13 @@ public class Player extends Actor {
 			}
 		}
 	}
-	
+
 	public void DoHotbarAction(final int hotbarSlot) {
 		int location = hotbarSlot - 1;
 		if(location < 0 || location >= inventory.size || location + 1 > Game.hotbar.columns) return;
 		UseInventoryItem(location);
 	}
-	
+
 	public String GetAttackText() {
 		Item held = GetHeldItem();
 		if(held != null) {
@@ -2114,7 +2211,6 @@ public class Player extends Actor {
 
 				if(randDamage == 0) return Integer.toString(baseDamage);
 				return MessageFormat.format(StringManager.get("entities.Player.weaponAttackText"), baseDamage, (randDamage + baseDamage));
-
 			}
 			else if(held instanceof Potion) {
 				return String.format("%.0f",((Potion)held).getExplosionDamageAmount());
@@ -2123,37 +2219,37 @@ public class Player extends Actor {
 				return "1";
 			}
 		}
-		
+
 		return "0";
 	}
-	
+
 	@Override
 	public void addExperience(int e)
 	{
 		exp += e;
-		
+
 		// ding?
 		if(!isDead && exp >= getNextLevel() && canLevelUp)
 		{
 			level++; // ding!
 			hp = getMaxHp();
-			
+
 			OverlayManager.instance.push(new LevelUpOverlay(this));
 		}
 	}
-	
+
 	@Override
 	public void hitEffect(Level level, DamageType inDamageType) {
-		
+
 		Random r = new Random();
 		int particleCount = 8;
 		particleCount *= Options.instance.gfxQuality;
-		
+
 		for(int i = 0; i < particleCount; i++)
 		{
 			level.SpawnNonCollidingEntity( CachePools.getParticle(x, y, z + 0.6f, r.nextFloat() * 0.02f - 0.01f, r.nextFloat() * 0.02f - 0.01f, r.nextFloat() * 0.02f - 0.01f, 220 + r.nextInt(500), 1f, 0f, Actor.getBloodTexture(bloodType), Actor.getBloodColor(bloodType), false)) ;
 		}
-		
+
 		shake(2f);
 	}
 
@@ -2170,7 +2266,7 @@ public class Player extends Actor {
 
 	@Override
 	public int takeDamage(int damage, DamageType damageType, Entity instigator) {
-        if(!isDead && !godMode) {
+		if(!isDead && !godMode) {
 			int tookDamage = super.takeDamage(damage, damageType, instigator);
 
 			if(tookDamage < 0)
@@ -2193,44 +2289,32 @@ public class Player extends Actor {
 	public void setAttackSpeed(float attackSpeed) {
 		this.attackSpeed = attackSpeed + getAttackSpeedStatBoost();
 	}
-	
+
 	public void updateMouseInput(GameInput input) {
 		/*if(!touchingItem && !Game.isMobile)
 		{
 			if(input.caughtCursor) {
 				rot -= (((float)Gdx.input.getDeltaX()) / 230.0) * Options.instance.mouseXSensitivity;
-				
+
 				float deltaY = Gdx.input.getDeltaY();
 				if(Options.instance.mouseInvert) deltaY *= -1;
-				
+
 				yrot -= (deltaY / 230.0) * Options.instance.mouseYSensitivity;
-				
+
 				if(yrot > 1.3) yrot = 1.3f;
 				if(yrot < -1.3) yrot = -1.3f;
 			}
 		}*/
 	}
-	
+
 	public float getWalkSpeed() {
 		float baseSpeed = 0.10f + stats.SPD * 0.015f;
-
-		// Sprinting
-		if(Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT)) {
-			baseSpeed = sprintModifier + (float) this.stats.SPD * 0.020F;
-		}
-
 		if(statusEffects == null || statusEffects.size <= 0) return baseSpeed * GetEquippedSpeedMod();
 
 		for(StatusEffect s : statusEffects) {
 			if(s.active) baseSpeed *= s.speedMod;
-
-			//Sprinting!
-			if(Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT)) {
-				baseSpeed = 0.25F + (float) this.stats.SPD * 0.015F;
-			}
-
 		}
-		
+
 		return baseSpeed * GetEquippedSpeedMod();
 	}
 
@@ -2243,17 +2327,17 @@ public class Player extends Actor {
 		}
 		catch(Exception ex) { Gdx.app.log("Delver", ex.getMessage()); }
 	}
-	
+
 	public void setMessageViews(String message, int views) {
 		messageViews.put(message, (float)views);
 	}
-	
+
 	public int getMessageViews(String message) {
 		Float views = messageViews.get(message);
 		if(views == null) return 0;
 		return Math.round(views);
 	}
-	
+
 	public int getDamageStatBoost() {
 		return Math.max(0, stats.ATK - 4 + calculatedStats.ATK);
 	}
@@ -2273,77 +2357,46 @@ public class Player extends Actor {
 		return stats.magicResistMod + calculatedStats.magicResistMod;
 	}
 
-	// Resistance Overrides (Elemental)
-	@Override
-	public float getFireResistModBoost() {
-		return stats.fireResistMod + calculatedStats.fireResistMod;
-	}
-	@Override
-	public float getPoisonResistModBoost() {
-		return stats.poisonResistMod + calculatedStats.poisonResistMod;
-	}
-	@Override
-	public float getIceResistModBoost() {
-		return stats.iceResistMod + calculatedStats.iceResistMod;
-	}
-	@Override
-	public float getLightningResistModBoost() {
-		return stats.lightningResistMod + calculatedStats.lightningResistMod;
-	}
-
-
-	//Resistance Overrides (Physical)
-	@Override
-	public float getBludgeoningResistModBoost() { return stats.bludgeoningResistMod + calculatedStats.bludgeoningResistMod; }
-	@Override
-	public float getPiercingResistModBoost() {
-		return stats.piercingResistMod + calculatedStats.piercingResistMod;
-	}
-	@Override
-	public float getSlashingResistModBoost() {
-		return stats.slashingResistMod + calculatedStats.slashingResistMod;
-	}
-	
 	public int getMagicStatBoost() {
 		return Math.max(0, stats.MAG - 4 + calculatedStats.MAG);
 	}
-	
+
 	public int getDefenseStatBoost() {
 		return Math.max(0, stats.DEF - 4);
 	}
-	
+
 	public void shake(float amount) {
-        if(isDead) return;
-        amount = Math.min(20, amount);
+		if(isDead) return;
+		amount = Math.min(20, amount);
 		screenshakeAmount = Math.max(screenshakeAmount, amount);
 	}
-	
+
 	public void shake(float amount, float range, Vector3 position) {
-        if(isDead) return;
+		if(isDead) return;
 		float distance = tempVec1.set(x,y,z).sub(position).len();
 		float mod = 1 - Math.min(distance / range, 1f);
 
-        float finalAmount = Math.min(20, amount * mod);
+		float finalAmount = Math.min(20, amount * mod);
 		screenshakeAmount = Math.max(screenshakeAmount, finalAmount);
 	}
 
 	public boolean isHoldingTwoHanded() {
 		return holdingTwoHanded;
 	}
-	
+
 	@Override
 	public int getMaxHp() {
 		return maxHp + calculatedStats.HP;
 	}
-	
+
 	public int GetArmorClass() {
 		return calculatedStats.DEF + getDefenseStatBoost();
 	}
-	
+
 	public float GetEquippedSpeedMod() {
 		float armorInfluence = 0.16f;
 		float speedToWeightRatio = (stats.SPD + calculatedStats.SPD * armorInfluence) / (float)stats.SPD;
-		
+
 		return Math.max(speedToWeightRatio, minWalkSpeed);
 	}
 
@@ -2386,11 +2439,11 @@ public class Player extends Actor {
 		}
 	}
 
-    public void addTravelPath(TravelInfo info) {
+	public void addTravelPath(TravelInfo info) {
 		travelPath.add(info);
-    }
+	}
 
-    public TravelInfo popTravelPath() {
+	public TravelInfo popTravelPath() {
 		return travelPath.pop();
 	}
 
@@ -2411,10 +2464,10 @@ public class Player extends Actor {
 	public void rotateCamera(int deltaX, int deltaY, boolean caughtCursor) {
 		if (Game.isDebugMode &&
 				(Gdx.input.isKeyPressed(Keys.R) ||
-				 Gdx.input.isKeyPressed(Keys.G) ||
-				 Gdx.input.isKeyPressed(Keys.B) ||
-				 Gdx.input.isKeyPressed(Keys.F) ||
-				 Gdx.input.isKeyPressed(Keys.V))) {
+						Gdx.input.isKeyPressed(Keys.G) ||
+						Gdx.input.isKeyPressed(Keys.B) ||
+						Gdx.input.isKeyPressed(Keys.F) ||
+						Gdx.input.isKeyPressed(Keys.V))) {
 			return;
 		}
 
@@ -2428,15 +2481,13 @@ public class Player extends Actor {
 		}
 	}
 
-    public float getHeadRoll() {
+	public float getHeadRoll() {
 		if(drunkMod == 0) return 0;
 		return (float)Math.sin(GlRenderer.time) * drunkMod;
-    }
+	}
 
-    private transient float t_timeSinceEscapeEffect = 0;
+	private transient float t_timeSinceEscapeEffect = 0;
 	private transient Color escapeFlashColor = new Color();
-
-	//Orb Code
 	private void tickEscapeEffects(Level level, float delta) {
 		t_timeSinceEscapeEffect += delta;
 
@@ -2508,7 +2559,6 @@ public class Player extends Actor {
 							if(Game.rand.nextBoolean()) {
 								Explosion e = new Explosion();
 
-								// TODO: Set new Orb Item to spawn a monster ("Monster m = new Monster()")
 								e.spawns = new Array<Entity>();
 								Fire f = new Fire();
 								f.color = new Color(Color.PURPLE);
@@ -2532,7 +2582,6 @@ public class Player extends Actor {
 			}
 		}
 	}
-	// Orb Code Ends
 
 	public void updatePlaytime(float delta) {
 		if(playtime >= 0) {
@@ -2582,14 +2631,12 @@ public class Player extends Actor {
 		playtime = 0;
 	}
 
-    public void resetInventoryDrawables() {
+	public void resetInventoryDrawables() {
 		// Reset inventory drawables after art assets have been disposed
 		for(int i = 0; i < inventory.size; i++) {
 			Item itm = inventory.get(i);
 			if(itm != null && itm.drawable != null)
 				itm.drawable.refresh();
 		}
-    }
-
-
+	}
 }

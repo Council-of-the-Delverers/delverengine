@@ -1,5 +1,11 @@
 {
 	animations: {
+		"itemOverlay": {
+			class: "com.interrupt.dungeoneer.gfx.animation.lerp3d.LerpedAnimation",
+			frames: [
+				{ transform: {x:0.5,y:0,z:0},			rotation: {x:0,y:0,z:0} },
+			]
+		},
 		"swordAttack": {
 			class: "com.interrupt.dungeoneer.gfx.animation.lerp3d.LerpedAnimation",
 			actionTime:10,

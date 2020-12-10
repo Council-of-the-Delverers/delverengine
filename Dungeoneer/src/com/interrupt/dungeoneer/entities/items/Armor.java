@@ -12,6 +12,8 @@ public class Armor extends Item {
 	@EditorProperty
 	public int armor;
 
+	public String itemOverlay = null;
+
 	@EditorProperty
 	public int durability = 25;
 	private int currentDurability = 0;
@@ -23,6 +25,7 @@ public class Armor extends Item {
 		isSolid = true;
 		yOffset = -0.1f;
 		equipSound = "/ui/ui_equip_armor.mp3";
+		itemOverlay = "itemOverlay";
 	}
 	
 	public Armor(int ac, String equipLoc, int tex)

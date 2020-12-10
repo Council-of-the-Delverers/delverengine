@@ -42,7 +42,7 @@ public class Weapon extends Item {
 		BLEEDING,
 	}
 
-	//Get 2 damage types to a weapom?
+	//Get 2 damage types to a weapon?
 	public enum BonusDamageType {
 		FIRE,
 		ICE,
@@ -54,13 +54,6 @@ public class Weapon extends Item {
 		BLUDGEONING,
 		SLASHING,
 		BLEEDING,
-	}
-
-	@EditorProperty
-	public BonusDamageType bonusDamageType = BonusDamageType.ICE;
-
-	public static String bonusDamageTypeToString(BonusDamageType bType) {
-		return StringManager.get("items.Weapon.bonusDamageType." + bType.toString().toUpperCase());
 	}
 
 	public ItemModification baseMods;
@@ -123,7 +116,7 @@ public class Weapon extends Item {
 	public Weapon(float x, float y, int tex, ItemType itemType, String name) {
 		super(x, y, tex, itemType, name);
 	}
-	
+
 	public int doAttackRoll(float attackPower, Player p)
 	{	
 		Random r = new Random();
@@ -174,7 +167,6 @@ public class Weapon extends Item {
 		int rdmg = getRandDamage();
 
 		String dmgType = Weapon.damageTypeToString(this.damageType);
-		String bdmgType = Weapon.bonusDamageTypeToString(this.bonusDamageType);
 		//if(damageType == DamageType.PHYSICAL) dmgType = "DMG";
 		
 		String infoText = MessageFormat.format(StringManager.get("items.Weapon.damageRangeText"), dmg, (dmg + rdmg), dmgType.toLowerCase());

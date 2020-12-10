@@ -49,7 +49,11 @@ public class Item extends Entity {
 			1.2f,
 			1.5f
 	};
-	
+
+	@EditorProperty(type = "Item Overlay")
+	public boolean hasEquippedOverlay = false;
+	public String equipOverlayTex = "";
+
 	@EditorProperty
 	public ItemCondition itemCondition = ItemCondition.normal;
 	

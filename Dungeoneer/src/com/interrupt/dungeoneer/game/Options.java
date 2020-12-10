@@ -46,6 +46,9 @@ public class Options {
 	public int key_look_down = Keys.DOWN;
 	public int key_turn_left = Keys.LEFT;
 	public int key_turn_right = Keys.RIGHT;
+	public int key_crouch = Keys.C;
+	public int key_prone = Keys.Z;
+	public int key_sprint = Keys.SHIFT_LEFT;
 	public int key_jump = -1;
 
 	public GamepadBinding gamepad_use = null;

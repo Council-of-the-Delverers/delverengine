@@ -25,7 +25,10 @@ public class Actions {
 		MENU_SELECT,
 		MENU_CANCEL,
 		PAUSE,
-		JUMP
+		JUMP,
+		CROUCH,
+		PRONE,
+		SPRINT
 	}
 
 	public static Hashtable<Action, Integer> keyBindings = new Hashtable<Action, Integer>();
@@ -50,6 +53,10 @@ public class Actions {
 		keyBindings.put(Action.LOOK_UP, Keys.UP);
 		keyBindings.put(Action.LOOK_DOWN, Keys.DOWN);
 		keyBindings.put(Action.JUMP, Keys.SPACE);
+
+		keyBindings.put(Action.SPRINT, Keys.SHIFT_LEFT);
+		keyBindings.put(Action.CROUCH, Keys.C);
+		keyBindings.put(Action.PRONE, Keys.Z);
 		
 		keyOrder.add(Action.USE);
 		keyOrder.add(Action.ATTACK);
@@ -68,5 +75,9 @@ public class Actions {
 		keyOrder.add(Action.LOOK_UP);
 		keyOrder.add(Action.LOOK_DOWN);
 		keyOrder.add(Action.JUMP);
+
+		keyOrder.add(Action.CROUCH);
+		keyOrder.add(Action.PRONE);
+		keyOrder.add(Action.SPRINT);
 	}
 }
