@@ -37,7 +37,7 @@ public class Actions {
 	
 	static {
 		keyBindings.put(Action.USE, Keys.E);
-		keyBindings.put(Action.ATTACK, Keys.X);
+		keyBindings.put(Action.ATTACK, Keys.H);
 		keyBindings.put(Action.DROP, Keys.Q);
 		keyBindings.put(Action.INVENTORY, Keys.I);
 		keyBindings.put(Action.ITEM_NEXT, Keys.RIGHT_BRACKET);
@@ -55,7 +55,7 @@ public class Actions {
 		keyBindings.put(Action.JUMP, Keys.SPACE);
 
 		keyBindings.put(Action.SPRINT, Keys.SHIFT_LEFT);
-		keyBindings.put(Action.CROUCH, Keys.C);
+		keyBindings.put(Action.CROUCH, Keys.X);
 		keyBindings.put(Action.PRONE, Keys.Z);
 		
 		keyOrder.add(Action.USE);

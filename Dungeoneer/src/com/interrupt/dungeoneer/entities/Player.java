@@ -11,6 +11,7 @@ import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.math.collision.BoundingBox;
 import com.badlogic.gdx.math.collision.Ray;
 import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.ArrayMap;
 import com.badlogic.gdx.utils.IntArray;
 import com.interrupt.api.steam.SteamApi;
 import com.interrupt.dungeoneer.Audio;
@@ -41,49 +42,59 @@ import com.interrupt.dungeoneer.tiles.ExitTile;
 import com.interrupt.dungeoneer.tiles.Tile;
 import com.interrupt.helpers.PlayerHistory;
 import com.interrupt.managers.StringManager;
-//import com.zel.lua.entity.LuaPlayer;
-import javafx.scene.input.KeyCode;
 
 import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Random;
 
 public class Player extends Actor {
-	/** Player gold amount. */
+
 	public int gold = 0;
+	public int ython = 0;
+	public int vis = 200;
 
-	/** Player z-axis rotation. */
 	public float rot = 0;
-
-	/** Player y-axis rotation. */
 	public float yrot = 0;
-
 	public float rota = 0;
 	public float rotya = 0;
 
+	public float baseSpeed = 0.1F;
+
 	public float rot2 = 0;
 
-	/** Player jump height. */
 	public float jumpHeight = 0.05f;
+	// Sprinting
+	private float sprintModifier = 0.15f;
+	private boolean isSprinting = false;
 
-	/** Player eye height. */
-	public float eyeHeight = 0.12f;
-
-	public float standingHeight = 0.12f;
-	public float crouchHeight = 0f;
-	public float proneHeight = -0.25f;
-
-	/** Head bob speed. */
-	public float headBobSpeed = 0.319f;
-
-	/** Head bob height. */
-	public float headBobHeight = 0.3f;
+	float walkVel = 0.05f;
+	float walkSpeed = 0.15f;
+	float sprintMul = 1.15f;
+	float standSpeed = 0.15f;
+	float crouchSpeed = 0.075f;
+	float proneSpeed = 0.025f;
+	float minWalkSpeed = 0.01f;
+	float rotSpeed = 0.009f;
+	float maxRot = 0.06f;
 
 	public float headBobStanding = 0.319f;
 	public float headBobCrouch = 0.225f;
 	public float headBobProne = 0.110f;
 
+	public float eyeHeight = 0.12f;
+	public float headBobSpeed = 0.319f;
+	public float headBobHeight = 0.3f;
+
 	public boolean hasAttacked;
+
+	public float standingHeight = 0.12f;
+	public float crouchHeight = 0f;
+	public float proneHeight = -0.25f;
+
+	private float stepHeight = 0.35f;
+	private float stepStanding = 0.35f;
+	private float crouchStep = 0.23f;
+	private float proneStep = 0.12f;
 
 	private float attackSpeed = 1;
 	private float attackChargeSpeed = 1;
@@ -96,7 +107,6 @@ public class Player extends Actor {
 	public boolean ignoreStairs = false;
 	public float spawnX, spawnY;
 
-	/** Player key count. */
 	public int keys = 0;
 
 	public float attackChargeTime = 40;
@@ -116,23 +126,23 @@ public class Player extends Actor {
 	private boolean wasOnFloorLast = false;
 	private float lastSplashTime = 0;
 
-	private float stepHeight = 0.35f;
-	private float stepStanding = 0.35f;
-	private float crouchStep = 0.23f;
-	private float proneStep = 0.12f;
-
 	private float lastZ;
 
 	public boolean isHoldingOrb = false;
 
 	public int levelNum = 0;
 
-	/** Player inventory. */
+	// inventory stuff
+	/** Custom Currencies List (Array) */
+	public ArrayMap<String, Integer> currencies = new ArrayMap<String, Integer>();
+	Integer Ython = currencies.get("Ython");
+	Integer Vis = currencies.get("Vis");
+
 	public Array<Item> inventory = new Array<Item>();
 	public Integer selectedBarItem = null;
 	public Integer heldItem = null;
 
-	/** New game player inventory. */
+	// items to start with!
 	public Array<Entity> startingInventory = new Array<Entity>();
 
 	public HashMap<String,Item> equippedItems = new HashMap<String,Item>();
@@ -149,16 +159,6 @@ public class Player extends Actor {
 	public Item hovering = null;
 
 	private boolean attackButtonWasPressed = false;
-
-	float walkVel = 0.05f;
-	float walkSpeed = 0.15f;
-	float sprintMul = 1.15f;
-	float standSpeed = 0.15f;
-	float crouchSpeed = 0.075f;
-	float proneSpeed = 0.025f;
-	float minWalkSpeed = 0.01f;
-	float rotSpeed = 0.009f;
-	float maxRot = 0.06f;
 
 	private transient float xm = 0;
 	private transient float zm = 0;
@@ -182,13 +182,9 @@ public class Player extends Actor {
 	Vector3 tempVec3 = new Vector3();
 	Vector3 tempVec4 = new Vector3();
 
-	/** Player light color. */
 	public Color torchColor = new Color(1f, 0.8f, 0.4f, 1f);
-
-	/** Player light range. */
-	public float torchRange = 3.0f;
-
 	private Color originalTorchColor = null;
+	public float torchRange = 3.0f;
 
 	public boolean inEditor = false;
 
@@ -225,7 +221,6 @@ public class Player extends Actor {
 
 	public transient float strafeCameraAngleMod = 0f;
 
-	/** Does player level up? */
 	private boolean canLevelUp = true;
 
 	private Array<TravelInfo> travelPath = new Array<TravelInfo>();
@@ -250,6 +245,8 @@ public class Player extends Actor {
 		hidden = true;
 		mass = 2f;
 		canStepUpOn = false;
+		// Sprinting
+		//isSprinting = Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT);
 	}
 
 	public Player(Game game) {
@@ -271,6 +268,7 @@ public class Player extends Actor {
 
 		canStepUpOn = false;
 	}
+
 
 	public boolean canAddInventorySlot() {
 		return inventorySize - hotbarSize < 36;
@@ -399,8 +397,6 @@ public class Player extends Actor {
 
 		// room to move in X?
 		if (!isSolid || level.isFree(nextx, y, z, collision, stepHeight, false, hitLoc)) {
-			runPushCheck(level, delta, CollisionAxis.X);
-
 			Entity encroaching = null;
 			if(isSolid) {
 				encroaching = level.getHighestEntityCollision(nextx, y, z, collision, this);
@@ -421,10 +417,10 @@ public class Player extends Actor {
 						encroaching.steppedOn(this);
 					}
 					else {
+						xa = 0;
 						if(!inEditor) {
 							encroaching.encroached(this);
 						}
-						xa = 0;
 					}
 				}
 				else {
@@ -432,10 +428,10 @@ public class Player extends Actor {
 				}
 			}
 			else {
+				xa = 0;
 				if(!inEditor) {
 					encroaching.encroached(this);
 				}
-				xa = 0;
 			}
 		}
 		else {
@@ -444,8 +440,6 @@ public class Player extends Actor {
 
 		// room to move in Y?
 		if (!isSolid || level.isFree(x, nexty, z, collision, stepHeight, false, hitLoc)) {
-			runPushCheck(level, delta, CollisionAxis.Y);
-
 			Entity encroaching = null;
 			if(isSolid) {
 				encroaching = level.getHighestEntityCollision(x, nexty, z, collision, this);
@@ -466,10 +460,10 @@ public class Player extends Actor {
 						encroaching.steppedOn(this);
 					}
 					else {
+						ya = 0;
 						if(!inEditor) {
 							encroaching.encroached(this);
 						}
-						ya = 0;
 					}
 				}
 				else {
@@ -477,10 +471,10 @@ public class Player extends Actor {
 				}
 			}
 			else {
+				ya = 0;
 				if(!inEditor) {
 					encroaching.encroached(this);
 				}
-				ya = 0;
 			}
 		}
 		else {
@@ -699,45 +693,6 @@ public class Player extends Actor {
 		}
 	}
 
-	private void runPushCheck(Level level, float delta, CollisionAxis collisionAxis) {
-
-		float checkX = x;
-		float checkY = y;
-
-		if(collisionAxis == CollisionAxis.X) {
-			checkX = nextx;
-		}
-		else if(collisionAxis == CollisionAxis.Y) {
-			checkY = nexty;
-		}
-
-		// This is all the same collision check from the tick function copy pasted here, probably should generalize this
-		Entity encroaching = null;
-		if(isSolid) {
-			encroaching = level.getHighestEntityCollision(checkX, checkY, z, collision, this);
-			if(encroaching == null) {
-				encroaching = level.checkStandingRoomWithEntities(checkX, checkY, z, collision, this);
-			}
-		}
-
-		if(encroaching == null || z > encroaching.z + encroaching.collision.z - stepHeight) {
-			// are we touching an entity?
-			if(encroaching != null) {
-				// maybe we can climb on it
-				if( z > encroaching.z + encroaching.collision.z - stepHeight &&
-						level.collidesWorldOrEntities(checkX, checkY, encroaching.z + encroaching.collision.z, collision, this) && encroaching.canStepUpOn) {
-					// can climb, no push
-				}
-				else {
-					encroaching.push(this, level, delta, collisionAxis);
-				}
-			}
-		}
-		else {
-			encroaching.push(this, level, delta, collisionAxis);
-		}
-	}
-
 	private void setMusicVolume() {
 		float musicLerp = Math.max(hp == 0 ? 0 : (float) hp / (float) maxHp, 0f);
 		if(isDead) musicLerp = 0f;
@@ -800,6 +755,9 @@ public class Player extends Actor {
 		rotSpeed = 0.009f;
 		maxRot = 0.06f;
 
+		//Sprinting!
+
+
 		// keep rotation in bounds
 		if(Math.abs(rot) > 6.28318531) {
 			if(rot > 0) rot = rot % 6.28318531f;
@@ -808,6 +766,9 @@ public class Player extends Actor {
 
 		boolean up = false, down = false, left = false, right = false, turnLeft = false, turnRight = false, turnUp = false, turnDown = false, attack = false, jump = false, crouch = false, prone = false, sprint = false;
 
+
+
+		//Custom Control Bindings
 		if(!isDead && !isInOverlay) {
 			up = input.isMoveForwardPressed();
 			down = input.isMoveBackwardsPressed();
@@ -823,8 +784,6 @@ public class Player extends Actor {
 			prone = input.isPronePressed();
 			sprint = input.isSprintPressed();
 		}
-
-		//eyeHeight = (prone ? proneHeight : (crouch ? crouchHeight : standingHeight));
 
 		if(prone) {
 			eyeHeight = proneHeight;
@@ -847,8 +806,6 @@ public class Player extends Actor {
 				headBobSpeed = headBobStanding;
 			}
 		}
-
-
 
 		// Update player visibility
 		Color lightColor = level.getLightColorAt(x, y, z, null, t_vislightColor);
@@ -1015,13 +972,7 @@ public class Player extends Actor {
 						Game.ShowUseMessage(MessageFormat.format(StringManager.get("entities.Player.useText"), useText, t.getUseVerb()));
 					}
 				}
-				else if(centered instanceof Item && (Math.abs(centered.xa) < 0.01f && Math.abs(centered.ya) < 0.01f && Math.abs(centered.za) < 0.01f)) {
-					Item i = (Item)centered;
-
-					if (!i.isPickup) {
-						Game.ShowUseMessage(MessageFormat.format(StringManager.get("entities.Player.getItemText"), useText, ((Item) (centered)).GetName() + "\n" + ((Item) (centered)).GetInfoText()), ((Item) (centered)).GetTextColor());
-					}
-				}
+				else if(centered instanceof Item && (Math.abs(centered.xa) < 0.01f && Math.abs(centered.ya) < 0.01f && Math.abs(centered.za) < 0.01f)) Game.ShowUseMessage(MessageFormat.format(StringManager.get("entities.Player.getItemText"), useText, ((Item) (centered)).GetName() + "\n" + ((Item) (centered)).GetInfoText()), ((Item) (centered)).GetTextColor());
 				else if(centered instanceof Stairs) Game.ShowUseMessage(MessageFormat.format(StringManager.get("entities.Player.useText"), useText, ((Stairs) (centered)).getUseText()));
 				else if(centered instanceof Door) Game.ShowUseMessage(MessageFormat.format(StringManager.get("entities.Player.useText"), useText, ((Door)centered).getUseText()));
 				else if(centered instanceof ButtonModel) Game.ShowUseMessage(MessageFormat.format(StringManager.get("entities.Player.useText"), useText, ((ButtonModel)centered).useVerb));
@@ -1979,6 +1930,7 @@ public class Player extends Actor {
 		return item == held;
 	}
 
+
 	public boolean addToInventory(Item item) {
 		return addToInventory(item, true);
 	}
@@ -2064,11 +2016,6 @@ public class Player extends Actor {
 		if(held != null) heldItem = inventory.indexOf(held, true);
 
 		Game.RefreshUI();
-	}
-
-	/** Returns true if player inventory has space for an item. */
-	public boolean hasFreeInventorySpace() {
-		return inventory.contains(null, true);
 	}
 
 	public void equip(Item item) {
@@ -2211,6 +2158,7 @@ public class Player extends Actor {
 
 				if(randDamage == 0) return Integer.toString(baseDamage);
 				return MessageFormat.format(StringManager.get("entities.Player.weaponAttackText"), baseDamage, (randDamage + baseDamage));
+
 			}
 			else if(held instanceof Potion) {
 				return String.format("%.0f",((Potion)held).getExplosionDamageAmount());
@@ -2309,10 +2257,22 @@ public class Player extends Actor {
 
 	public float getWalkSpeed() {
 		float baseSpeed = 0.10f + stats.SPD * 0.015f;
+
+		// Sprinting
+		//if(Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT)) {
+		//baseSpeed = sprintModifier + (float) this.stats.SPD * 0.020F;
+		//}
+
 		if(statusEffects == null || statusEffects.size <= 0) return baseSpeed * GetEquippedSpeedMod();
 
 		for(StatusEffect s : statusEffects) {
 			if(s.active) baseSpeed *= s.speedMod;
+
+			//Sprinting!
+			if(Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT)) {
+				baseSpeed = 0.25F + (float) this.stats.SPD * 0.015F;
+			}
+
 		}
 
 		return baseSpeed * GetEquippedSpeedMod();
@@ -2355,6 +2315,37 @@ public class Player extends Actor {
 	@Override
 	public float getMagicResistModBoost() {
 		return stats.magicResistMod + calculatedStats.magicResistMod;
+	}
+
+	// Resistance Overrides (Elemental)
+	@Override
+	public float getFireResistModBoost() {
+		return stats.fireResistMod + calculatedStats.fireResistMod;
+	}
+	@Override
+	public float getPoisonResistModBoost() {
+		return stats.poisonResistMod + calculatedStats.poisonResistMod;
+	}
+	@Override
+	public float getIceResistModBoost() {
+		return stats.iceResistMod + calculatedStats.iceResistMod;
+	}
+	@Override
+	public float getLightningResistModBoost() {
+		return stats.lightningResistMod + calculatedStats.lightningResistMod;
+	}
+
+
+	//Resistance Overrides (Physical)
+	@Override
+	public float getBludgeoningResistModBoost() { return stats.bludgeoningResistMod + calculatedStats.bludgeoningResistMod; }
+	@Override
+	public float getPiercingResistModBoost() {
+		return stats.piercingResistMod + calculatedStats.piercingResistMod;
+	}
+	@Override
+	public float getSlashingResistModBoost() {
+		return stats.slashingResistMod + calculatedStats.slashingResistMod;
 	}
 
 	public int getMagicStatBoost() {
@@ -2488,6 +2479,8 @@ public class Player extends Actor {
 
 	private transient float t_timeSinceEscapeEffect = 0;
 	private transient Color escapeFlashColor = new Color();
+
+	//Orb Code
 	private void tickEscapeEffects(Level level, float delta) {
 		t_timeSinceEscapeEffect += delta;
 
@@ -2559,6 +2552,7 @@ public class Player extends Actor {
 							if(Game.rand.nextBoolean()) {
 								Explosion e = new Explosion();
 
+								// TODO: Set new Orb Item to spawn a monster ("Monster m = new Monster()")
 								e.spawns = new Array<Entity>();
 								Fire f = new Fire();
 								f.color = new Color(Color.PURPLE);
@@ -2582,6 +2576,7 @@ public class Player extends Actor {
 			}
 		}
 	}
+	// Orb Code Ends
 
 	public void updatePlaytime(float delta) {
 		if(playtime >= 0) {
@@ -2639,4 +2634,6 @@ public class Player extends Actor {
 				itm.drawable.refresh();
 		}
 	}
+
+
 }
