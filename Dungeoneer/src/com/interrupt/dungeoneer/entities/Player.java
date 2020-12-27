@@ -790,14 +790,20 @@ public class Player extends Actor {
 			stepHeight = proneStep;
 			walkSpeed = proneSpeed;
 			headBobSpeed = headBobProne;
+			collision.set(0.2f,0.2f,0.2f);
+			if (isSolid && (za > 0 && !level.isFree(x, y, z + za, collision, stepHeight, false, null))) {
+				za = 0;
+			}
 		} else if(crouch) {
 			eyeHeight = crouchHeight;
 			stepHeight = crouchStep;
 			walkSpeed = crouchSpeed;
 			headBobSpeed = headBobCrouch;
+			collision.set(0.2f,0.2f,0.65f);
 		} else {
 			eyeHeight = standingHeight;
 			stepHeight = stepStanding;
+			collision.set(0.2f,0.2f,0.65f);
 			if(sprint) {
 				walkSpeed = walkSpeed * sprintMul;
 				headBobSpeed = headBobStanding * sprintMul;
