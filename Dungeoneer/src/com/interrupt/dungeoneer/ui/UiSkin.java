@@ -47,6 +47,7 @@ public class UiSkin {
         Texture mapTexture = Art.loadTexture("ui/map-bg.png");
         Texture saveSelectTexture = Art.loadTexture("ui/save-select.png");
         Texture inventoryWindowTexture = Art.loadTexture("ui/inventory-window.png");
+
         Texture inventoryButtons = Art.loadTexture("ui/inventory-buttons.png");
         Texture tooltipTexture = Art.loadTexture("ui/tooltip.png");
 		Texture tableHover = Art.loadTexture("ui/table-hover.png");
@@ -66,6 +67,7 @@ public class UiSkin {
 		atlas.addRegion("menu-char-btn-active", inventoryButtons, 0, 22, 30, 20);
 		atlas.addRegion("menu-inv-btn-inactive", inventoryButtons, 0, 44, 30, 20);
 		atlas.addRegion("menu-char-btn-inactive", inventoryButtons, 0, 66, 30, 20);
+
 
 		upRegion.splits = new int[]{4, 4, 4, 4};
 		upRegion.pads = new int[]{0, 0, 4, 5};

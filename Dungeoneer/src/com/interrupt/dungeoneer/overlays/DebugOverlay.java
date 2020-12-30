@@ -578,7 +578,7 @@ public class DebugOverlay extends WindowOverlay {
 
 		/** TUD DEBUG ITEMS*/
 		addItem(contentTable, "Ython", new Ython(200));
-		addItem(contentTable, "Vis", new Vis(200));
+		//addItem(contentTable, "Vis", new Vis(200));
 
 		addLevelUpItem(contentTable, "LEVEL UP!");
         //addGoDownItem(contentTable, "DOWN");
