@@ -90,8 +90,10 @@ public class WorldMapOverlay extends MessageOverlay {
             }
 
             continueImage.setColor(textColor);
+
+            //continue button
             mainTable.add(continueImage).align(Align.right);
-            
+
             animateText = false;
 
             return;
