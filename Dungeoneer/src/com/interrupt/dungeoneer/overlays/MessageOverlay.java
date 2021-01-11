@@ -40,6 +40,9 @@ public class MessageOverlay extends WindowOverlay {
 
 	protected Table mainTable = null;
 
+	//Map Dialogue
+	protected Table mapTable = null;
+
 	float lastHeight = 0f;
     public String triggerOnClose;
 

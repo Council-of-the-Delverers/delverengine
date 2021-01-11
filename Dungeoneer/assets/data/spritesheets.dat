@@ -50,6 +50,24 @@
         "name": "LeoOther"
     },
     {
+        "columns": 1,
+        "filename": "sprites/map/world/Map1.png",
+        "scale": 1,
+        "name": "Map1"
+    },
+    {
+        "columns": 5,
+        "filename": "sprites/UI-Sprites.png",
+        "scale": 1,
+        "name": "UISprites"
+    },
+    {
+        "columns": 5,
+        "filename": "sprites/Map-UI.png",
+        "scale": 1,
+        "name": "MapUI"
+    },
+    {
         "columns": 5,
         "filename": "sprites/NPC.png",
         "scale": 1,

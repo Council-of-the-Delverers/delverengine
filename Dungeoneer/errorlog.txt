@@ -2026,3 +2026,385 @@ armor (com.interrupt.managers.ItemManager)
 	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
 	... 15 more
 
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1449)
+	at com.interrupt.dungeoneer.game.ModManager.loadEntityManager(ModManager.java:140)
+	at com.interrupt.dungeoneer.editor.EditorApplication.init(EditorApplication.java:398)
+	at com.interrupt.dungeoneer.editor.EditorApplication.create(EditorApplication.java:1884)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 6 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON, unmatched brace.
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:555)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 7 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1449)
+	at com.interrupt.dungeoneer.game.ModManager.loadEntityManager(ModManager.java:140)
+	at com.interrupt.dungeoneer.editor.EditorApplication.init(EditorApplication.java:398)
+	at com.interrupt.dungeoneer.editor.EditorApplication.create(EditorApplication.java:1884)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 6 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON, unmatched brace.
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:555)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 7 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1449)
+	at com.interrupt.dungeoneer.game.ModManager.loadEntityManager(ModManager.java:140)
+	at com.interrupt.dungeoneer.editor.EditorApplication.init(EditorApplication.java:398)
+	at com.interrupt.dungeoneer.editor.EditorApplication.create(EditorApplication.java:1884)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 6 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON, unmatched brace.
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:555)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 7 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1449)
+	at com.interrupt.dungeoneer.game.ModManager.loadEntityManager(ModManager.java:140)
+	at com.interrupt.dungeoneer.editor.EditorApplication.init(EditorApplication.java:398)
+	at com.interrupt.dungeoneer.editor.EditorApplication.create(EditorApplication.java:1884)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Serialization trace:
+entities (com.interrupt.managers.EntityManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:900)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:936)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:953)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 6 more
+Caused by: com.badlogic.gdx.utils.reflect.ReflectionException: Class not found: com.interrupt.dungeoneer.triggers.MapDialogue
+	at com.badlogic.gdx.utils.reflect.ClassReflection.forName(ClassReflection.java:30)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:898)
+	... 11 more
+Caused by: java.lang.ClassNotFoundException: com.interrupt.dungeoneer.triggers.MapDialogue
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:291)
+	at com.badlogic.gdx.utils.reflect.ClassReflection.forName(ClassReflection.java:28)
+	... 12 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1449)
+	at com.interrupt.dungeoneer.game.ModManager.loadEntityManager(ModManager.java:140)
+	at com.interrupt.dungeoneer.editor.EditorApplication.init(EditorApplication.java:398)
+	at com.interrupt.dungeoneer.editor.EditorApplication.create(EditorApplication.java:1884)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Serialization trace:
+entities (com.interrupt.managers.EntityManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:900)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:936)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:953)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 6 more
+Caused by: com.badlogic.gdx.utils.reflect.ReflectionException: Class not found: com.interrupt.dungeoneer.triggers.MapDialogue
+	at com.badlogic.gdx.utils.reflect.ClassReflection.forName(ClassReflection.java:30)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:898)
+	... 11 more
+Caused by: java.lang.ClassNotFoundException: com.interrupt.dungeoneer.triggers.MapDialogue
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:291)
+	at com.badlogic.gdx.utils.reflect.ClassReflection.forName(ClassReflection.java:28)
+	... 12 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1449)
+	at com.interrupt.dungeoneer.game.ModManager.loadEntityManager(ModManager.java:140)
+	at com.interrupt.dungeoneer.editor.EditorApplication.init(EditorApplication.java:398)
+	at com.interrupt.dungeoneer.editor.EditorApplication.create(EditorApplication.java:1884)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Serialization trace:
+entities (com.interrupt.managers.EntityManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:900)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:936)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:953)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 6 more
+Caused by: com.badlogic.gdx.utils.reflect.ReflectionException: Class not found: com.interrupt.dungeoneer.triggers.MapDialogue
+	at com.badlogic.gdx.utils.reflect.ClassReflection.forName(ClassReflection.java:30)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:898)
+	... 11 more
+Caused by: java.lang.ClassNotFoundException: com.interrupt.dungeoneer.triggers.MapDialogue
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:291)
+	at com.badlogic.gdx.utils.reflect.ClassReflection.forName(ClassReflection.java:28)
+	... 12 more
+
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.overlays.WorldMapOverlay.makeMessage(WorldMapOverlay.java:53)
+	at com.interrupt.dungeoneer.overlays.WorldMapOverlay.makeContent(WorldMapOverlay.java:306)
+	at com.interrupt.dungeoneer.overlays.WindowOverlay.makeLayout(WindowOverlay.java:282)
+	at com.interrupt.dungeoneer.overlays.WindowOverlay.onShow(WindowOverlay.java:254)
+	at com.interrupt.dungeoneer.overlays.MessageOverlay.onShow(MessageOverlay.java:179)
+	at com.interrupt.dungeoneer.overlays.WorldMapOverlay.onShow(WorldMapOverlay.java:249)
+	at com.interrupt.dungeoneer.overlays.Overlay.show(Overlay.java:55)
+	at com.interrupt.dungeoneer.overlays.Overlay.show(Overlay.java:31)
+	at com.interrupt.dungeoneer.overlays.OverlayManager.push(OverlayManager.java:33)
+	at com.interrupt.dungeoneer.entities.triggers.MapDialogue.doTriggerEvent(MapDialogue.java:51)
+	at com.interrupt.dungeoneer.entities.triggers.Trigger.tick(Trigger.java:139)
+	at com.interrupt.dungeoneer.game.Level.tickEntityList(Level.java:3098)
+	at com.interrupt.dungeoneer.game.Level.tick(Level.java:3078)
+	at com.interrupt.dungeoneer.game.Game.tick(Game.java:538)
+	at com.interrupt.dungeoneer.GameManager.tick(GameManager.java:113)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:73)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.interrupt.dungeoneer.editor.EditorApplication.render(EditorApplication.java:480)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.overlays.WorldMapOverlay.makeMessage(WorldMapOverlay.java:53)
+	at com.interrupt.dungeoneer.overlays.WorldMapOverlay.makeContent(WorldMapOverlay.java:306)
+	at com.interrupt.dungeoneer.overlays.WindowOverlay.makeLayout(WindowOverlay.java:282)
+	at com.interrupt.dungeoneer.overlays.WindowOverlay.onShow(WindowOverlay.java:254)
+	at com.interrupt.dungeoneer.overlays.MessageOverlay.onShow(MessageOverlay.java:179)
+	at com.interrupt.dungeoneer.overlays.WorldMapOverlay.onShow(WorldMapOverlay.java:249)
+	at com.interrupt.dungeoneer.overlays.Overlay.show(Overlay.java:55)
+	at com.interrupt.dungeoneer.overlays.Overlay.show(Overlay.java:31)
+	at com.interrupt.dungeoneer.overlays.OverlayManager.push(OverlayManager.java:33)
+	at com.interrupt.dungeoneer.entities.triggers.MapDialogue.doTriggerEvent(MapDialogue.java:51)
+	at com.interrupt.dungeoneer.entities.triggers.Trigger.tick(Trigger.java:139)
+	at com.interrupt.dungeoneer.game.Level.tickEntityList(Level.java:3098)
+	at com.interrupt.dungeoneer.game.Level.tick(Level.java:3078)
+	at com.interrupt.dungeoneer.game.Game.tick(Game.java:538)
+	at com.interrupt.dungeoneer.GameManager.tick(GameManager.java:113)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:73)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.interrupt.dungeoneer.editor.EditorApplication.render(EditorApplication.java:480)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.overlays.WorldMapOverlay.makeMessage(WorldMapOverlay.java:66)
+	at com.interrupt.dungeoneer.overlays.WorldMapOverlay.makeContent(WorldMapOverlay.java:305)
+	at com.interrupt.dungeoneer.overlays.WindowOverlay.makeLayout(WindowOverlay.java:282)
+	at com.interrupt.dungeoneer.overlays.WindowOverlay.onShow(WindowOverlay.java:254)
+	at com.interrupt.dungeoneer.overlays.MessageOverlay.onShow(MessageOverlay.java:179)
+	at com.interrupt.dungeoneer.overlays.WorldMapOverlay.onShow(WorldMapOverlay.java:248)
+	at com.interrupt.dungeoneer.overlays.Overlay.show(Overlay.java:55)
+	at com.interrupt.dungeoneer.overlays.Overlay.show(Overlay.java:31)
+	at com.interrupt.dungeoneer.overlays.OverlayManager.push(OverlayManager.java:33)
+	at com.interrupt.dungeoneer.entities.triggers.MapDialogue.doTriggerEvent(MapDialogue.java:51)
+	at com.interrupt.dungeoneer.entities.triggers.Trigger.tick(Trigger.java:139)
+	at com.interrupt.dungeoneer.game.Level.tickEntityList(Level.java:3098)
+	at com.interrupt.dungeoneer.game.Level.tick(Level.java:3078)
+	at com.interrupt.dungeoneer.game.Game.tick(Game.java:538)
+	at com.interrupt.dungeoneer.GameManager.tick(GameManager.java:113)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:73)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.interrupt.dungeoneer.editor.EditorApplication.render(EditorApplication.java:480)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.overlays.WorldMapOverlay.makeMessage(WorldMapOverlay.java:101)
+	at com.interrupt.dungeoneer.overlays.WorldMapOverlay.makeContent(WorldMapOverlay.java:308)
+	at com.interrupt.dungeoneer.overlays.WindowOverlay.makeLayout(WindowOverlay.java:282)
+	at com.interrupt.dungeoneer.overlays.WindowOverlay.onShow(WindowOverlay.java:254)
+	at com.interrupt.dungeoneer.overlays.MessageOverlay.onShow(MessageOverlay.java:179)
+	at com.interrupt.dungeoneer.overlays.WorldMapOverlay.onShow(WorldMapOverlay.java:251)
+	at com.interrupt.dungeoneer.overlays.Overlay.show(Overlay.java:55)
+	at com.interrupt.dungeoneer.overlays.Overlay.show(Overlay.java:31)
+	at com.interrupt.dungeoneer.overlays.OverlayManager.push(OverlayManager.java:33)
+	at com.interrupt.dungeoneer.entities.triggers.MapDialogue.doTriggerEvent(MapDialogue.java:51)
+	at com.interrupt.dungeoneer.entities.triggers.Trigger.tick(Trigger.java:139)
+	at com.interrupt.dungeoneer.game.Level.tickEntityList(Level.java:3098)
+	at com.interrupt.dungeoneer.game.Level.tick(Level.java:3078)
+	at com.interrupt.dungeoneer.game.Game.tick(Game.java:538)
+	at com.interrupt.dungeoneer.GameManager.tick(GameManager.java:113)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:73)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.interrupt.dungeoneer.editor.EditorApplication.render(EditorApplication.java:480)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1449)
+	at com.interrupt.dungeoneer.game.ModManager.loadEntityManager(ModManager.java:140)
+	at com.interrupt.dungeoneer.editor.EditorApplication.init(EditorApplication.java:398)
+	at com.interrupt.dungeoneer.editor.EditorApplication.create(EditorApplication.java:1884)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 6 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 448 near: 	hidden: false,
+			},
+		{
+			*ERROR*"Map Dialogue",
+		"class": "com.interrupt.dungeoneer.entities.t
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 7 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1449)
+	at com.interrupt.dungeoneer.game.ModManager.loadEntityManager(ModManager.java:140)
+	at com.interrupt.dungeoneer.screens.SplashScreen.<init>(SplashScreen.java:67)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:58)
+	at com.interrupt.dungeoneer.editor.EditorApplication.testLevel(EditorApplication.java:2118)
+	at com.interrupt.dungeoneer.editor.EditorActions$8.actionPerformed(EditorActions.java:111)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:48)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 11 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 448 near: 	hidden: false,
+			},
+		{
+			*ERROR*"Map Dialogue",
+		"class": "com.interrupt.dungeoneer.entities.t
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 12 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1449)
+	at com.interrupt.dungeoneer.game.ModManager.loadEntityManager(ModManager.java:140)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:160)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:203)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorApplication.testLevel(EditorApplication.java:2118)
+	at com.interrupt.dungeoneer.editor.EditorActions$8.actionPerformed(EditorActions.java:111)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:48)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 448 near: 	hidden: false,
+			},
+		{
+			*ERROR*"Map Dialogue",
+		"class": "com.interrupt.dungeoneer.entities.t
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 16 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1449)
+	at com.interrupt.dungeoneer.game.ModManager.loadEntityManager(ModManager.java:140)
+	at com.interrupt.dungeoneer.editor.EditorApplication.init(EditorApplication.java:398)
+	at com.interrupt.dungeoneer.editor.EditorApplication.create(EditorApplication.java:1884)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 6 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 449 near: Dialogue": {
+				"Map Dialogue"*ERROR*,
+				"class": "com.interrupt.dungeoneer.entities.triggers.MapD
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 7 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1449)
+	at com.interrupt.dungeoneer.game.ModManager.loadEntityManager(ModManager.java:140)
+	at com.interrupt.dungeoneer.editor.EditorApplication.init(EditorApplication.java:398)
+	at com.interrupt.dungeoneer.editor.EditorApplication.create(EditorApplication.java:1884)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 6 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 554 near: Dialogue": {
+				"Map Dialogue"*ERROR*,
+				"class": "com.interrupt.dungeoneer.entities.triggers.MapD
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 7 more
+
