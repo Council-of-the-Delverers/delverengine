@@ -80,19 +80,21 @@ public class WorldMapOverlay extends MessageOverlay {
             Texture t = Art.loadTexture(imageFile);
             if(t != null) {
                 Image i = new Image(t);
-
+                //200 Default
                 float scale = 200f / t.getWidth();
+
                 i.setWidth(t.getWidth() * scale);
                 i.setHeight(t.getHeight() * scale);
 
-                mainTable.add(i).width(200).height(t.getHeight() * scale);
+                //200 Default
+                mainTable.add(i).width(2000).height(t.getHeight() * scale);
                 mainTable.row();
             }
 
             continueImage.setColor(textColor);
 
             //continue button
-            mainTable.add(continueImage).align(Align.right);
+            mainTable.add(continueImage).align(Align.left);
 
             animateText = false;
 
@@ -109,7 +111,7 @@ public class WorldMapOverlay extends MessageOverlay {
 
         mainTable.align(Align.topLeft|Align.top);
 
-        //Top message
+        //Top message, padRight moves it to the left
         mainTable.add(messageText).minWidth(200).padRight(350f);
 
         //No Choice Window
