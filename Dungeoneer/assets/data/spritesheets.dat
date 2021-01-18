@@ -86,6 +86,12 @@
         "name": "Weapons-1"
     },
     {
+        "columns": 4,
+        "filename": "sprites/spell-vfx.png",
+        "scale": 1,
+        "name": "spell-vfx"
+    },
+    {
         "columns": 5,
         "filename": "sprites/32/ranged-1.png",
         "scale": 1,
