@@ -234,7 +234,7 @@ public class Actor extends Entity {
 					//Resistance Damages
 					if(damageType == DamageType.BLUDGEONING)
 					{
-						damage *= s.damageMod;
+						damage *= s.bludgeoningDamageMod;
 					}
 					if(damageType == DamageType.PIERCING)
 					{
@@ -293,6 +293,10 @@ public class Actor extends Entity {
 
 			case ICE:
 				damage = (int)Math.ceil(damage - getIceResistModBoost() * 1f);
+				break;
+
+			case LIGHTNING:
+				damage = (int)Math.ceil(damage - getLightningResistModBoost() * 1f);
 				break;
 
 			//Physical Cases
