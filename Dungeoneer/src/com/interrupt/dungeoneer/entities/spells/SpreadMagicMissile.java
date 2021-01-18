@@ -13,6 +13,8 @@ public class SpreadMagicMissile extends MagicMissile {
     public float xSpread = 5f;
     public float ySpread = 5f;
 
+    boolean floating = true;
+
     Vector3 tempDir = new Vector3();
 	
 	@Override
@@ -37,6 +39,8 @@ public class SpreadMagicMissile extends MagicMissile {
             projectile.za = tempDir.y * speed;
             projectile.xa = tempDir.x * speed;
             projectile.ya = tempDir.z * speed;
+
+            projectile.floating = this.floating;
 
             if (hitSound != null) projectile.hitSound = hitSound;
             Game.GetLevel().entities.add(projectile);
