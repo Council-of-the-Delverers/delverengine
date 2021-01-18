@@ -33,3 +33,5 @@ build/
 .idea/runConfigurations/Editor.xml
 .idea/runConfigurations/Game.xml
 *.xml
+
+Dungeoneer/errorlog.txt
