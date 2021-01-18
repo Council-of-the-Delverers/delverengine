@@ -87,7 +87,7 @@ public class WorldMapOverlay extends MessageOverlay {
                 i.setHeight(t.getHeight() * scale);
 
                 //200 Default
-                mainTable.add(i).width(2000).height(t.getHeight() * scale);
+                mainTable.add(i).width(200).height(t.getHeight() * scale);
                 mainTable.row();
             }
 
