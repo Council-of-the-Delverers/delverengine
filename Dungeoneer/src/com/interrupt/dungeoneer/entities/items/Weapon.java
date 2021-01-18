@@ -68,12 +68,6 @@ public class Weapon extends Item {
 	public Weapon() { }
 
 	@EditorProperty
-	protected int bonusBaseDamage = 2;
-
-	@EditorProperty
-	protected int bonusRandDamage = 2;
-
-	@EditorProperty
 	protected int baseDamage = 2;
 
 	@EditorProperty
