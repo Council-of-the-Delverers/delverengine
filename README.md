@@ -4,8 +4,6 @@
 # Delver Engine Open Source
 Delver engine and editor source code release
 
-<<<<<<< HEAD
-=======
 This source release does not contain or cover the game data from Delver, the game data remains subject to the original copyright and applicable law.
 
 ![Delver editor in action](https://i.imgur.com/tqeeJqH.png)

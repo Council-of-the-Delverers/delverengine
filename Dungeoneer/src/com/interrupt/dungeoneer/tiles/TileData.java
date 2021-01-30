@@ -30,7 +30,7 @@ public class TileData {
 	public Color lightColor = null;
 	public Color mapColor = null;
 	public float friction = 1;
-	public String walkSound = "footsteps/feet_default_01.mp3,footsteps/feet_default_02.mp3,footsteps/feet_default_03.mp3,footsteps/feet_default_04.mp3,footsteps/feet_default_05.mp3,footsteps/feet_default_06.mp3,footsteps/feet_default_07.mp3,footsteps/feet_default_08.mp3,footsteps/feet_default_09.mp3";
+	public String walkSound = null;
     public String ambientSound = null;
     public float ambientSoundVolume = 1f;
     public float ambientSoundRadius = 5f;

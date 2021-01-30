@@ -50,7 +50,10 @@ import java.util.concurrent.Executors;
 
 public class Game {
 	/** Engine version */
-	public static String VERSION = "v1.3.0";
+	public static String VERSION = "Delver - v1.3.0";
+
+	/** TUD Version */
+	public static String TUDVERSION = "TUD - v1.0b";
 
     /** The save game version, gets saved in the player */
     public static int SAVE_VERSION = 1;

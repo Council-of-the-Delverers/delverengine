@@ -37,7 +37,7 @@ public class WorldMapOverlay extends MessageOverlay {
     protected String currentLine;
 
 
-    // Current Ink story
+    /** Current Ink story */
 
     protected Story story;
 
@@ -76,24 +76,24 @@ public class WorldMapOverlay extends MessageOverlay {
             thisText = " ";
             finishedShowingText = true;
 
-            //Load Image
+            /** Load Image */
             Texture t = Art.loadTexture(imageFile);
             if(t != null) {
                 Image i = new Image(t);
-                //200 Default
-                float scale = 200f / t.getWidth();
+                /** 200 Default */
+                float scale = 100f / t.getWidth();
 
                 i.setWidth(t.getWidth() * scale);
                 i.setHeight(t.getHeight() * scale);
 
-                //200 Default
+                /** 200 Default */
                 mainTable.add(i).width(200).height(t.getHeight() * scale);
                 mainTable.row();
             }
 
             continueImage.setColor(textColor);
 
-            //continue button
+            /** continue button */
             mainTable.add(continueImage).align(Align.left);
 
             animateText = false;
@@ -111,22 +111,22 @@ public class WorldMapOverlay extends MessageOverlay {
 
         mainTable.align(Align.topLeft|Align.top);
 
-        //Top message, padRight moves it to the left
-        mainTable.add(messageText).minWidth(200).padRight(350f);
+        /** Top Message. PadRight moves it to the left */
+        mainTable.add(messageText).minWidth(200).padRight(375f);
 
-        //No Choice Window
+        /** No Choice Window */
         mainTable.row().padRight(20f).padBottom(20f);
 
         continueImage.setColor(textColor);
 
         animateText = true;
 
-        // Also add the choice buttons, if any!
+        /** Also add the choice buttons, if any! */
         if(story.getCurrentChoices().size() > 0) {
             // Add a spacer between the choices and the text
             mainTable.row().padTop(2f);
 
-            // Create or clear the choices table
+            /** Create or clear the choices table */
             if(choicesTable == null)
                 choicesTable = new Table();
             else
@@ -152,7 +152,7 @@ public class WorldMapOverlay extends MessageOverlay {
                             finishedShowingText = false;
                             next();
                         } catch (Exception ex) {
-                            Gdx.app.log("DialogueOverlay", ex.getMessage());
+                            Gdx.app.log("WorldMapOverlay", ex.getMessage());
                             next();
                         }
                     }
@@ -174,12 +174,12 @@ public class WorldMapOverlay extends MessageOverlay {
                 choiceIndex++;
             }
             mainTable.align(Align.topLeft|Align.top);
-            //Use padRight(i) to position one way
+            /** Use padRight(i) to position one way */
             mainTable.row().padRight(350f).padBottom(200f);
             mainTable.add(choicesTable);
             mainTable.row();
         } else {
-            // Just add the continue icon
+            /** Just add the continue icon */
             mainTable.add(continueImage).align(Align.right);
         }
     }
@@ -194,7 +194,7 @@ public class WorldMapOverlay extends MessageOverlay {
 
     public void bindExternalFunctions(Story story) {
         try {
-            // Test out binding some functions
+            /** Test out binding some functions */
             story.bindExternalFunction("killPlayer", new Story.ExternalFunction() {
                 @Override
                 public Object call(Object[] args) throws Exception {
@@ -246,7 +246,7 @@ public class WorldMapOverlay extends MessageOverlay {
 
             String fileJson = file.readString();
 
-            // Fixup some characters for Ink, will explode otherwise (https://github.com/bladecoder/blade-ink/issues/8)
+            /** Fixup some characters for Ink, will explode otherwise (https://github.com/bladecoder/blade-ink/issues/8) */
             String BOM = new String("\uFEFF".getBytes("UTF-8"));
             fileJson = fileJson.replace(BOM, "");
 
@@ -279,7 +279,7 @@ public class WorldMapOverlay extends MessageOverlay {
 
         processStory();
 
-        // Update the window
+        /** Update the window */
         makeMessage();
         resetGlyphLayout();
 
@@ -289,7 +289,7 @@ public class WorldMapOverlay extends MessageOverlay {
 
     public void processStory() {
         try {
-            // Get the next bit of the story
+            /** Get the next bit of the story */
             currentLine = story.Continue();
         } catch(Exception ex) {
             Gdx.app.log("DialogueOverlay", ex.getMessage());

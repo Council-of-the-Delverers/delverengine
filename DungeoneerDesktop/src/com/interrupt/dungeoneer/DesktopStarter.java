@@ -43,7 +43,7 @@ public class DesktopStarter {
 		
 		if(args != null) {
 			for(String arg : args) {
-				if(arg.toLowerCase().endsWith("gimmedatdebugmenu")) { /** DEBUG MENU SYNTAX */
+				if(arg.toLowerCase().endsWith("debug=true")) { /** DEBUG MENU SYNTAX */
 					Game.isDebugMode = true;
 				}
 				else if(arg.toLowerCase().endsWith("debug-collision=true")) {

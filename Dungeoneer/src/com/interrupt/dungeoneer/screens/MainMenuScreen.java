@@ -455,6 +455,8 @@ public class MainMenuScreen extends BaseScreen {
 
         renderer.drawTextRightJustified(Game.VERSION, (w / 2) - smallFontSize, (-h / 2) + smallFontSize, smallFontSize, Color.GRAY, Color.BLACK);
 
+        renderer.drawTextRightJustified(Game.TUDVERSION, (w / 4) - smallFontSize, (-h / 2) + smallFontSize, smallFontSize, Color.WHITE, Color.BLACK);
+
         renderer.uiBatch.end();
 	}
 	

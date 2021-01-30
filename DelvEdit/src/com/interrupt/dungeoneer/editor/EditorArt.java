@@ -54,7 +54,7 @@ public class EditorArt {
 	/**
 	 * Reload all art assets.
 	 *
-	 * @apiNote This must be called from the same thread where OpenGL was initialized.
+	 * apiNote This must be called from the same thread where OpenGL was initialized.
 	 */
 	public static void refresh() {
 		try {

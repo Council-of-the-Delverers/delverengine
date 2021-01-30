@@ -556,7 +556,7 @@
 				"spriteAtlas": "UISprites",
 				"isSolid": true,
 				"hidden": false,
-				"backgroundImage": "sprites/map/MapDesign.png"
+				"backgroundImage": "ui/mapoverlay.png"
 			}
 		},
 		"LevelWarp": {

@@ -227,7 +227,8 @@ public class EditorFile {
             @Override
             public boolean accept(File path) {
                 String name = path.getName();
-                return (name.endsWith(".dat") || name.endsWith(".png") || name.endsWith(".bin"));
+                //Custom Filenames
+                return (name.endsWith(".dat") || name.endsWith(".png") || name.endsWith(".bin") || name.endsWith(".map"));
             }
         }
         FileFilter wsFilter = new WSFilter();
@@ -286,6 +287,11 @@ public class EditorFile {
                     openLevel.loadForEditor(dir + fileName, heightFile);
                 }
                 else if(fileName.endsWith(".bin")) {
+                    openLevel = KryoSerializer.loadLevel(levelFileHandle);
+                    openLevel.init(Level.Source.EDITOR);
+                }
+                //Custom filenames
+                else if(fileName.endsWith(".map")) {
                     openLevel = KryoSerializer.loadLevel(levelFileHandle);
                     openLevel.init(Level.Source.EDITOR);
                 }
