@@ -53,7 +53,7 @@ public class Game {
 	public static String VERSION = "Delver - v1.3.0";
 
 	/** TUD Version */
-	public static String TUDVERSION = "TUD - v1.0b";
+	public static String TUDVERSION = "TUD - v0.1a";
 
     /** The save game version, gets saved in the player */
     public static int SAVE_VERSION = 1;
@@ -332,6 +332,7 @@ public class Game {
 
 	    Gdx.app.log("Delver", "Building Dungeon Layout");
 
+	    /** Looks in File for Dungeons*/
 	    FileHandle dungeonsFile = Game.modManager.findFile("data/dungeons.dat");
 	    if(dungeonsFile != null && dungeonsFile.exists()) {
             return loadDataLevels();
