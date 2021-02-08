@@ -56,17 +56,10 @@ public class Hud {
 		equipLocations.put( "RING", new EquipLoc("RING", startX + 1f, startY + 1f, 150) );
 		equipLocations.put( "AMULET", new EquipLoc("AMULET", startX + 1f, startY + 2f, 142) );
 
-		/** TUR Slots */
-		equipLocations.put( "RING2", new EquipLoc("RING", startX + -1f, startY + 1f, 150) );
+		/** TUD Slots */
 		equipLocations.put( "HOOD", new EquipLoc("HOOD", startX + -1f, startY, 141) );
-		equipLocations.put( "BELT", new EquipLoc("BELT", startX + -1f, startY + 2, 140) );
+		equipLocations.put( "BELT", new EquipLoc("BELT", startX + -1f, startY + 1, 140) );
 		equipLocations.put( "BOOTS", new EquipLoc("BOOTS", startX + -1f, startY + 2, 159) );
-		equipLocations.put( "CLOAK", new EquipLoc("CLOAK", startX + -1f, startY + 2, 159) );
-
-		/** TUR Enhancements */
-		equipLocations.put( "SKILL1", new EquipLoc("SKILL1", startX + 1f, startY + 4, 159) );
-		equipLocations.put( "SKILL2", new EquipLoc("SKILL2", startX, startY + 4, 159) );
-		equipLocations.put( "SKILL3", new EquipLoc("SKILL3", startX + -1f, startY + 4, 159) );
 
 
 		for(EquipLoc loc : equipLocations.values())

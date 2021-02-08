@@ -153,8 +153,9 @@ public class Player extends Actor {
 
 	private Integer tapLength = null;
 
+	/** Hotbar/Inventory sizes*/
 	public int hotbarSize = 5;
-	public int inventorySize = 23;
+	public int inventorySize = 30;
 
 	public Item hovering = null;
 

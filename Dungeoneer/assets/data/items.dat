@@ -23,6 +23,22 @@
 			dropSound:"drops/drop_metal_01.mp3,drops/drop_metal_02.mp3,drops/drop_metal_03.mp3",
 			minItemLevel: 1,
 			maxItemLevel: 5
+		},
+		{
+			"class": "com.interrupt.dungeoneer.entities.items.Armor",
+			"itemType": "armor",
+			"tex": 0,
+			"inventoryTex": 45,
+			"spriteAtlas": "unique",
+			"name": "Survivor's Ring",
+			"unique": true,
+			"armor": 3,
+			"equipLoc": "RING",
+			"yOffset": -0.11,
+			"cost": 1000,
+			"minItemLevel": 2,
+			"maxItemLevel": 8,
+			"baseMods": { "hpMod": 1, "agilityMod": 1, "attackSpeedMod": 0.1 }
 		}
 	],
 	melee:{
