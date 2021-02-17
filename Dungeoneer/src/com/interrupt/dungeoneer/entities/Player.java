@@ -2338,9 +2338,14 @@ public class Player extends Actor {
 		return stats.iceResistMod + calculatedStats.iceResistMod;
 	}
 	@Override
-	public float getLightningResistModBoost() {
-		return stats.lightningResistMod + calculatedStats.lightningResistMod;
-	}
+	public float getLightningResistModBoost() { return stats.lightningResistMod + calculatedStats.lightningResistMod; }
+
+	@Override
+	public float getFrostResistModBoost() { return stats.frostResistMod + calculatedStats.frostResistMod; }
+
+	@Override
+	public float getThunderResistModBoost() { return stats.thunderResistMod + calculatedStats.thunderResistMod; }
+
 
 
 	//Resistance Overrides (Physical)

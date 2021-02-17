@@ -36,10 +36,12 @@ public class Stats {
 	public float fireResistMod = 0f;
 	public float iceResistMod = 0f;
 	public float poisonResistMod = 0f;
-	public float lightningResistMod= 0f;
-	public float slashingResistMod= 0f;
-	public float piercingResistMod= 0f;
-	public float bludgeoningResistMod= 0f;
+	public float lightningResistMod = 0f;
+	public float slashingResistMod = 0f;
+	public float piercingResistMod = 0f;
+	public float bludgeoningResistMod = 0f;
+	public float frostResistMod = 0f;
+	public float thunderResistMod = 0f;
 
 	private transient int LAST_ATK;
 	private transient int LAST_DEF;
@@ -60,6 +62,8 @@ public class Stats {
 	private transient float LAST_slashingResistMod;
 	private transient float LAST_piercingResistMod;
 	private transient float LAST_bludgeoningResistMod;
+	private transient float LAST_frostResistMod;
+	private transient float LAST_thunderResistMod;
 
 	public void ResetStats() {
 
@@ -82,6 +86,8 @@ public class Stats {
 		LAST_slashingResistMod = slashingResistMod;
 		LAST_piercingResistMod = piercingResistMod;
 		LAST_bludgeoningResistMod = bludgeoningResistMod;
+		LAST_frostResistMod = frostResistMod;
+		LAST_thunderResistMod = thunderResistMod;
 
 		ATK = 0;
 		DEF = 0;
@@ -103,6 +109,8 @@ public class Stats {
 		slashingResistMod = 0;
 		piercingResistMod = 0;
 		bludgeoningResistMod = 0;
+		frostResistMod = 0;
+		thunderResistMod = 0f;
 
 		iceDamageMod = 0;
 	}
@@ -151,6 +159,9 @@ public class Stats {
 		poisonResistMod += m.getPoisonResistMod(i);
 		lightningResistMod += m.getLightningResistMod(i);
 
+		frostResistMod = m.getFrostResistMod(i);
+		thunderResistMod = m.getThunderResistMod(i);
+
 		iceDamageMod += m.getIceDamageMod(i);
 
 		bludgeoningResistMod += m.getBludgeoningResistMod(i);
@@ -159,6 +170,6 @@ public class Stats {
 	}
 
 	public boolean statsChanged() {
-		return (ATK != LAST_ATK || DEF != LAST_DEF || DEX != LAST_DEX || SPD != LAST_SPD || MAG != LAST_MAG || END != LAST_END || HP != LAST_HP || attackSpeedMod != LAST_attackSpeedMod || knockbackMod != LAST_knockbackMod || magicResistMod != LAST_magicResistMod || fireResistMod != LAST_fireResistMod || iceResistMod != LAST_iceResistMod || poisonResistMod != LAST_poisonResistMod || lightningResistMod != LAST_lightningResistMod || slashingResistMod != LAST_slashingResistMod || piercingResistMod != LAST_piercingResistMod || bludgeoningResistMod != LAST_bludgeoningResistMod || iceDamageMod != LAST_iceDamageMod );
+		return (ATK != LAST_ATK || DEF != LAST_DEF || DEX != LAST_DEX || SPD != LAST_SPD || MAG != LAST_MAG || END != LAST_END || HP != LAST_HP || attackSpeedMod != LAST_attackSpeedMod || knockbackMod != LAST_knockbackMod || magicResistMod != LAST_magicResistMod || fireResistMod != LAST_fireResistMod || iceResistMod != LAST_iceResistMod || poisonResistMod != LAST_poisonResistMod || lightningResistMod != LAST_lightningResistMod || slashingResistMod != LAST_slashingResistMod || piercingResistMod != LAST_piercingResistMod || bludgeoningResistMod != LAST_bludgeoningResistMod || iceDamageMod != LAST_iceDamageMod || frostResistMod != LAST_frostResistMod || thunderResistMod != LAST_thunderResistMod );
 	}
 }

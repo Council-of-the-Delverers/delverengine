@@ -36,24 +36,13 @@ public class Weapon extends Item {
 		HEALING,
 		PARALYZE,
 		VAMPIRE,
-		PIERCING,
-		BLUDGEONING,
-		SLASHING,
-		BLEEDING,
-	}
 
-	//Get 2 damage types to a weapon?
-	public enum BonusDamageType {
-		FIRE,
-		ICE,
-		LIGHTNING,
-		POISON,
-		PARALYZE,
-		VAMPIRE,
 		PIERCING,
 		BLUDGEONING,
 		SLASHING,
 		BLEEDING,
+		FROST, // Poison with Ice (Effect Name: Frostbite
+		THUNDER // Knockback
 	}
 
 	public ItemModification baseMods;

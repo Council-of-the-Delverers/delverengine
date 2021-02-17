@@ -100,7 +100,6 @@ public class WorldMapOverlay extends MessageOverlay {
 
             return;
         }
-        //Load Image End
 
         messageText = new Label(message, skin.get(Label.LabelStyle.class));
         messageText.setColor(textColor);

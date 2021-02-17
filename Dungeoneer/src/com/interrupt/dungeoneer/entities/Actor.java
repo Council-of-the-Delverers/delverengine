@@ -89,6 +89,10 @@ public class Actor extends Entity {
 	public float piercingResistMod = 0.0f;
 	@EditorProperty(group = "Resistances")
 	public float bludgeoningResistMod = 0.0f;
+	@EditorProperty(group = "Resistances")
+	public float frostResistMod = 0.0f;
+	@EditorProperty(group = "Resistances")
+	public float thunderResistMod = 0.0f;
 
 
 	public Stats stats = new Stats();
@@ -187,9 +191,9 @@ public class Actor extends Entity {
 	public float getFireResistModBoost() {
 		return stats.fireResistMod;
 	}
-	public float getIceResistModBoost() {
-		return stats.iceResistMod;
-	}
+	public float getIceResistModBoost() { return stats.iceResistMod; }
+	public float getFrostResistModBoost() { return stats.frostResistMod; }
+	public float getThunderResistModBoost() { return stats.thunderResistMod; }
 	public float getPoisonResistModBoost() {
 		return stats.poisonResistMod;
 	}
@@ -220,6 +224,10 @@ public class Actor extends Entity {
 	public float piercingResistMod() { return piercingResistMod; }
 
 	public float bludgeoningResistMod() { return bludgeoningResistMod; }
+
+	public float frostResistMod() { return frostResistMod; }
+
+	public float thunderResistMod() { return thunderResistMod; }
 
 	public int takeDamage(int damage, DamageType damageType, Entity instigator) {
 		// Some status effects change how much damage is being dealt
@@ -260,6 +268,14 @@ public class Actor extends Entity {
 					if(damageType == DamageType.LIGHTNING)
 					{
 						damage *= s.lightningDamageMod;
+					}
+					if(damageType == DamageType.FROST)
+					{
+						damage *= s.frostDamageMod;
+					}
+					if(damageType == DamageType.THUNDER)
+					{
+						damage *= s.thunderDamageMod;
 					}
 				}
 			}
@@ -311,35 +327,16 @@ public class Actor extends Entity {
 			case SLASHING:
 				damage = (int)Math.ceil(damage - getSlashingResistModBoost() * 1f);
 				break;
+
+			case FROST:
+				damage = (int)Math.ceil(damage - getFrostResistModBoost() * 1f);
+				break;
+
+			case THUNDER:
+				damage = (int)Math.ceil(damage - getThunderResistModBoost() * 1f);
+				break;
 		}
 		if(damage < 0) damage = 0;
-
-		//if(damageType == DamageType.PHYSICAL) {
-			//damage = (int)Math.ceil(damage * (1f - getMagicResistModBoost()));
-		//}
-		//if(damageType == DamageType.FIRE) {
-			//damage = (int)Math.ceil(damage * (1f - getFireResistModBoost()));
-		//}
-		//if(damageType == DamageType.ICE) {
-			//damage = (int)Math.ceil(damage * (1f - getIceResistModBoost()));
-		//}
-		//if(damageType == DamageType.POISON) {
-			//damage = (int)Math.ceil(damage * (1f - getPoisonResistModBoost()));
-		//}
-		//if(damageType == DamageType.LIGHTNING) {
-			//damage = (int)Math.ceil(damage * (1f - getLightningResistModBoost()));
-		//}
-
-		//Resistance Modboost (Physical)
-		//if(damageType == DamageType.BLUDGEONING) {
-			//damage = (int)Math.ceil(damage * (1f - getBludgeoningResistModBoost()));
-		//}
-		//if(damageType == DamageType.PIERCING) {
-			//damage = (int)Math.ceil(damage * (1f - getPiercingResistModBoost()));
-		//}
-		//if(damageType == DamageType.SLASHING) {
-			//damage = (int)Math.ceil(damage * (1f - getSlashingResistModBoost()));
-		//}
 
 		// Healing should heal
 		if(damageType == DamageType.HEALING) damage *= -1f;

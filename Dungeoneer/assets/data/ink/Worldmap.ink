@@ -1,6 +1,7 @@
 
 - WORLD MAP
-* [(A) Region]
+* [image: test.png] 
+[(A) Region]
      Region Name
     * * [City Name]
          City Name

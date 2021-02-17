@@ -25,6 +25,9 @@ public class StatusEffect {
 	public float bludgeoningDamageMod = 1;
 	public float piercingDamageMod = 1;
 	public float slashingDamageMod = 1;
+	public float frostDamageMod = 1;
+	public float thunderDamageMod = 1;
+
 
 	public boolean active = true;
 	public boolean showParticleEffect = true;

@@ -23,6 +23,9 @@ public class ItemModification {
     protected int piercingDamageMod = 0;
     protected int slashingDamageMod = 0;
 
+    protected int frostDamageMod = 0;
+    protected int thunderDamageMod = 0;
+
     protected int fireDamageMod = 0;
     protected int iceDamageMod = 0;
     protected int poisonDamageMod = 0;
@@ -37,6 +40,8 @@ public class ItemModification {
     protected float slashingResistMod = 0f;
     protected float piercingResistMod = 0f;
     protected float bludgeoningResistMod = 0f;
+    protected float frostResistMod = 0f;
+    protected float thunderResistMod = 0f;
 
     protected int fireResist = 0;
     protected int iceResist = 0;
@@ -47,6 +52,8 @@ public class ItemModification {
     protected int piercingResist = 0;
     protected int bludgeoningResist = 0;
     protected int iceDamage = 0;
+    protected int frostResist = 0;
+    protected int thunderResist = 0;
 
     public DamageType damageType = DamageType.PHYSICAL;
 
@@ -137,6 +144,10 @@ public class ItemModification {
 
     public float getPiercingResistMod(Item owner) { return piercingResistMod + (piercingResistMod * owner.itemLevel * 0.05f); }
 
+    public float getFrostResistMod(Item owner) { return frostResistMod + (frostResistMod * owner.itemLevel * 0.05f); }
+
+    public float getThunderResistMod(Item owner) { return thunderResistMod + (thunderResistMod * owner.itemLevel * 0.05f); }
+
     public float getBludgeoningResistMod(Item owner) { return bludgeoningResistMod + (bludgeoningResistMod * owner.itemLevel * 0.05f); }
 
     public int getCostMod() {
@@ -169,6 +180,9 @@ public class ItemModification {
         costMod += Math.min(1000 * slashingResistMod, 0);
         costMod += Math.min(1000 * piercingResistMod, 0);
         costMod += Math.min(1000 * bludgeoningResistMod, 0);
+
+        costMod += Math.min(1000 * frostResistMod, 0);
+        costMod += Math.min(1000 * thunderResistMod, 0);
 
         if(damageType != DamageType.PHYSICAL) {
             costMod += 40;
