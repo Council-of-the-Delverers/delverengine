@@ -4,6 +4,16 @@
         "localizedName": "Press any key to start",
         "comment": "Prompt shown once at the start of the game."
     },
+        "items.Obsidian.goldItemText": {
+            "class": "com.interrupt.dungeoneer.game.LocalizedString",
+            "localizedName": "Obsidian",
+            "comment": "Prompt shown once at the start of the game."
+        },
+                "items.Obsidian.defaultNameText": {
+                    "class": "com.interrupt.dungeoneer.game.LocalizedString",
+                    "localizedName": "Obsidian Talisman",
+                    "comment": "Prompt shown once at the start of the game."
+                },
     "screens.MainMenuScreen.playButton": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
         "localizedName": "Play",

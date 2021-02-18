@@ -338,22 +338,18 @@ public class ShopOverlay extends WindowOverlay {
 		itm.x = (player.x + projx * 0.5f);
 		itm.y = (player.y + projy * 0.5f);
 	}
-	/** Retrieve Custom Currencies*/
+	/** Retrieve Custom Currencies */
 	protected int getPlayerCurrency(Player player){
-		if(currencyType == TriggeredShop.CurrencyType.ython)
-			return player.ython;
-		if(currencyType == TriggeredShop.CurrencyType.vis)
-			return player.vis;
+		if(currencyType == TriggeredShop.CurrencyType.obsidian)
+			return player.obsidian;
 
 		return player.gold;
 	}
 
 	/** Buy with Custom Currencies */
 	protected void buyWithCurrency(int cost){
-		if(currencyType == TriggeredShop.CurrencyType.ython)
-			player.ython-=cost;
-		if(currencyType == TriggeredShop.CurrencyType.vis)
-			player.vis-=cost;
+		if(currencyType == TriggeredShop.CurrencyType.obsidian)
+			player.obsidian-=cost;
 
 		player.gold-=cost;
 

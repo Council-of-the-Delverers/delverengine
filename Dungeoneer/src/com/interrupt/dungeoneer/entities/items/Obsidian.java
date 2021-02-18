@@ -11,13 +11,13 @@ import com.interrupt.managers.StringManager;
 
 import java.text.MessageFormat;
 
-public class Ython extends Item {
+public class Obsidian extends Item {
 	
-	public Ython() {
+	public Obsidian() {
 		tex = 0;
 		spriteAtlas = "LeoOther";
 		artType = ArtType.item;
-		name = StringManager.get("items.Ython.defaultNameText");
+		name = StringManager.get("items.Obsidian.defaultNameText");
 		collidesWith = CollidesWith.staticOnly;
 		dropSound = "drops/drop_gold.mp3";
 		collision.x = 0.1f;
@@ -25,30 +25,30 @@ public class Ython extends Item {
 	}
 	
 	@EditorProperty
-	public int ythonAmount = 1;
+	public int obsidianAmount = 1;
 	
 	public boolean autoPickup = false;
 	
 	public boolean playedDropSound = false;
 
-	public Ython(float x, float y) {
-		super(x, y, 0, ItemType.gold, StringManager.get("items.Ython.defaultNameText"));
+	public Obsidian(float x, float y) {
+		super(x, y, 0, ItemType.gold, StringManager.get("items.Obsidian.defaultNameText"));
 	}
 	
-	public Ython(int amount) {
+	public Obsidian(int amount) {
 		this();
-		ythonAmount = amount;
-		this.name = StringManager.get("items.Ython.defaultNameText");
+		obsidianAmount = amount;
+		this.name = StringManager.get("items.Obsidian.defaultNameText");
 
-		if(ythonAmount <= 0) ythonAmount = 1;
-		if(ythonAmount > 5) tex = 90;
+		if(obsidianAmount <= 0) obsidianAmount = 1;
+		if(obsidianAmount > 5) tex = 90;
 		
 		pickupSound = "pu_gold.mp3";
 	}
 
 	@Override
 	public String GetItemText() {
-		return MessageFormat.format(StringManager.get("items.Ython.goldItemText"), this.ythonAmount);
+		return MessageFormat.format(StringManager.get("items.Obsidian.goldItemText"), this.obsidianAmount);
 	}
 	
 	@Override
@@ -67,7 +67,7 @@ public class Ython extends Item {
 	
 	protected void pickup(Player player) {
 		if(isActive) {
-			player.ython += ythonAmount;
+			player.obsidian += obsidianAmount;
 			isActive = false;
 			Audio.playSound(pickupSound, 0.3f, 1f);
 			makeItemPickupAnimation(player);

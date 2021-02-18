@@ -111,8 +111,7 @@ public class CharacterScreen {
         // Currency Info
         makeTitle(StringManager.get("overlays.CharacterOverlay.currencyTitle"));
         Table currencyTable = new Table();
-        makeRow(currencyTable,"Ython", Integer.toString(player.ython));
-        makeRow(currencyTable,"Vis", Integer.toString(player.vis));
+        makeRow(currencyTable,"Obsidian Talisman", Integer.toString(player.obsidian));
 
         contentTable.add(currencyTable).colspan(4);
         contentTable.row();

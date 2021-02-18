@@ -50,8 +50,7 @@ import java.util.Random;
 public class Player extends Actor {
 
 	public int gold = 0;
-	public int ython = 0;
-	public int vis = 200;
+	public int obsidian = 0;
 
 	public float rot = 0;
 	public float yrot = 0;
@@ -135,8 +134,7 @@ public class Player extends Actor {
 	// inventory stuff
 	/** Custom Currencies List (Array) */
 	public ArrayMap<String, Integer> currencies = new ArrayMap<String, Integer>();
-	Integer Ython = currencies.get("Ython");
-	Integer Vis = currencies.get("Vis");
+	Integer Obsidian = currencies.get("Obsidian");
 
 	public Array<Item> inventory = new Array<Item>();
 	public Integer selectedBarItem = null;

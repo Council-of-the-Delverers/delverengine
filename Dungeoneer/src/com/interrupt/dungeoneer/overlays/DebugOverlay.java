@@ -577,8 +577,7 @@ public class DebugOverlay extends WindowOverlay {
 		addItem(contentTable, "Gold", new Gold(200));
 
 		/** TUD DEBUG ITEMS*/
-		addItem(contentTable, "Ython", new Ython(200));
-		addItem(contentTable, "Vis", new Vis(200));
+		addItem(contentTable, "Obsidian Talisman", new Obsidian(200));
 
 		addLevelUpItem(contentTable, "LEVEL UP!");
         //addGoDownItem(contentTable, "DOWN");
