@@ -1,15 +1,10 @@
 
 # Delver: The Uncharted Depths
 
-This is the official repository for the standalone expansion to the game, Delver. the code is basically done for a lil while until i figure out more things.
+This is the official repository for the standalone expansion to the game, Delver.
+## Whats in the game right now:
 
-## Whats in the repo right now:
-
-- Magic Resistances (Fire, Ice, Poison)
-- Custom Currencies (Ython, (???))
+- Resistances to all damage types
+- 2nd Currency (Obsidian Talisman)
 - Particle Sphere Emitter
-
-## Whats planned:
-- Bigger Levels
-- Better Fights
-- Developers are now inside the game
+- Crouch, Prone and Sprint
