@@ -110,6 +110,12 @@ public class ItemModification {
     public int getSlashingDamageMod(Item owner) {
         return slashingDamageMod + (int)(damageMod * owner.itemLevel * 0.5f);
     }
+    public int getFrostDamageMod(Item owner) {
+        return frostDamageMod + (int)(damageMod * owner.itemLevel * 0.5f);
+    }
+    public int getThunderDamageMod(Item owner) {
+        return thunderDamageMod + (int)(damageMod * owner.itemLevel * 0.5f);
+    }
 
     public float getKnockbackMod(Item owner) {
         return knockbackMod + (knockbackMod * owner.itemLevel * 0.05f);
@@ -167,6 +173,9 @@ public class ItemModification {
         costMod += Math.min(piercingDamageMod, 0);
         costMod += Math.min(slashingDamageMod, 0);
 
+        costMod += Math.min(frostDamageMod, 0);
+        costMod += Math.min(thunderDamageMod, 0);
+
         costMod += Math.min(iceDamageMod, 0);
 
 
@@ -209,6 +218,14 @@ public class ItemModification {
         }
 
         if(damageType != DamageType.BLUDGEONING) {
+            costMod += 40;
+        }
+
+        if(damageType != DamageType.FROST) {
+            costMod += 40;
+        }
+
+        if(damageType != DamageType.THUNDER) {
             costMod += 40;
         }
 

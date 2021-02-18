@@ -192,23 +192,18 @@ public class Actor extends Entity {
 		return stats.fireResistMod;
 	}
 	public float getIceResistModBoost() { return stats.iceResistMod; }
+
 	public float getFrostResistModBoost() { return stats.frostResistMod; }
 	public float getThunderResistModBoost() { return stats.thunderResistMod; }
-	public float getPoisonResistModBoost() {
-		return stats.poisonResistMod;
-	}
-	public float getLightningResistModBoost() {
-		return stats.lightningResistMod;
-	}
+
+	public float getPoisonResistModBoost() { return stats.poisonResistMod; }
+	public float getLightningResistModBoost() { return stats.lightningResistMod; }
+
 
 	//Resistance Mod Boosts (Physical)
-	public float getBludgeoningResistModBoost() {
-		return stats.bludgeoningResistMod;
-	}
+	public float getBludgeoningResistModBoost() { return stats.bludgeoningResistMod; }
 	public float getPiercingResistModBoost() { return stats.piercingResistMod; }
-	public float getSlashingResistModBoost() {
-		return stats.slashingResistMod;
-	}
+	public float getSlashingResistModBoost() { return stats.slashingResistMod; }
 
 
 	public float fireResistMod() { return fireResistMod; }

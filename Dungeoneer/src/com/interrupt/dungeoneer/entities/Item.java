@@ -73,7 +73,7 @@ public class Item extends Entity {
 	public String equipSound = "";
 	
 	@EditorProperty
-	public String pickupSound = "pu_gen.mp3";
+	public String pickupSound = "";
 
 	@EditorProperty
 	public boolean identified = true;
@@ -461,6 +461,8 @@ public class Item extends Entity {
 		float slashingResistMod = 0;
 		float piercingResistMod = 0;
 		float bludgeoningResistMod = 0;
+		float frostResistMod = 0;
+		float thunderResistMod = 0;
 
 		for(ItemModification m : getEnchantments()) {
 			moveMod += m.getMoveSpeedMod(this);
@@ -484,6 +486,8 @@ public class Item extends Entity {
 			slashingResistMod += m.getSlashingResistMod(this);
 			piercingResistMod += m.getPiercingResistMod(this);
 			bludgeoningResistMod += m.getBludgeoningResistMod(this);
+			frostResistMod += m.getFrostResistMod(this);
+			thunderResistMod += m.getThunderResistMod(this);
 		}
 
 		// add status texts
@@ -507,6 +511,8 @@ public class Item extends Entity {
 		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoPiercingResistText"), piercingResistMod);
 		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoBludgeoningResistText"), bludgeoningResistMod);
 
+		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoFrostResistText"), frostResistMod);
+		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoThunderResistText"), thunderResistMod);
 		return infoText;
 	}
 

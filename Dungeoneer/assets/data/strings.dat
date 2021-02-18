@@ -684,6 +684,16 @@
     "localizedName": "Ice Resistance",
     "comment": ""
   },
+    "entities.Item.modificationInfoFrostResistText": {
+      "class": "com.interrupt.dungeoneer.game.LocalizedString",
+      "localizedName": "Frost Resistance",
+      "comment": ""
+    },
+    "entities.Item.modificationInfoIceResistText": {
+      "class": "com.interrupt.dungeoneer.game.LocalizedString",
+      "localizedName": "Thunder Resistance",
+      "comment": ""
+    },
   "entities.Item.modificationInfoFireResistText": {
     "class": "com.interrupt.dungeoneer.game.LocalizedString",
     "localizedName": "Fire Resistance",
@@ -1814,6 +1824,16 @@
     "localizedName": "SLASHING",
     "comment": ""
   },
+    "items.Weapon.damageType.FROST": {
+      "class": "com.interrupt.dungeoneer.game.LocalizedString",
+      "localizedName": "FROST",
+      "comment": ""
+    },
+      "items.Weapon.damageType.THUNDER": {
+        "class": "com.interrupt.dungeoneer.game.LocalizedString",
+        "localizedName": "THUNDER",
+        "comment": ""
+      },
   "items.Weapon.damageType.PIERCING": {
     "class": "com.interrupt.dungeoneer.game.LocalizedString",
     "localizedName": "PIERCING",

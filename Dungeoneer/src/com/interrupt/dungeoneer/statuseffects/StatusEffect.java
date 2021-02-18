@@ -9,7 +9,7 @@ import com.interrupt.managers.StringManager;
 
 
 public class StatusEffect {
-	public enum StatusEffectType { BURNING, DRUNK, INVISIBLE, PARALYZE, POISON, RESTORE, SHIELD, SLOW, LEVITATE, SPEED, BLEED, SHOCK}
+	public enum StatusEffectType { BURNING, DRUNK, INVISIBLE, PARALYZE, POISON, RESTORE, SHIELD, SLOW, LEVITATE, SPEED, BLEED, FROSTBITE}
 
 	public String name = StringManager.get("statuseffects.StatusEffect.defaultNameText");
 	public float timer = 1000;
@@ -48,6 +48,11 @@ public class StatusEffect {
 			case PIERCING:
 				break;
 			case SLASHING:
+				break;
+
+			case FROST:
+				break;
+			case THUNDER:
 				break;
 
 			case MAGIC:
