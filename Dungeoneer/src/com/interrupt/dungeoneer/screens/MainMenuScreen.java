@@ -45,6 +45,7 @@ public class MainMenuScreen extends BaseScreen {
     private TextButton playButton;
     private TextButton deleteButton;
     private TextButton optionsButton;
+    private TextButton quitButton;
     
     private Progression progress[] = new Progression[3];
     private Player saveGames[] = new Player[3];    
@@ -62,8 +63,9 @@ public class MainMenuScreen extends BaseScreen {
     Color fadeColor = new Color(Color.BLACK);
     boolean fadingOut = false;
     float fadeFactor = 1f;
-	
-	public MainMenuScreen() {
+    private Object QuitEvent;
+
+    public MainMenuScreen() {
 		
 		dungeonInfo = Game.buildLevelLayout();
 
