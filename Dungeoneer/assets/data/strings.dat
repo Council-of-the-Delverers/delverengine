@@ -469,6 +469,11 @@
         "localizedName": "SCROLLS USED: ",
         "comment": ""
     },
+        "screens.MainMenuScreen.quitButton": {
+            "class": "com.interrupt.dungeoneer.game.LocalizedString",
+            "localizedName": "Quit",
+            "comment": "Quits the game."
+        },
     "screens.GameOverScreen.trapsStatLabel": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
         "localizedName": "TRAPS TRIPPED: ",
