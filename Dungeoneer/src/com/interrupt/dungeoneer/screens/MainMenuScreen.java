@@ -31,6 +31,7 @@ import com.interrupt.dungeoneer.overlays.OptionsOverlay;
 import com.interrupt.dungeoneer.ui.UiSkin;
 import com.interrupt.managers.StringManager;
 
+import java.awt.desktop.QuitEvent;
 import java.text.MessageFormat;
 
 public class MainMenuScreen extends BaseScreen {
