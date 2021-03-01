@@ -17,6 +17,12 @@
         "scale": 1,
         "name": "sprite"
     },
+        {
+            "columns": 4,
+            "filename": "sprites/Sprites.png",
+            "scale": 1,
+            "name": "TUDSprites"
+        },
     {
         "columns": 8,
         "filename": "items.png",

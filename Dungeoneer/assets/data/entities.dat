@@ -69,8 +69,59 @@
 		"Fate Entities": {
 			"Basic Monster": {
 				class: "com.interrupt.dungeoneer.entities.Monster"
-			},
-			"Basic Monster (Emit)": {
+	    },
+		"Gold": {
+            "class": "com.interrupt.dungeoneer.entities.items.Gold",
+            "collision": { "x": 0.05, "y": 0.05, "z": 0.05 },
+            "spriteAtlas": "TUDSprites",
+            "yOffset": -0.11,
+            "tex": "1",
+            "shader": "magic-item-white"
+				attached: [
+					{
+				"class": "com.interrupt.dungeoneer.entities.ParticleEmitter",
+				"id": "",
+				"tex": 0,
+				"spriteAtlas": "TUDSprites",
+				"collision": {
+					"x": 0.2,
+					"y": 0.2,
+					"z": 0.5
+				},
+				"dropSound": "drops/drop_soft.ogg",
+				"particleHalos": true,
+				"particleHalo": "BOTH",
+				"particleLifetime": 100,
+				"particlesCollide": false,
+				"particleSpread": {
+					"x": 0.1,
+					"y": 0.1,
+					"z": 0.57
+				},
+				"particleRandomVelocity": {
+					"z": 0.004
+				},
+				"particlesFloat": true,
+				"particleStartScale": 0.5,
+				"particleEndScale": 0,
+				"spriteAtlas": "TUDSprites",
+                "tex": 0,
+				"particlesFullbrite": true,
+				"particleSpawnCount": 2,
+				"particleSpawnInterval": 25,
+				"particleRandomSpawnInterval": 5,
+				"particleRandomLifetime": 25,
+				"particleColor": {
+					"r": 1,
+					"g": 1,
+					"b": 1,
+					"a": 1
+				},
+				"maxVisibleRadius": 4
+			}
+			]
+        },
+		"Basic Monster (Emit)": {
 				class: "com.interrupt.dungeoneer.entities.Monster",
 				attached: [
 					{
@@ -96,14 +147,14 @@
 							"z": 0.9
 						},
 						"particleRandomVelocity": {
-							"x": 0.004,
-							"y": 0.004
+						    "z": 0.03
+
 						},
 						"particlesFloat": true,
 						"particleEndScale": 0,
 						"particlesFullbrite": true,
-						"particleSpawnCount": 50,
-						"particleSpawnInterval": 12,
+						"particleSpawnCount": 1,
+						"particleSpawnInterval": 1,
 						"particleRandomSpawnInterval": 5,
 						"particleRandomLifetime": 25,
 						"particleColor": {
