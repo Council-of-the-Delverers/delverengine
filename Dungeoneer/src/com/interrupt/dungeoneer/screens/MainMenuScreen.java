@@ -132,6 +132,14 @@ public class MainMenuScreen extends BaseScreen {
             }
         });
 
+        quitButton = new TextButton(MessageFormat.format(paddedButtonText, StringManager.get("screens.MainMenuScreen.quitButton")), skin);
+        quitButton.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                Gdx.app.exit();
+            }
+        });
+
         TextButton modsButton = new TextButton(MessageFormat.format(paddedButtonText, "Mods"), skin);
         modsButton.addListener(new ClickListener() {
             @Override
