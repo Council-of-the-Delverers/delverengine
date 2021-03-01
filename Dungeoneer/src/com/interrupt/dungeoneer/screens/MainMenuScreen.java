@@ -301,6 +301,8 @@ public class MainMenuScreen extends BaseScreen {
         if(hasMods())
             buttonTable.add(modsButton).align(Align.right).height(20);
 
+        buttonTable.add(quitButton).align(Align.left).height(20f);
+
         buttonTable.add(optionsButton).align(Align.right).height(20f);
         buttonTable.pack();
 
